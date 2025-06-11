@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Gabriel Ferreira">
+<meta name="dcterms.date" content="2024-02-27">
+
+<title>Projeto: Dashboard Piracanjuba - Análise de Engajamento e Desenvolvimento de Alunos</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Projeto5DA_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Projeto5DA_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Projeto5DA_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Projeto5DA_files/libs/quarto-html/popper.min.js"></script>
+<script src="Projeto5DA_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Projeto5DA_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Projeto5DA_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Projeto5DA_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Projeto5DA_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Projeto5DA_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Projeto5DA_files/libs/bootstrap/bootstrap-bb462d781dde1847d9e3ccf7736099dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-full">
+
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Projeto: Dashboard Piracanjuba - Análise de Engajamento e Desenvolvimento de Alunos</h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Gabriel Ferreira </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">February 27, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introdução" class="level1">
+<h1>Introdução</h1>
+<p>Este é um projeto real, e consiste na criação de um dashboard desenvolvido para a <strong>Piracanjuba</strong>, com o objetivo principal de avaliar o engajamento e o desenvolvimento dos colaboradores que estão participando de um curso de tecnólogo. A empresa adquiriu o curso para seus funcionários e demandou uma ferramenta analítica para monitorar o progresso, identificar áreas de sucesso e oportunidades de melhoria no processo de capacitação. O painel proporciona uma visão clara sobre o número de alunos, o tempo médio de estudo, o avanço na conclusão de módulos e a emissão de certificados, permitindo à Piracanjuba tomar decisões baseadas em dados para otimizar seus programas de desenvolvimento interno.</p>
+<section id="obs-todos-os-funcionários-alunos-foram-anonimizados-no-dataset." class="level6">
+<h6 class="anchored" data-anchor-id="obs-todos-os-funcionários-alunos-foram-anonimizados-no-dataset.">Obs: Todos os funcionários (alunos) foram anonimizados no dataset.</h6>
+</section>
+<section id="estrutura-do-projeto" class="level2">
+<h2 class="anchored" data-anchor-id="estrutura-do-projeto">Estrutura do Projeto</h2>
+<p>A análise foi dividida em quatro páginas principais no dashboard, cada uma focando em diferentes aspectos do engajamento e desenvolvimento dos alunos:</p>
+<ul>
+<li><strong>Visão Geral</strong>: Apresenta os indicadores totais de alunos e a média de dias de estudo.</li>
+<li><strong>Análise Geral dos Alunos</strong>: Detalha a conclusão de módulos individuais, o fluxo de novos alunos por mês e o volume de conclusão de módulos mensal.</li>
+<li><strong>Análise da Performance dos Alunos - Certificados</strong>: Foca nos certificados emitidos, mostrando o total geral, a emissão por aluno e por conteúdo.</li>
+<li><strong>Avaliação dos Módulos</strong>: Oferece uma visão do desempenho geral dos módulos (concluídos, pendentes, em progresso) e uma classificação do desempenho dos alunos com base no número de módulos concluídos.</li>
+</ul>
+</section>
+<section id="tecnologias-utilizadas" class="level2">
+<h2 class="anchored" data-anchor-id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
+<p>Para a construção deste dashboard analítico, as ferramentas empregadas foram:</p>
+<ul>
+<li><strong>Power BI Desktop</strong>: Para conectar as fontes de dados, realizar a modelagem e transformação necessárias, e desenvolver os visuais interativos que compõem o dashboard. Foram utilizadas medidas DAX para cálculos e a linguagem M para o tratamento de dados no Power Query.</li>
+<li><strong>Figma</strong>: A prototipação e o design do dashboard foram feitos com o Figma, garantindo uma experiência de usuário intuitiva e visualmente atraente, que posteriormente foi exportada e integrada ao Power BI.</li>
+</ul>
+</section>
+<section id="processo-de-etl-extração-transformação-e-carregamento" class="level2">
+<h2 class="anchored" data-anchor-id="processo-de-etl-extração-transformação-e-carregamento">Processo de ETL (Extração, Transformação e Carregamento)</h2>
+<p>O processo de ETL para esse projeto foi estruturado para garantir a acuracidade e a prontidão dos dados para análise:</p>
+<ol type="1">
+<li><strong>Extração</strong>: Os dados brutos foram extraídos de planilhas Excel, contendo informações detalhadas sobre os alunos, seu progresso nos módulos e os certificados emitidos. Essas planilhas serviram como a fonte primária de dados para a análise.</li>
+<li><strong>Transformação</strong>: No Power Query, parte integrante do Power BI, foram realizadas diversas operações de limpeza e enriquecimento. Isso incluiu:
+<ul>
+<li>Tratamento de dados, garantindo consistência e qualidade.</li>
+<li>Criação de novas colunas e métricas calculadas que seriam essenciais para as análises, utilizando a linguagem M.</li>
+<li>A modelagem de dados foi cuidadosamente definida, estabelecendo relacionamentos entre as tabelas e criando um esquema que permitisse a correta agregação e filtragem das informações.</li>
+</ul></li>
+<li><strong>Carregamento</strong>: Após as etapas de extração e transformação, os dados foram carregados no modelo de dados do Power BI, estando prontos para alimentar todos os gráficos e tabelas do dashboard, permitindo a exploração interativa.</li>
+</ol>
+</section>
+</section>
+<section id="dashboard" class="level1">
+<h1>Dashboard</h1>
+<p>O dashboard é organizado em quatro páginas distintas, cada uma dedicada a um aspecto específico da análise. O design, concebido no Figma e implementado no Power BI, garante uma interface limpa, com visuais claros e de fácil interpretação. A interatividade permite que os usuários naveguem entre as páginas e explorem os dados em diferentes níveis de granularidade, desde a visão geral do engajamento até o desempenho individual dos módulos e alunos.</p>
+<div style="text-align:center;">
+<p><img src="imagem1.png" alt=""></p>
+</div>
+<section id="insights" class="level2">
+<h2 class="anchored" data-anchor-id="insights">Insights</h2>
+<p>A análise dos dados apresentados no dashboard revelou insights cruciais sobre o engajamento e desenvolvimento dos alunos da Piracanjuba:</p>
+<ul>
+<li><strong>Visão Geral do Engajamento</strong>:
+<ul>
+<li>O painel revela um total de 4.419 alunos inscritos no curso.</li>
+<li>A média de dias de estudo é de 27,28 dias. Este é um indicador importante para medir o tempo que os alunos dedicam ao aprendizado, sugerindo um engajamento razoável com a plataforma ou conteúdo.</li>
+</ul></li>
+</ul>
+<div style="text-align:center;">
+<p><img src="imagem2.png" alt=""></p>
+</div>
+<ul>
+<li><strong>Conclusão e Fluxo de Alunos por Módulo</strong>:
+<ul>
+<li>O módulo de “Boas-vindas!” e “Desenvolvimento técnico” se destacam com 219 e 192 conclusões, respectivamente, indicando que são os pontos de entrada ou módulos de grande relevância e engajamento.</li>
+<li>Módulos fundamentais como “Módulo Inicial - Power BI” (135 conclusões), “Power BI II” (73 conclusões) e “Essencial de SQL” (70 conclusões) mostram uma boa taxa de finalização, o que é positivo para o desenvolvimento das competências técnicas.</li>
+<li>Em contrapartida, módulos mais avançados ou específicos, como “Live de Dúvidas” (16 conclusões) e “Pilar 4.3 Projeto Real” (17 conclusões), possuem um número significativamente menor de conclusões. Indicando uma dificuldade maior, menor interesse, ou que são módulos opcionais para um grupo menor de alunos.</li>
+</ul></li>
+</ul>
+<div style="text-align:center;">
+<p><img src="imagem3.png" alt=""></p>
+</div>
+<ul>
+<li><strong>Fluxo de Entrada e Conclusão Mensal</strong>:
+<ul>
+<li>A entrada de Novos Alunos** teve picos notáveis em Janeiro (1.088) e Setembro (779), com uma queda em Dezembro (644) e duas quedas signifcantes em Outubro e Novembro (265 e 64 respectivamente).
+<div style="text-align:center;">
+<img src="imagem4.png" alt="">
+</div></li>
+<li>A Conclusão de Módulos por Mês mostra um padrão diferente. Embora Setembro (183) e Outubro (215) tenham um alto volume de conclusões, Janeiro (12) e Dezembro (18) registram os menores números. Isso pode refletir um atraso entre a entrada de alunos e a conclusão dos módulos, ou que as conclusões se concentram em meses específicos do ano letivo.
+<div style="text-align:center;">
+<img src="imagem10.png" alt="">
+</div></li>
+</ul></li>
+<li><strong>Análise de Certificados Emitidos</strong>:
+<ul>
+<li>Um total de 751 Certificados Emitidos demonstra um resultado tangível do programa de capacitação.
+<div style="text-align:center;">
+<img src="imagem5.png" alt="">
+</div></li>
+<li>A distribuição de certificados por aluno revela que o aluno #4 se destaca com 6 certificados.
+<div style="text-align:center;">
+<img src="imagem6.png" alt="">
+</div></li>
+<li>Em relação à Emissão de Certificados por Conteúdo**, “Power BI 1.0” (197 certificados) e “Excel” (168 certificados) são os conteúdos com maior número de certificações, sublinhando a demanda e a relevância dessas ferramentas. SQL (153 certificados) também possui um bom desempenho. Conteúdos como “Pentaho” e “Boas-Vindas” têm um número muito baixo de certificados (1 cada), o que pode indicar que são módulos de nicho ou introdutórios sem foco em certificação.
+<div style="text-align:center;">
+<p><img src="imagem7.png" alt=""></p>
+</div></li>
+</ul></li>
+<li><strong>Desempenho Geral e por Aluno nos Módulos</strong>:
+<ul>
+<li>Dos 26 módulos totais, a maioria dos alunos está “Em progresso” (79,35%). Apenas 7,61% dos alunos “Concluíram” todos os módulos, e 13,04% estão com módulos “Pendente”. Isso ressalta a importância de estratégias para incentivar a conclusão e o acompanhamento dos alunos em progresso.
+<div style="text-align:center;">
+<img src="imagem9.png" alt="">
+</div></li>
+<li>A classificação de “Dedicação dos Alunos” categoriza o desempenho: “Bom” (&gt; 20 módulos concluídos), “Médio” (8 a 19 módulos concluídos) e “Ruim” (&lt; 8 módulos concluídos).</li>
+<li>O painel “Desempenho dos Alunos” mostra que a maior parte está em “Em progresso”.
+<div style="text-align:center;">
+<img src="imagem8.png" alt="">
+</div></li>
+</ul></li>
+<li>Também é possivel visualizar uma performance individual, essa capacidade de identificar o desempenho individualizado permite intervenções direcionadas, como suporte personalizado para alunos com desempenho “Ruim” ou reconhecimento para os “Bons”.</li>
+</ul>
+</section>
+<section id="considerações" class="level2">
+<h2 class="anchored" data-anchor-id="considerações">Considerações</h2>
+<p>O dashboard oferece uma base sólida para aprimorar as estratégias de educação corporativa na Piracanjuba. A partir dos insights obtidos, algumas considerações importantes surgem:</p>
+<ul>
+<li><strong>Incentivo à Conclusão</strong>: Com uma grande parcela de alunos “Em progresso”, é fundamental desenvolver estratégias para converter esse progresso em conclusão. Isso pode incluir campanhas de incentivo, lembretes automatizados, sessões de tutoria ou a gamificação para manter os alunos engajados até o final.</li>
+<li><strong>Acompanhamento de Módulos Específicos</strong>: A baixa conclusão de módulos mais avançados ou específicos sugere a necessidade de avaliar a dificuldade do conteúdo, a demanda por esses tópicos ou a necessidade de mais suporte para os alunos que os iniciam.</li>
+<li><strong>Otimização do Fluxo Mensal</strong>: A disparidade entre a entrada de novos alunos e a conclusão de módulos por mês aponta para a necessidade de entender os ciclos de estudo dos colaboradores. Pode-se planejar a oferta de módulos de acordo com os períodos de maior engajamento ou criar programas de aceleração para a conclusão.</li>
+<li><strong>Exploração de Certificações</strong>: O alto número de certificados em Power BI e Excel valida a relevância desses temas. A empresa pode explorar a criação de novos módulos ou aprofundamentos nesses temas para atender à demanda. Para os temas com pouca certificação, uma revisão do conteúdo ou da forma de apresentação pode ser necessária.</li>
+<li><strong>Gestão Individualizada do Desempenho</strong>: A capacidade de classificar o desempenho dos alunos (“Bom”, “Médio”, “Ruim”) é um diferencial. A Piracanjuba pode usar essa informação para oferecer mentorias aos alunos com desempenho “Ruim”, celebrar os “Bons” e talvez incentivá-los a se tornarem “mentores” para os colegas, e fornecer feedback construtivo aos alunos “Médios”.</li>
+</ul>
+</section>
+<section id="conclusão" class="level2">
+<h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
+<p>O Dashboard foi uma ferramenta analítica estratégica que transformou os dados de engajamento e desenvolvimento dos colaboradores em inteligência acionável. Sua principal contribuição residiu na capacidade de:</p>
+<ul>
+<li>Fornecer uma visão clara e abrangente do progresso educacional da força de trabalho.</li>
+<li>Identificar padrões de engajamento, gargalos na conclusão de módulos e áreas de alta performance.</li>
+<li>Permitir uma gestão proativa do programa de capacitação, desde o planejamento da oferta de cursos até o suporte individualizado aos alunos.</li>
+</ul>
+</section>
+<section id="link-para-o-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="link-para-o-dashboard">Link para o Dashboard:</h2>
+<p><a href="https://app.powerbi.com/groups/me/reports/e6f8d154-f679-4e1a-8fb4-a81b7300e178/ReportSectionbbdc1d2c38618044282c?experience=power-bi" target="_blank" rel="noopener noreferrer"> Clique aqui para acessar o relatório no Power BI </a></p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

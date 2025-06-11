@@ -1,0 +1,60 @@
+---
+title: "Meus Projetos"
+format:
+  html:
+    include-after-body:
+      - text: |
+          <script src="js/projetos.js" defer></script>
+---
+
+### Data Science Projects
+
+<div id="ds-swiper" class="swiper projetos-swiper">
+  <div class="swiper-wrapper">
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<br>
+<hr>
+<br>
+
+### Data Analytics Projects
+
+<div id="da-swiper" class="swiper projetos-swiper">
+  <div class="swiper-wrapper">
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<br>
+<hr>
+<br>
+
+### Dashboards
+
+<div id="dash-swiper" class="swiper projetos-swiper">
+  <div class="swiper-wrapper">
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>
+
+
+```{=html}
+<div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close-button">&times;</span>
+    <h3 id="modal-title" style="margin-top: 20px;"></h3>
+    <p id="modal-desc"></p>
+    <img id="modal-img" src="" alt="Imagem do Projeto">
+    <br>
+    <a id="modal-link" href="#" class="btn btn-primary" target="_blank">Ver Projeto Completo</a>
+  </div>
+</div>
+```

@@ -1,0 +1,45 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - cursos
+    - cv
+    - images
+    - projetos
+
+website:
+  title: "Gabriel Ferreira"
+  favicon: images/icon.png  # <-- ADICIONADO: Caminho para o seu ícone
+  navbar:
+    search: false               # <-- ADICIONADO: Remove a lupa de pesquisa
+    left:
+      - text: "Principal"
+        href: index.qmd
+      - text: "Projetos"
+        href: projetos.qmd
+      - text: "Contato"
+        href: contato.qmd
+  page-footer:
+    left: "Design by Gabriel Ferreira"
+    right: 
+      - icon: github
+        href: https://github.com/FerreiraGabrielw
+        target: "_blank"
+      - icon: linkedin
+        href: https://www.linkedin.com/in/gabrielferreira2001/
+        target: "_blank"
+
+format:
+  html:
+    theme: sandstone
+    css: styles.css
+    toc: false
+    anchor-sections: false
+    include-in-header:
+      - text: |
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    include-after-body:
+      - text: |
+          <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+          <script src="js/scripts.js"></script>

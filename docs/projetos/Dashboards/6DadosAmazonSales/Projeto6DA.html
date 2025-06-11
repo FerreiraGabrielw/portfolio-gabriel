@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Gabriel Ferreira">
+<meta name="dcterms.date" content="2023-03-17">
+
+<title>Projeto: Dashboard Amazon - Análise de Vendas e Lucratividade</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Projeto6DA_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Projeto6DA_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Projeto6DA_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Projeto6DA_files/libs/quarto-html/popper.min.js"></script>
+<script src="Projeto6DA_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Projeto6DA_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Projeto6DA_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Projeto6DA_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Projeto6DA_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Projeto6DA_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Projeto6DA_files/libs/bootstrap/bootstrap-bb462d781dde1847d9e3ccf7736099dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-full">
+
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Projeto: Dashboard Amazon - Análise de Vendas e Lucratividade</h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Gabriel Ferreira </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 17, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introdução" class="level1">
+<h1>Introdução</h1>
+<p>Este projeto apresenta um Dashboard de análise de vendas e lucratividade, desenvolvido para simular o ambiente de e-commerce e varejo da Amazon. O principal objetivo é fornecer uma visão detalhada do desempenho financeiro da empresa ao longo dos anos, identificar os produtos e categorias mais rentáveis, analisar o comportamento de compra dos clientes e avaliar a eficiência operacional, como o tempo de entrega. O painel visa capacitar a gestão a tomar decisões estratégicas relacionadas a estoque, precificação, marketing e otimização da cadeia de suprimentos.</p>
+<section id="estrutura-do-projeto" class="level2">
+<h2 class="anchored" data-anchor-id="estrutura-do-projeto">Estrutura do Projeto</h2>
+<p>O dashboard é organizado em diferentes seções, cada uma focando em um aspecto crucial da análise de negócios:</p>
+<ul>
+<li><strong>Visão Geral Financeira</strong>: KPIs de vendas, lucro e margem, além de uma linha do tempo da performance anual.</li>
+<li><strong>Produtos e Clientes de Destaque</strong>: Identificação dos produtos mais vendidos e dos clientes mais lucrativos.</li>
+<li><strong>Análise por Categoria</strong>: Detalhamento de pedidos, lucro e vendas por diferentes categorias de produtos.</li>
+<li><strong>Eficiência Operacional e Comportamento de Pedidos</strong>: Avaliação do tempo médio de entrega e a distribuição de pedidos por mês e por cliente.</li>
+</ul>
+</section>
+<section id="tecnologias-utilizadas" class="level2">
+<h2 class="anchored" data-anchor-id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
+<p>Para a construção deste dashboard, as ferramentas empregadas foram:</p>
+<ul>
+<li><strong>Power BI Desktop</strong>: Para conectar a fonte de dados, realizar a modelagem e transformação necessárias, desenvolver as medidas DAX para cálculos complexos e construir os visuais interativos que compõem o dashboard.</li>
+<li><strong>Figma</strong>: A prototipação e o design do dashboard foram feitos com o Figma, garantindo uma experiência de usuário intuitiva e visualmente atraente.</li>
+</ul>
+</section>
+<section id="processo-de-etl-extração-transformação-e-carregamento" class="level2">
+<h2 class="anchored" data-anchor-id="processo-de-etl-extração-transformação-e-carregamento">Processo de ETL (Extração, Transformação e Carregamento)</h2>
+<p>O processo de ETL para o Dashboard Amazon foi rigorosamente executado para garantir a qualidade e a integridade dos dados:</p>
+<ol type="1">
+<li><strong>Extração</strong>: Os dados foram extraídos de uma única planilha Excel (<code>.xls</code>), que consolidava todas as informações de vendas, produtos, clientes e operações necessárias para a análise.</li>
+<li><strong>Transformação</strong>: No Power Query, parte integrante do Power BI, foram realizadas diversas operações de limpeza e enriquecimento. Isso incluiu:
+<ul>
+<li>Tratamento de dados, como a padronização de nomes e a correção de valores.</li>
+<li>Criação de novas colunas e métricas calculadas que seriam essenciais para as análises, utilizando a linguagem M.</li>
+<li>A modelagem de dados foi cuidadosamente definida, estabelecendo relacionamentos entre as tabelas e garantindo que todas as informações pudessem ser corretamente agregadas e filtradas para uma análise multidimensional.</li>
+</ul></li>
+<li><strong>Carregamento</strong>: Após as etapas de extração e transformação, os dados foram carregados no modelo de dados do Power BI, estando prontos para alimentar todos os gráficos e tabelas do dashboard, permitindo a exploração interativa.</li>
+</ol>
+</section>
+</section>
+<section id="dashboard" class="level1">
+<h1>Dashboard</h1>
+<p>O dashboard apresenta um layout claro e organizado, com uma navegação intuitiva entre as diferentes análises. A interface combina cartões de KPI, gráficos de barras e linhas para tendências temporais e rankings, além de tabelas detalhadas. Cada visual é projetado para destacar informações chave e permitir a exploração interativa dos dados, facilitando a identificação de padrões e insights acionáveis para o negócio.</p>
+<section id="insights" class="level2">
+<h2 class="anchored" data-anchor-id="insights">Insights</h2>
+<p>A análise dos dados apresentados no dashboard revelou insights valiosos sobre a performance de vendas e lucratividade:</p>
+<ul>
+<li><strong>Visão Geral Financeira Robusta</strong>:
+<ul>
+<li>O painel destaca um <strong>Total de Vendas de R$ 3,59 Milhões</strong> e um <strong>Total de Lucro de R$ 108 Mil</strong>.
+<div style="text-align:center;">
+<img src="imagem1.png" alt="">
+</div></li>
+<li>A <strong>Margem de Lucro é de 3,02%</strong>, indicando a eficiência na conversão de vendas em lucro.
+<div style="text-align:center;">
+<img src="imagem2.png" alt="">
+</div></li>
+<li>A análise temporal de <strong>Vendas por Ano</strong> mostra um crescimento contínuo de 2011 a 2014, com o ano de 2014 registrando o maior volume de vendas, próximo a R$ 1,5 Milhão, sublinhando uma trajetória positiva de expansão.</li>
+</ul></li>
+</ul>
+<div style="text-align:center;">
+<p><img src="imagem3.png" alt=""></p>
+</div>
+<ul>
+<li><strong>Produtos e Clientes de Destaque</strong>:
+<ul>
+<li>Entre os <strong>Produtos Mais Vendidos</strong>, “Staples” lidera com <strong>R$ 1,2 Milhão</strong> em vendas, seguido por produtos como “Wilson Jones Clip &amp;…” e “Cardinal EasyOpen …”, com <strong>R$ 1,0 Milhão</strong>. Esses dados são cruciais para a gestão de estoque e campanhas de marketing direcionadas.
+<div style="text-align:center;">
+<img src="imagem4.png" alt="">
+</div></li>
+<li>Na análise de <strong>Lucro por Cliente</strong>, Raymond Buch se destaca, seguido por Jane Waco, evidenciando os clientes de maior valor para o negócio e a importância de programas de fidelidade.
+<div style="text-align:center;">
+<p><img src="imagem5.png" alt=""></p>
+</div></li>
+</ul></li>
+<li><strong>Eficiência e Desempenho por Categoria</strong>:
+<ul>
+<li>O Ticket Médio das vendas é de R$ 2.230,55, e o Valor Médio por Unidade é de R$ 226,49, indicando o valor transacional por pedido e por item vendido.
+<div style="text-align:center;">
+<img src="imagem6.png" alt="">
+</div></li>
+<li>Em Número de Pedidos por Categoria, “Binders” lidera com 403 pedidos, seguido por “Paper” (384) e “Furnishings” (281), o que sugere alta demanda por esses itens.
+<div style="text-align:center;">
+<img src="imagem7.png" alt="">
+</div></li>
+<li>A Vendas por Categoria mostram “Copiers” com R$ 0,50 Milhão** e “Phones” com R$ 0,49 Milhão, liderando em receita.
+<div style="text-align:center;">
+<img src="imagem8.png" alt="">
+</div></li>
+<li>Por outro lado, em Lucro por Categoria, “Tables” (R$ 19 Mil), “Copiers” (R$ 16 Mil) e “Binders” (R$ 16 Mil) são os maiores contribuintes, revelando que nem sempre as categorias com maior volume de vendas são as mais lucrativas.
+<div style="text-align:center;">
+<p><img src="imagem9.png" alt=""></p>
+</div></li>
+</ul></li>
+<li><strong>Performance de Pedidos e Clientes</strong>:
+<ul>
+<li>O Tempo Médio de Entrega é de 3,93 dias, um KPI importante para a satisfação do cliente. O Número Total de Pedidos no período é de 1.611.
+<div style="text-align:center;">
+<img src="imagem10.png" alt="">
+</div></li>
+<li>A análise de Pedidos por Mês ao longo dos anos revela que Setembro (227), Novembro e Dezembro (ambos com 234 pedidos, são os meses de pico, sugerindo sazonalidade nas compras.
+<div style="text-align:center;">
+<img src="imagem11.png" alt="">
+</div></li>
+<li>Em Número de Pedidos por Cliente, Arianne Irving e Bill Donatelli estão entre os clientes com 7 pedidos cada, mostrando alta frequência de compra.
+<div style="text-align:center;">
+<img src="imagem12.png" alt="">
+</div></li>
+<li><strong>Total de Vendas por Cliente</strong> reitera o valor de Raymond Buch (R$ 58 Mil) e Nora Preis (R$ 55 Mil) como os clientes que geram mais receita.
+<div style="text-align:center;">
+<p><img src="imagem13.png" alt=""></p>
+</div></li>
+</ul></li>
+</ul>
+</section>
+<section id="considerações" class="level2">
+<h2 class="anchored" data-anchor-id="considerações">Considerações</h2>
+<p>O dashboard oferece uma base sólida para otimizar as operações e as estratégias de vendas da Amazon (simulada). A partir dos insights obtidos, algumas considerações importantes surgem:</p>
+<ul>
+<li><strong>Otimização do Mix de Produtos</strong>: A diferença entre categorias mais vendidas e mais lucrativas (“Copiers” e “Phones” vs.&nbsp;“Tables”) indica a necessidade de uma análise mais aprofundada de custos e precificação. A empresa pode focar em aumentar as vendas de itens de alta lucratividade ou buscar maneiras de melhorar a margem de produtos de alto volume.</li>
+<li><strong>Gestão de Estoque e Demanda Sazonal</strong>: O pico de pedidos entre Setembro e Dezembro é um indicativo claro de sazonalidade. A gestão de estoque e o planejamento de campanhas de marketing devem ser intensificados nesses meses para capitalizar a demanda.</li>
+<li><strong>Melhora Contínua do Tempo de Entrega</strong>: Um tempo médio de entrega de 3,93 dias é razoável, mas em um ambiente competitivo como o e-commerce, a otimização contínua desse KPI pode ser um diferencial crucial para a satisfação e retenção de clientes.</li>
+<li><strong>Programas de Fidelidade e VIP</strong>: A identificação dos clientes de maior valor, tanto em lucro quanto em vendas, permite a criação de programas de fidelidade ou ofertas personalizadas para incentivar a recompra e fortalecer o relacionamento.</li>
+<li><strong>Análise de Desempenho por Ano</strong>: A tendência de crescimento anual é positiva, mas é importante investigar os fatores que impulsionaram o aumento das vendas em 2014 para replicar essas estratégias em períodos futuros.</li>
+</ul>
+</section>
+<section id="conclusão" class="level2">
+<h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
+<p>O Dashboard foi uma ferramenta analítica abrangente que transforma dados de vendas e operações em inteligência de negócio acionável. Sua principal contribuição reside na capacidade de:</p>
+<ul>
+<li>Fornecer uma visão clara da performance financeira geral e da trajetória de crescimento da empresa.</li>
+<li>Identificar os produtos, categorias e clientes que impulsionam a receita e o lucro.</li>
+<li>Analisar a eficiência operacional e os padrões sazonais de pedidos.</li>
+</ul>
+</section>
+<section id="link-para-o-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="link-para-o-dashboard">Link para o Dashboard:</h2>
+<p><a href="https://app.powerbi.com/groups/me/reports/f3677347-a80f-4fd0-aad8-4a1b5c33b243/ReportSection45c8cf44a92cf66d802f?experience=power-bi" target="_blank" rel="noopener noreferrer"> Clique aqui para acessar o relatório no Power BI </a></p>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

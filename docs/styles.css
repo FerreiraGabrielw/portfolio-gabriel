@@ -1,0 +1,369 @@
+/* --- GERAL --- */
+h1, h2, h3 {
+  color: #333;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  margin-top: 40px;
+}
+
+/* --- SEÇÃO EXPERIÊNCIA --- */
+.experiencia-agrupada {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.experiencia-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.experiencia-header img {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+.experiencia-header h3 {
+  border-bottom: none;
+  margin: 0;
+}
+.timeline {
+  position: relative;
+  border-left: 3px solid #007bff;
+  padding-left: 30px;
+  margin-left: 38px;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 25px;
+}
+.timeline-dot {
+  position: absolute;
+  left: -38px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border: 3px solid #007bff;
+  border-radius: 50%;
+}
+.timeline-date {
+  font-weight: bold;
+  color: #555;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+.timeline-content h4 {
+  border: none;
+  margin-top: 0;
+  padding-bottom: 5px;
+}
+
+/* --- SEÇÃO FORMAÇÃO (COM OVERLAY) --- */
+.formacao-item {
+  text-align: center;
+}
+.diploma-container {
+  display: block;
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 0 auto 15px auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+.diploma-container:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.diploma-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #ffffff;
+}
+.diploma-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 86, 179, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.diploma-overlay span {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2px solid white;
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+.diploma-container:hover .diploma-overlay {
+  opacity: 1;
+}
+
+/* --- CARROSSÉIS (CURSOS NA HOME) --- */
+.swiper {
+  width: 100%;
+  padding: 10px 10px 50px 10px;
+}
+.swiper-slide {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 400px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.swiper-slide:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+.swiper-slide h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0056b3;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+.swiper-slide p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  flex-grow: 1;
+}
+.swiper-slide .btn {
+  margin-top: 20px;
+  align-self: center;
+}
+.swiper-pagination-bullet-active {
+  background-color: #007bff !important;
+}
+.swiper-button-next, .swiper-button-prev {
+  color: #007bff !important;
+}
+
+/* --- MODAL (POP-UP) DOS PROJETOS --- */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 2vh auto; /* Reduz ainda mais a margem vertical */
+  padding: 30px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 700px;
+  border-radius: 10px;
+  position: relative;
+  animation: fadeIn 0.5s;
+  max-height: 90vh; /* Aumenta um pouco a altura máxima */
+  overflow-y: auto;
+  display: flex; /* Habilita o Flexbox para organizar os itens */
+  flex-direction: column; /* Organiza os itens em coluna */
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* Estilo para a imagem dentro do modal */
+.modal-content #modal-img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 45vh; /* Permite uma altura um pouco maior para a imagem */
+  object-fit: contain;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 15px; /* Reduz um pouco a margem superior */
+  margin-bottom: 15px; /* Adiciona margem inferior */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilos para o título e descrição */
+.modal-content h3#modal-title {
+  margin-top: 0; /* Remove a margem superior padrão do h3 */
+  margin-bottom: 10px;
+}
+
+.modal-content p#modal-desc {
+  margin-bottom: 15px;
+}
+
+/* Estilo para o botão */
+.modal-content a#modal-link {
+  margin-top: auto; /* Empurra o botão para baixo */
+  align-self: flex-start; /* Alinha o botão à esquerda */
+}
+
+.close-button {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* --- SEÇÃO COMPLETA: CARROSSEL DE PROJETOS (VERSÃO FINAL E ESTÁVEL) --- */
+
+.projetos-swiper {
+  width: 100%;
+  position: relative; /* Essencial para o posicionamento das setas */
+
+  /* CRÍTICO: Cria um "corredor" nas laterais para as setas, travando-as no lugar */
+  padding: 10px 50px 50px 50px; 
+  box-sizing: border-box; /* Garante que o padding não cause overflow na página */
+}
+
+.projetos-swiper .swiper-slide {
+  height: auto;          /* Deixa a altura se ajustar ao conteúdo */
+  display: flex;         /* Garante que o card ocupe o espaço */
+}
+
+/* Estilos do card dentro do carrossel */
+.projetos-swiper .project-card-text {
+  width: 100%;
+  min-height: 180px; 
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.projetos-swiper .project-card-text:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: #007bff;
+}
+
+.projetos-swiper .project-card-text h5 {
+  font-size: 1.1rem;
+  color: #0056b3;
+  font-weight: 600;
+  border-bottom: none;
+  margin-bottom: 10px;
+  flex-grow: 1;
+}
+
+.projetos-swiper .project-card-text .project-tools {
+  font-size: 0.85em;
+  color: #6c757d;
+  font-style: italic;
+  margin-top: auto;
+}
+
+/* REGRAS FINAIS E ESTÁVEIS PARA AS SETAS DE NAVEGAÇÃO */
+.projetos-swiper .swiper-button-next,
+.projetos-swiper .swiper-button-prev {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  color: #007bff !important;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.projetos-swiper .swiper-button-next:hover,
+.projetos-swiper .swiper-button-prev:hover {
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.projetos-swiper .swiper-button-next:after,
+.projetos-swiper .swiper-button-prev:after {
+  font-size: 20px !important;
+  font-weight: 900;
+}
+
+/* Posiciona as setas DENTRO da área de padding, nos extremos */
+.projetos-swiper .swiper-button-next {
+  right: 0px; 
+}
+
+.projetos-swiper .swiper-button-prev {
+  left: 0px;
+}
+
+/* --- SEÇÃO DE CONTATO --- */
+.contact-card {
+  display: block;
+  padding: 25px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  background-color: #fff;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: #007bff;
+  text-decoration: none;
+}
+
+.contact-card h5 {
+  border: none;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* --- AJUSTE PARA O CARD DE EMAIL --- */
+.contact-card .text-muted {
+  word-break: break-word; /* Quebra palavras longas para evitar overflow */
+  hyphens: auto;          /* Adiciona hifens se necessário (melhor suporte) */
+}
+
+/* --- ESTILOS PARA FEEDBACK DO CARD DE EMAIL --- */
+#email-text {
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+#email-text.copied {
+  color: #28a745 !important; /* Cor de sucesso (verde) */
+  font-weight: 600;
+}
