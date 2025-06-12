@@ -20,12 +20,24 @@ Olá, seja bem-vindo!
 :::
 
 ::: {.g-col-12 .g-col-md-8}
-<p>Minha trajetória profissional me deu uma perspectiva única: comecei na engenharia, onde aprendi a analisar dados para resolver problemas físicos e garantir resultados concretos. Essa base analítica foi o que me impulsionou para o universo de Business Intelligence e Data Science, onde hoje transformo informações em decisões estratégicas.</p>
+<p>Com uma base sólida em análise e resolução de problemas, encontrei na Ciência de Dados e em Business Intelligence o ambiente ideal para aplicar minha expertise. Minha missão é ir além dos números, transformando dados em insights acionáveis que não apenas resolvem questões presentes, mas também capacitam as empresas a inovar e a se antecipar às futuras tendências de mercado.</p>
 
 <p>  Este portfólio é a minha história contada através do trabalho. Explore os projetos que eu já trabalhei para ver a aplicação prática de Data Analytics e Ciência de Dados. Logo abaixo, você encontrará as minhas experiências profissionais, ferramentas e competências que me movem e, para uma visão detalhada, meu CV completo está disponível para download.</p>
 :::
 
 :::
+
+```{=html}
+<div class="text-center" style="margin-top: 20px; display: flex; justify-content: center; gap: 15px;">
+  <a href="projetos.qmd" class="btn btn-success btn-lg">
+    <i class="bi bi-kanban-fill"></i> Ver Meus Projetos
+  </a>
+  <a href="cv/CvCientistadeDadosGabrielFerreira.pdf" class="btn btn-primary btn-lg" target="_blank" download>
+    <i class="bi bi-download"></i> Baixe meu CV
+  </a>
+</div>
+```
+
 
 ### Experiência Profissional
 
@@ -303,13 +315,15 @@ Olá, seja bem-vindo!
   <li>• SQL</li>
   <li>• Python</li>
   <li>• Linguagem R</li>
-  <li>• Power BI</li>
-  <li>• Tableau</li>
-  <li>• Looker Studio</li>
   <li>• Apache Spark</li>
   <li>• Apache Airflow</li>
   <li>• DuckDB</li>
   <li>• Databricks</li>
+  <li>• AWS</li>
+  <li>• Microsoft Fabric</li>
+  <li>• Power BI (DAX/M)</li>
+  <li>• Tableau</li>
+  <li>• Looker Studio</li>
 </ul>
 :::
 
@@ -317,21 +331,23 @@ Olá, seja bem-vindo!
 <h5><i class="bi bi-cpu"></i> Hard Skills</h5>
 <ul class="list-unstyled">
   <li>• Construção de Dashboards Interativos</li>
-  <li>• Vibe Coding</li>
   <li>• Criação de scripts, automações e macros</li>
   <li>• Análise e tratamento de dados</li>
   <li>• Estatística descritiva e inferencial</li>
   <li>• Testes estatísticos</li>
   <li>• Queries Big Data e interpretação</li>
-  <li>• Modelagem Preditiva</li>
+  <li>• Modelagem Preditiva e Prescritiva</li>
   <li>• Modelagem de Séries Temporais</li>
   <li>• Análise Multivariada</li>
   <li>• Redução de Dimensionalidade</li>
+  <li>• Aprendizagem Supervisionada e Não Supervisionada (Regressão, Classificação, Clusterização)</li>
   <li>• Validação Cruzada</li>
   <li>• Otimização de Hiperparâmetros</li>
   <li>• Algoritmos de aprendizagem de máquina</li>
+  <li>• Versionamento de Código (Git/Github)</li>
   <li>• Estruturação de Data Warehouses, Data Lakes, bancos relacionais e não relacionais (básico)</li>
   <li>• Deploy de modelos (básico)</li>
+  <li>• Vibe Coding</li>
 </ul>
 :::
 
@@ -339,11 +355,13 @@ Olá, seja bem-vindo!
 <h5><i class="bi bi-person-check"></i> Soft Skills</h5>
 <ul class="list-unstyled">
   <li>• Resolução de Problemas</li>
-  <li>• Pensamento Analítico</li>
   <li>• Comunicação Assertiva</li>
+  <li>• Raciocínio Lógico</li>
+  <li>• Storytelling</li>
+  <li>• Metodologias Ágeis</li>
+  <li>• Trabalho em Equipe</li>
   <li>• Ética e Governança</li>
   <li>• Aprendizagem Contínua</li>
-  <li>• Trabalho em Equipe</li>
 </ul>
 :::
 :::
@@ -357,7 +375,7 @@ Olá, seja bem-vindo!
   <a href="projetos.qmd" class="btn btn-success btn-lg">
     <i class="bi bi-kanban-fill"></i> Ver Meus Projetos
   </a>
-  <a href="cv/CvAnalistadeDadosSeniorGabriel Ferreira.pt.pdf" class="btn btn-primary btn-lg" target="_blank" download>
+  <a href="cv/CvCientistadeDadosGabrielFerreira.pdf" class="btn btn-primary btn-lg" target="_blank" download>
     <i class="bi bi-download"></i> Baixe meu CV
   </a>
 </div>
