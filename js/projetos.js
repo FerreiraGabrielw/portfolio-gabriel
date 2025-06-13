@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', function () {
         { 
             id: 'da-proj-1', 
             category: 'Data Analytics', 
-            title: 'Em andamento', 
-            tools: 'Power BI, SQL, DAX', 
-            description: 'Descrição completa do projeto 4.', 
-            link: '#',
-            image: 'images/dashboard-vendas.gif'
+            title: 'Análise de Clientes para Shopping Center', 
+            tools: 'Python', 
+            description: 'Este projeto foi realizado a partir de um conjunto de dados real, proveniente de um shopping center, com o objetivo principal de estudar as características e os padrões de compra de seus clientes', 
+            link: 'projetos/DataAnalytics/1CustumerShoppingCenter/1AnaliseDadosShoppingCenter.html',
+            image: 'projetos/DataAnalytics/1CustumerShoppingCenter/capa.png'
         },
         // Projetos de Dashboards
         { 

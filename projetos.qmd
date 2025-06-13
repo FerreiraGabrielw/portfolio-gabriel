@@ -7,6 +7,8 @@ format:
           <script src="js/projetos.js" defer></script>
 ---
 
+Apresento aqui alguns projetos nos quais trabalhei, organizados em seções de Projetos de Ciência de Dados, Análise de Dados e Dashboards. Sinta-se à vontade para analisá-los. Caso queira trocar uma ideia, estou à disposição.
+
 ### Data Science Projects
 
 <div id="ds-swiper" class="swiper projetos-swiper">
