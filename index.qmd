@@ -173,12 +173,12 @@ Olá, seja bem-vindo!
 ```{=html}
 <div class="formacao-item">
   <a href="cursos/zDiplomaPosGraduacao.pdf" target="_blank" class="diploma-container">
-    <img src="images/dsa.png" alt="Logo Data Science Academy">
+    <img src="images/logofacint.jpeg" alt="Logo Faculdade FACINT">
     <div class="diploma-overlay">
       <span>Ver Diploma</span>
     </div>
   </a>
-  <p><strong>Pós Graduação - Ciência de Dados</strong><br>Data Science Academy (2024-2025)</p>
+  <p><strong>Pós Graduação - Ciência de Dados</strong><br>Faculdade FACINT (2024-2025)</p>
 </div>
 ```
 :::
