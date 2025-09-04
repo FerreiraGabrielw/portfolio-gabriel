@@ -14,9 +14,9 @@ document.addEventListener('DOMContentLoaded', function () {
         { 
             id: 'da-proj-1', 
             category: 'Data Analytics', 
-            title: 'Análise de Clientes para Shopping Center', 
+            title: 'Customer Analysis for Shopping Center',
             tools: 'Python', 
-            description: 'Este projeto foi realizado a partir de um conjunto de dados real, proveniente de um shopping center, com o objetivo principal de estudar as características e os padrões de compra de seus clientes', 
+            description: 'This project was conducted using a real dataset from a shopping center, with the main objective of studying the characteristics and purchasing patterns of its customers', 
             link: 'projetos/DataAnalytics/1CustumerShoppingCenter/1AnaliseDadosShoppingCenter.html',
             image: 'projetos/DataAnalytics/1CustumerShoppingCenter/capa.png'
         },
