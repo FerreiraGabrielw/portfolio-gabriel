@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', function () {
         { 
             id: 'dash-proj-11', 
             category: 'Dashboards', 
-            title: 'Perfil do Mentorado', 
+            title: 'Mentee Profile', 
             tools: 'Power BI, DAX, M', 
-            description: ' Projeto que capicitou a empresa que trabalha com programas de mentoria a compreender melhor seu público-alvo, personalizar as ofertas de capacitação, otimizar a alocação de recursos e identificar talentos com alto potencial para desenvolvimento e migração de área.', 
+            description: ' Project that enabled the company working with mentoring programs to better understand its target audience, personalize training offers, optimize resource allocation, and identify talents with high potential for development and career migration.', 
             link: 'projetos/Dashboards/11ProjetoPerfilMentorado/Projeto11DA.html',
             image: 'projetos/Dashboards/11ProjetoPerfilMentorado/capa.png'
         },
@@ -107,16 +107,16 @@ document.addEventListener('DOMContentLoaded', function () {
             category: 'Dashboards', 
             title: 'Netflix', 
             tools: 'Tableau', 
-            description: 'This project presents an analytical Dashboard focused on Netflix\'s vast content library.', 
+            description: 'This project presents an analytical Dashboard focused on Netflix vast content library.', 
             link: 'projetos/Dashboards/9TableauDashboard/Projeto9DA.html',
             image: 'projetos/Dashboards/9TableauDashboard/capa.png'
         },
         { 
             id: 'dash-proj-10', 
             category: 'Dashboards', 
-            title: 'Pedidos', 
+            title: 'Orders', 
             tools: 'Loocker Studio', 
-            description: 'Este projeto apresenta um Dashboard de análise de pedidos, desenvolvido no Looker Studio.', 
+            description: 'This project presents an Order Analysis Dashboard, developed in Looker Studio.', 
             link: 'projetos/Dashboards/10DashboardLoockerStudio/Projeto10DA.html',
             image: 'projetos/Dashboards/10DashboardLoockerStudio/capa.png'
         },

@@ -9,7 +9,7 @@
 <meta name="author" content="Gabriel Ferreira">
 <meta name="dcterms.date" content="2024-06-02">
 
-<title>Projeto: Dashboard de Análise de Perfil de Mentorado e Potencial de Carreira</title>
+<title>Project: Mentee Profile and Career Potential Analysis Dashboard</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -47,7 +47,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projeto: Dashboard de Análise de Perfil de Mentorado e Potencial de Carreira</h1>
+<h1 class="title">Project: Mentee Profile and Career Potential Analysis Dashboard</h1>
 </div>
 
 
@@ -76,140 +76,145 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introdução" class="level1">
-<h1>Introdução</h1>
-<p>Este projeto apresenta um Dashboard analítico desenvolvido para traçar o perfil de indivíduos interessados em mentoria e desenvolvimento de carreira. O principal objetivo é fornecer uma visão detalhada sobre as características demográficas, formação acadêmica, experiência profissional, nível de conhecimento em diversas ferramentas e tecnologias, e aspirações de carreira dos mentorados. O painel visou capacitar a empresa que trabalha com programas de mentoria a compreender melhor seu público-alvo, personalizar as ofertas de capacitação, otimizar a alocação de recursos e identificar talentos com alto potencial para desenvolvimento e migração de área.</p>
-<section id="estrutura-do-projeto" class="level2">
-<h2 data-anchor-id="estrutura-do-projeto">Estrutura do Projeto</h2>
-<p>O dashboard é organizado para oferecer uma análise multidimensional do perfil dos indivíduos:</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>This project presents an analytical Dashboard developed to outline the profile of individuals interested in mentoring and career development. The main objective is to provide a detailed view of the mentees’ demographic characteristics, academic background, professional experience, level of knowledge in various tools and technologies, and career aspirations. The dashboard aims to empower the company working with mentoring programs to better understand its target audience, personalize training offers, optimize resource allocation, and identify talents with high potential for development and career migration.</p>
+<section id="project-structure" class="level2">
+<h2 data-anchor-id="project-structure">Project Structure</h2>
+<p>The dashboard is organized to offer a multidimensional analysis of individual profiles:</p>
 <ul>
-<li><strong>Visão Geral do Perfil</strong>: Total de pessoas analisadas, distribuição por gênero e taxa de conversão.</li>
-<li><strong>Dados Demográficos</strong>: Faixa etária, estado civil, origem do lead e distribuição geográfica por estado.</li>
-<li><strong>Perfil Profissional e Acadêmico</strong>: Média salarial, formação, interesse em migrar para outras áreas e tempo disponível para estudo.</li>
-<li><strong>Nível de Conhecimento em Ferramentas</strong>: Avaliação detalhada do conhecimento em SQL, Gestão de Projetos, Power BI, Dados e Excel, além do contato com metodologias ágeis (Kanban/Scrum).</li>
+<li><strong>Profile Overview</strong>: Total number of people analyzed, gender distribution, and conversion rate.</li>
+<li><strong>Demographic Data</strong>: Age group, marital status, lead source, and geographical distribution by state.</li>
+<li><strong>Professional and Academic Profile</strong>: Average salary, education, interest in migrating to other areas, and available study time.</li>
+<li><strong>Tool Knowledge Level</strong>: Detailed assessment of knowledge in SQL, Project Management, Power BI, Data, and Excel, as well as familiarity with agile methodologies (Kanban/Scrum).</li>
 </ul>
 </section>
-<section id="tecnologias-utilizadas" class="level2">
-<h2 data-anchor-id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
-<p>Para a construção deste dashboard analítico, as ferramentas empregadas foram:</p>
+<section id="technologies-used" class="level2">
+<h2 data-anchor-id="technologies-used">Technologies Used</h2>
+<p>For the construction of this analytical dashboard, the tools employed were:</p>
 <ul>
-<li><strong>Power BI Desktop</strong>: Para conectar as quatro bases de dados em Excel, realizar a modelagem e transformação necessárias, desenvolver as medidas DAX para cálculos complexos e construir os visuais interativos que compõem o dashboard.</li>
-<li><strong>Figma</strong>: A prototipação e o design do dashboard foram feitos com o Figma, garantindo uma experiência de usuário intuitiva e visualmente atraente.</li>
+<li><strong>Power BI Desktop</strong>: To connect the four Excel databases, perform the necessary modeling and transformation, develop DAX measures for complex calculations, and build the interactive visuals that compose the dashboard.</li>
+<li><strong>Figma</strong>: The prototyping and design of the dashboard were done with Figma, ensuring an intuitive and visually appealing user experience.</li>
 </ul>
 </section>
-<section id="processo-de-etl-extração-transformação-e-carregamento" class="level2">
-<h2 data-anchor-id="processo-de-etl-extração-transformação-e-carregamento">Processo de ETL (Extração, Transformação e Carregamento)</h2>
-<p>O processo de ETL para o Dashboard de Análise de Perfil de Mentorado foi estruturado para integrar informações de diversas fontes, garantindo uma visão completa e precisa:</p>
+<section id="etl-process-extraction-transformation-and-loading" class="level2">
+<h2 data-anchor-id="etl-process-extraction-transformation-and-loading">ETL Process (Extraction, Transformation, and Loading)</h2>
+<p>The ETL process for the Mentee Profile Analysis Dashboard was structured to integrate information from various sources, ensuring a complete and accurate view:</p>
 <ol type="1">
-<li><strong>Extração</strong>: Os dados brutos foram extraídos de quatro bases de dados distintas, todas em formato Excel. Cada base possivelmente continha informações específicas sobre um aspecto do perfil do mentorado.</li>
-<li><strong>Transformação</strong>: No Power Query, parte integrante do Power BI, foram realizadas diversas operações de limpeza e enriquecimento. Isso incluiu:
+<li><strong>Extraction</strong>: Raw data was extracted from four distinct databases, all in Excel format. Each database likely contained specific information about an aspect of the mentee’s profile.</li>
+<li><strong>Transformation</strong>: In Power Query, an integral part of Power BI, various cleaning and enrichment operations were performed. This included:
 <ul>
-<li>Tratamento de dados, como padronização de campos e correção de valores.</li>
-<li>Criação de novas colunas e métricas calculadas essenciais para as análises, utilizando a linguagem M.</li>
-<li>A modelagem de dados foi crucial. Relacionamentos foram estabelecidos entre as quatro bases de dados, garantindo que todas as informações pudessem ser corretamente agregadas e filtradas para análises multidimensionais do perfil.</li>
+<li>Data treatment, such as field standardization and value correction.</li>
+<li>Creation of new columns and calculated metrics essential for analyses, using the M language.</li>
+<li>Data modeling was crucial. Relationships were established between the four databases, ensuring that all information could be correctly aggregated and filtered for multidimensional profile analyses.</li>
 </ul></li>
-<li><strong>Carregamento</strong>: Após as etapas de extração e transformação, os dados foram carregados no modelo de dados do Power BI, estando prontos para alimentar todos os gráficos e tabelas do dashboard, permitindo a exploração interativa dos perfis analisados.</li>
+<li><strong>Loading</strong>: After the extraction and transformation steps, the data was loaded into the Power BI data model, ready to feed all the charts and tables of the dashboard, allowing for interactive exploration of the analyzed profiles.</li>
 </ol>
 </section>
 </section>
 <section id="dashboard" class="level1">
 <h1>Dashboard</h1>
-<p>Com uma organização que facilita a compreensão das diversas características dos indivíduos. A interface combina cartões de KPI para os totais gerais, gráficos de barras e rosca para distribuições percentuais (gênero, faixa etária, estado civil), gráficos de barras horizontais para rankings (origem do lead, estados) e visuais de barras para níveis de conhecimento e tempo de estudo. A interatividade é um recurso central, permitindo a filtragem por diferentes dimensões e facilitando a identificação de segmentos específicos de mentorados.</p>
+<p>With an organization that facilitates the understanding of the diverse characteristics of individuals. The interface combines KPI cards for general totals, donut and bar charts for percentage distributions (gender, age group, marital status), horizontal bar charts for rankings (lead source, states), and bar visuals for knowledge levels and study time. Interactivity is a central feature, allowing filtering by different dimensions and facilitating the identification of specific mentee segments.</p>
 <div style="text-align:center;">
 <p><img src="imagem1.png" alt=""></p>
 </div>
 <section id="insights" class="level2">
 <h2 data-anchor-id="insights">Insights</h2>
-<p>A análise dos dados apresentados no dashboard revelou insights valiosos sobre o perfil dos mentorados:</p>
+<p>The analysis of the data presented in the dashboard revealed valuable insights into the mentees’ profiles:</p>
 <ul>
-<li><strong>Público Principal e Taxa de Conversão</strong>:
+<li><strong>Main Audience and Conversion Rate</strong>:
 <ul>
-<li>O painel indica um Total de Compradores de 660 indivíduos.</li>
-<li>A Taxa de Conversão geral é de 67%, com 71,06% de Compradores Homens e 28,94% de Compradoras Mulheres.</li>
-<li>Curiosamente, 23,18% dos Compradores possuem filhos, oferecendo um detalhe sobre o perfil familiar.</li>
+<li>The dashboard indicates a <strong>Total Buyers</strong> of 660 individuals.</li>
+<li>The overall <strong>Conversion Rate</strong> is 67%, with 71.06% Male Buyers and 28.94% Female Buyers.</li>
+<li>Interestingly, 23.18% of Buyers have children, providing a detail about the family profile.</li>
 </ul></li>
 </ul>
 <div style="text-align:center;">
 <p><img src="imagem2.png" alt=""></p>
 </div>
 <ul>
-<li><strong>Distribuição Demográfica</strong>:
+<li><strong>Demographic Distribution</strong>:
 <ul>
-<li>Entre os indivíduos analisados, a maioria tem entre 25 e 35 anos (394), seguido por 18 a 25 anos (163) e 35 a 45 anos (90). Isso aponta para um público predominantemente jovem a meia-idade.
+<li>Among the individuals analyzed, the majority are between <strong>25 and 35 years old (394)</strong>, followed by 18 to 25 years old (163) and 35 to 45 years old (90). This points to a predominantly young to middle-aged audience.
 <div style="text-align:center;">
 <img src="imagem3.png" alt="">
 </div></li>
-<li>A distribuição por Estado Civil mostra que a maior parte é Solteira (436), seguida por Casado(a) (207).
+<li>The <strong>Marital Status</strong> distribution shows that most are <strong>Single (436)</strong>, followed by Married (207).
 <div style="text-align:center;">
 <img src="imagem5.png" alt="">
 </div></li>
-<li>Em termos de Origem do Lead, o Instagram (590) é a principal fonte, destacando a relevância dessa plataforma para o engajamento desse público.
+<li>In terms of <strong>Lead Source</strong>, <strong>Instagram (590)</strong> is the main source, highlighting the relevance of this platform for engaging this audience.
 <div style="text-align:center;">
 <img src="imagem6.png" alt="">
 </div></li>
-<li>A distribuição geográfica dos leads é concentrada em SP (171), RS (82) e RJ (73), indicando os principais mercados de interesse.
+<li>The geographical distribution of leads is concentrated in <strong>SP (171), RS (82), and RJ (73)</strong>, indicating the main markets of interest.
 <div style="text-align:center;">
 <img src="imagem4.png" alt="">
 </div></li>
 </ul></li>
-<li><strong>Perfil Profissional e Aspirações</strong>:
+<li><strong>Professional Profile and Aspirations</strong>:
 <ul>
-<li>A Média Salarial dos participantes é de R$ 3.778 fornecendo um panorama financeiro.
+<li>The <strong>Average Salary</strong> of participants is R$ 3,778, providing a financial overview.
 <div style="text-align:center;">
 <img src="imagem7.png" alt="">
 </div></li>
-<li>Um percentual significativo de 87,88% dos indivíduos tem interesse em Migrar para uma Nova Área, sublinhando a busca por desenvolvimento e novas oportunidades de carreira.
+<li>A significant percentage of <strong>87.88%</strong> of individuals are interested in <strong>Migrating to a New Area</strong>, underscoring the pursuit of development and new career opportunities.
 <div style="text-align:center;">
 <img src="imagem8.png" alt="">
 </div></li>
-<li>Em relação ao Tempo Disponível para Estudo, a maior parte dedica 2 a 4 horas (270 pessoas), seguido por 1 a 2 horas (236 pessoas), o que é importante para o planejamento de programas de estudo.
+<li>Regarding <strong>Available Study Time</strong>, most dedicate <strong>2 to 4 hours (270 people)</strong>, followed by 1 to 2 hours (236 people), which is important for planning study programs.
 <div style="text-align:center;">
 <img src="imagem9.png" alt="">
 </div></li>
 </ul></li>
-<li><strong>Nível de Conhecimento e Formação</strong>:
+<li><strong>Knowledge Level and Education</strong>:
 <ul>
-<li>A análise de conhecimento em Excel (66,21%) é a mais alta, seguida por Conhecimento em Dados (44,85%) e Power BI (22,58%). O conhecimento em SQL (14,55%) e Gestão de Projetos (18,33%) são menores, indicando lacunas potenciais.
+<li>Knowledge in <strong>Excel (66.21%)</strong> is the highest, followed by Knowledge in Data (44.85%) and Power BI (22.58%). Knowledge in <strong>SQL (14.55%)</strong> and <strong>Project Management (18.33%)</strong> is lower, indicating potential gaps.
 <div style="text-align:center;">
 <img src="imagem10.png" alt="">
 </div></li>
-<li>Em termos de Formação, a maioria possui Ensino Superior Completo (302), seguido por Ensino Superior Incompleto (161) e Ensino Médio Completo (147).
+<li>In terms of <strong>Education</strong>, most have a <strong>Completed Higher Education (302)</strong>, followed by Incomplete Higher Education (161) and Completed High School (147).
 <div style="text-align:center;">
 <img src="imagem11.png" alt="">
 </div></li>
-<li>No detalhe de Conhecimento em Power BI, Excel e SQL, a categoria “Básico” é a mais comum, e um percentual considerável “Nunca teve contato”, especialmente em SQL e Power BI. Isso ressalta a necessidade de programas de formação fundamental nessas áreas.</li>
-<li>Aprofundando em Conhecimento em Power BI (DAX, M), 346 pessoas têm nível básico. Em Nível em Excel, 346 estão no básico. Em Nível de SQL, 243 estão no básico. Isso reforça a demanda por capacitação introdutória.</li>
-<li>Quanto ao contato com Kanban/Scrum, a maioria “Não teve contato” (378) ou “Tem dificuldade” (180), indicando uma oportunidade para treinamento em metodologias ágeis.
+<li>In the detail of Knowledge in Power BI, Excel, and SQL, the “Basic” category is the most common, and a considerable percentage “Never had contact,” especially in SQL and Power BI. This highlights the need for fundamental training programs in these areas.</li>
+<li>Delving into <strong>Power BI Knowledge (DAX, M)</strong>, 346 people have a basic level. For <strong>Excel Level</strong>, 346 are at a basic level. For <strong>SQL Level</strong>, 243 are at a basic level. This reinforces the demand for introductory training.</li>
+<li>As for contact with <strong>Kanban/Scrum</strong>, most “Had no contact” (378) or “Have difficulty” (180), indicating an opportunity for training in agile methodologies.
 <div style="text-align:center;">
 <p><img src="imagem12.png" alt=""></p>
 </div></li>
 </ul></li>
 </ul>
 </section>
-<section id="considerações" class="level2">
-<h2 data-anchor-id="considerações">Considerações</h2>
-<p>O dashboard oferece uma base sólida para aprimorar programas de capacitação e estratégias de recrutamento. A partir dos insights obtidos, algumas considerações importantes surgem:</p>
+<section id="considerations" class="level2">
+<h2 data-anchor-id="considerations">Considerations</h2>
+<p>The dashboard provides a solid foundation for enhancing training programs and recruitment strategies. Based on the insights obtained, some important considerations arise:</p>
 <ul>
-<li><strong>Desenvolvimento de Habilidades</strong>: Há uma clara demanda por conhecimento em <strong>Dados</strong> e <strong>Excel</strong>, e uma oportunidade para programas de base em <strong>Power BI</strong> e <strong>SQL</strong>, visto que muitos estão em nível básico ou nunca tiveram contato.</li>
-<li><strong>Atração e Engajamento</strong>: O Instagram é um canal eficaz para atrair leads. Compreender o perfil do público (jovens adultos, solteiros) e suas aspirações (migrar de área, buscar desenvolvimento) pode otimizar as campanhas de engajamento.</li>
-<li><strong>Adaptação de Programas de Estudo</strong>: A maioria dos mentorados dispõe de 2 a 4 horas para estudo, o que deve ser considerado ao estruturar a carga horária e o formato dos cursos.</li>
-<li><strong>Treinamento em Metodologias Ágeis</strong>: A alta proporção de pessoas sem contato ou com dificuldade em Kanban/Scrum sugere uma grande demanda latente por essa habilidade, essencial no mercado de trabalho atual.</li>
-<li><strong>Segmentação por Região</strong>: A concentração de leads em estados como SP, RS e RJ pode guiar a alocação de recursos e a realização de eventos presenciais ou focados regionalmente.</li>
+<li><strong>Skills Development</strong>: There is a clear demand for knowledge in <strong>Data</strong> and <strong>Excel</strong>, and an opportunity for foundational programs in <strong>Power BI</strong> and <strong>SQL</strong>, as many are at a basic level or have never had contact.</li>
+<li><strong>Attraction and Engagement</strong>: Instagram is an effective channel for attracting leads. Understanding the audience profile (young adults, singles) and their aspirations (career migration, seeking development) can optimize engagement campaigns.</li>
+<li><strong>Adaptation of Study Programs</strong>: Most mentees have 2 to 4 hours available for study, which should be considered when structuring the workload and format of courses.</li>
+<li><strong>Agile Methodology Training</strong>: The high proportion of people without contact or with difficulty in Kanban/Scrum suggests a large latent demand for this skill, essential in today’s job market.</li>
+<li><strong>Segmentation by Region</strong>: The concentration of leads in states like SP, RS, and RJ can guide resource allocation and the execution of in-person or regionally focused events.</li>
 </ul>
 </section>
-<section id="conclusão" class="level2">
-<h2 data-anchor-id="conclusão">Conclusão</h2>
-<p>O Dashboard foi uma ferramenta analítica estratégica que transformou dados brutos em inteligência que geraram impacto para a empresa. Sua principal contribuição residiu na capacidade de:</p>
+<section id="conclusion" class="level2">
+<h2 data-anchor-id="conclusion">Conclusion</h2>
+<p>The Dashboard was a strategic analytical tool that transformed raw data into actionable intelligence that generated impact for the company. Its main contribution lies in its ability to:</p>
 <ul>
-<li>Fornecer um panorama detalhado das características demográficas, acadêmicas e profissionais dos mentorados.</li>
-<li>Identificar lacunas de conhecimento e áreas de alta demanda por desenvolvimento de habilidades.</li>
-<li>Permitir a personalização de ofertas de capacitação e a otimização de estratégias de engajamento.</li>
+<li>Provide a detailed overview of the demographic, academic, and professional characteristics of mentees.</li>
+<li>Identify knowledge gaps and areas of high demand for skills development.</li>
+<li>Enable the personalization of training offers and the optimization of engagement strategies.</li>
 </ul>
-<p>Esse projeto teve como resultado: - Otimização de Custos de Marketing em 30%: Contribuição direta para a redução de 30% nos custos de marketing dos clientes, através do desenvolvimento de dashboards que permitiram a análise de performance de campanhas e a otimização da alocação de investimentos. Este resultado foi alcançado após propor uma nova estratégia de segmentação de público, baseada em insights extraídos da análise de dados, para direcionar os funis de venda de forma mais eficaz.</p>
 </section>
-<section id="link-para-o-dashboard" class="level2">
-<h2 data-anchor-id="link-para-o-dashboard">Link para o Dashboard:</h2>
-<p><a href="https://app.powerbi.com/groups/me/reports/33d5b95e-9fb9-47d2-8af1-a0eeaa0ded0d/ReportSection259bd8bfc3ddcb04fdf2?experience=power-bi" target="_blank" rel="noopener noreferrer"> Clique aqui para acessar o relatório no Power BI </a></p>
+<section id="result" class="level2">
+<h2 data-anchor-id="result">Result:</h2>
+<ul>
+<li>This project resulted in Marketing Cost Optimization, with a 30% reduction in customer marketing costs, through the development of dashboards that allowed for campaign performance analysis and investment allocation optimization. This result was achieved after proposing a new audience segmentation strategy, based on insights extracted from data analysis, to more effectively direct sales funnels.</li>
+</ul>
+</section>
+<section id="link-to-the-dashboard" class="level2">
+<h2 data-anchor-id="link-to-the-dashboard">Link to the Dashboard:</h2>
+<p><a href="https://app.powerbi.com/groups/me/reports/33d5b95e-9fb9-47d2-8af1-a0eeaa0ded0d/ReportSection259bd8bfc3ddcb04fdf2?experience=power-bi" rel="noopener noreferrer"> Click here to access the report in Power BI </a></p>
 </section>
 </section>
 
