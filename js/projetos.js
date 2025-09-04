@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: 'Dashboards', 
             title: 'Tech Trend', 
             tools: 'Power BI, DAX, M',   
-            description: 'Este projeto apresenta um Dashboard de Marketing Analytics, construído para fornecer uma visão abrangente do desempenho das campanhas digitais e do comportamento do usuário', 
+            description: 'This project presents a Marketing Analytics Dashboard, built to provide a comprehensive view of digital campaign performance and user behavior', 
             link: 'projetos/Dashboards/4CaseTechTrends/Projeto4DA.html',
             image: 'projetos/Dashboards/4CaseTechTrends/capa.png'
         },
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: 'Dashboards', 
             title: 'Bite Speed', 
             tools: 'Power BI, DAX, M',   
-            description: 'Este projeto apresenta um Dashboard desenvolvido para a empresa fictícia BiteSpeed, com o objetivo primordial de fornecer uma visão consolidada e acionável sobre as operações.', 
+            description: 'This project presents a Dashboard developed for the fictional company BiteSpeed, with the primary objective of providing a consolidated and actionable view of operations.', 
             link: 'projetos/Dashboards/3DashboardBiteSpeed/Projeto3DA.html',
             image: 'projetos/Dashboards/3DashboardBiteSpeed/capa.png'
         },

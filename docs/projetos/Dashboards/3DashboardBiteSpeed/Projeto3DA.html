@@ -9,7 +9,7 @@
 <meta name="author" content="Gabriel Ferreira">
 <meta name="dcterms.date" content="2022-05-10">
 
-<title>Projeto: Dashboard BiteSpeed - Análise de Performance Operacional e de Vendas</title>
+<title>Project: BiteSpeed Dashboard - Operational and Sales Performance Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -48,7 +48,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projeto: Dashboard BiteSpeed - Análise de Performance Operacional e de Vendas</h1>
+<h1 class="title">Project: BiteSpeed Dashboard - Operational and Sales Performance Analysis</h1>
 </div>
 
 
@@ -77,138 +77,138 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introdução" class="level1">
-<h1>Introdução</h1>
-<p>Este projeto apresenta um Dashboard desenvolvido para a empresa fictícia BiteSpeed, com o objetivo primordial de fornecer uma visão consolidada e acionável sobre as operações de vendas e o desempenho do serviço de atendimento ao cliente. A solução foi projetada para permitir que gestores e equipes operacionais monitorem métricas chave de vendas, produção e, crucialmente, o tempo médio de atendimento em diferentes canais e regiões. Ao integrar dados de vendas, atendimento e demografia do cliente, o painel capacita a empresa a identificar gargalos, otimizar processos, aprimorar a experiência do cliente e direcionar campanhas de marketing de forma mais eficaz.</p>
-<section id="estrutura-do-projeto" class="level2">
-<h2 class="anchored" data-anchor-id="estrutura-do-projeto">Estrutura do Projeto</h2>
-<p>Os principais requisitos e indicadores desenvolvidos para esta análise, visando uma gestão mais eficiente do negócio, foram:</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>This project presents a Dashboard developed for the fictional company BiteSpeed, with the primary objective of providing a consolidated and actionable view of sales operations and customer service performance. The solution was designed to allow managers and operational teams to monitor key sales and production metrics and, crucially, the average service time across different channels and regions. By integrating sales, service, and customer demographic data, the dashboard empowers the company to identify bottlenecks, optimize processes, improve customer experience, and direct marketing campaigns more effectively.</p>
+<section id="project-structure" class="level2">
+<h2 class="anchored" data-anchor-id="project-structure">Project Structure</h2>
+<p>The main requirements and indicators developed for this analysis, aiming for more efficient business management, were:</p>
 <ul>
-<li><strong>Performance Financeira e Operacional Global</strong>: Total de Vendas, Total de Produção e Quantidade Vendida, oferecendo um panorama macro do volume de negócios da empresa.</li>
-<li><strong>Desempenho Regional</strong>: Análise das vendas e outras métricas por regiões geográficas (Centro, Leste, Norte, Oeste, Sul).</li>
-<li><strong>Tempo de Atendimento ao Cliente</strong>: Monitoramento da média de tempo de atendimento, detalhado por tipo de serviço (Drive-Thru, Delivery, Balcão), por gênero do cliente e, de forma granular, por colaboradores específicos.</li>
-<li><strong>Análise Geográfica do Atendimento</strong>: Visualização da média de tempo de atendimento por estado, destacando áreas que requerem atenção ou que performam excepcionalmente bem.</li>
-<li><strong>Composição de Vendas por Produto</strong>: Detalhamento das vendas totais por categoria de produto (Hambúrguer, Sobremesa, Bebida, Acompanhamento).</li>
-<li><strong>Lucratividade por Categoria</strong>: Apuração do lucro gerado por cada categoria de produto, permitindo decisões estratégicas sobre o mix de produtos.</li>
-<li><strong>Tendência de Vendas ao Longo do Tempo</strong>: Gráfico da evolução das vendas totais ao longo dos meses do ano, para identificar sazonalidades e padrões de consumo.</li>
-<li><strong>Demografia de Vendas</strong>: Análise da distribuição das vendas por faixa etária e gênero, oferecendo insights valiosos para campanhas de marketing e segmentação de público.</li>
+<li><strong>Global Financial and Operational Performance</strong>: Total Sales, Total Production, and Quantity Sold, offering a macro overview of the company’s business volume.</li>
+<li><strong>Regional Performance</strong>: Analysis of sales and other metrics by geographical regions (Central, East, North, West, South).</li>
+<li><strong>Customer Service Time</strong>: Monitoring of the average service time, detailed by service type (Drive-Thru, Delivery, Counter), by customer gender, and, in a granular way, by specific employees.</li>
+<li><strong>Geographic Analysis of Service</strong>: Visualization of the average service time by state, highlighting areas that require attention or that perform exceptionally well.</li>
+<li><strong>Sales Composition by Product</strong>: Detailing total sales by product category (Hamburger, Dessert, Drink, Side Dish).</li>
+<li><strong>Profitability by Category</strong>: Calculation of the profit generated by each product category, allowing for strategic decisions on the product mix.</li>
+<li><strong>Sales Trend Over Time</strong>: Graph of the evolution of total sales throughout the months of the year, to identify seasonality and consumption patterns.</li>
+<li><strong>Sales Demographics</strong>: Analysis of sales distribution by age group and gender, offering valuable insights for marketing campaigns and audience segmentation.</li>
 </ul>
 </section>
-<section id="tecnologias-utilizadas" class="level2">
-<h2 class="anchored" data-anchor-id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
-<p>Para a construção deste dashboard analítico, as ferramentas empregadas foram:</p>
+<section id="technologies-used" class="level2">
+<h2 class="anchored" data-anchor-id="technologies-used">Technologies Used</h2>
+<p>For the construction of this analytical dashboard, the tools employed were:</p>
 <ul>
-<li><p><strong>Power BI Desktop</strong>: Para conectar as fontes de dados, realizar a modelagem e transformação necessárias, e desenvolver os visuais interativos que compõem o dashboard.</p></li>
-<li><p><strong>Figma</strong>: A prototipação e o design do dashboard foram feitos com o Figma</p></li>
+<li><p><strong>Power BI Desktop</strong>: To connect data sources, perform the necessary modeling and transformation, and develop the interactive visuals that compose the dashboard.</p></li>
+<li><p><strong>Figma</strong>: The prototyping and design of the dashboard were done with Figma.</p></li>
 </ul>
 </section>
-<section id="processo-de-etl-extração-transformação-e-carregamento" class="level2">
-<h2 class="anchored" data-anchor-id="processo-de-etl-extração-transformação-e-carregamento">Processo de ETL (Extração, Transformação e Carregamento)</h2>
-<p>O processo de ETL para o Dashboard BiteSpeed foi cuidadosamente planejado para garantir a qualidade e a integridade dos dados:</p>
+<section id="etl-process-extraction-transformation-and-loading" class="level2">
+<h2 class="anchored" data-anchor-id="etl-process-extraction-transformation-and-loading">ETL Process (Extraction, Transformation, and Loading)</h2>
+<p>The ETL process for the BiteSpeed Dashboard was carefully planned to ensure data quality and integrity:</p>
 <ol type="1">
-<li><strong>Extração</strong>: Os dados foram obtidos de suas fontes operacionais, que em um ambiente de quick-service incluiriam sistemas de Ponto de Venda (PDV) para vendas, sistemas de gerenciamento de pedidos para tempos de atendimento, sistemas de RH para dados de colaboradores. Os dados foram fornecidos em <code>.xls</code> e <code>.csv</code>, contendo informações detalhadas sobre transações, produtos, horários de atendimento e dados demográficos dos clientes.</li>
-<li><strong>Transformação</strong>: No Power Query, parte integrante do Power BI, foram realizadas diversas operações de limpeza e enriquecimento. Isso incluiu:
+<li><strong>Extraction</strong>: Data was obtained from its operational sources, which in a quick-service environment would include Point of Sale (POS) systems for sales, order management systems for service times, HR systems for employee data. The data was provided in <code>.xls</code> and <code>.csv</code> formats, containing detailed information about transactions, products, service times, and customer demographics.</li>
+<li><strong>Transformation</strong>: In Power Query, an integral part of Power BI, various cleaning and enrichment operations were performed. This included:
 <ul>
-<li>Padronização de nomes de regiões e categorias de produto.</li>
-<li>Tratamento de dados temporais para permitir análises por mês.</li>
+<li>Standardization of region names and product categories.</li>
+<li>Handling of temporal data to allow analysis by month.</li>
 </ul></li>
 </ol>
-<p>A modelagem de dados foi fundamental para estabelecer relacionamentos entre as tabelas fato e dimensão, assegurando que todas as informações pudessem ser corretamente filtradas e visualizadas em conjunto.</p>
+<p>Data modeling was fundamental to establish relationships between fact and dimension tables, ensuring that all information could be correctly filtered and viewed together.</p>
 <ol start="3" type="1">
-<li><strong>Carregamento</strong>: Após as etapas de extração e transformação, os dados foram carregados no modelo de dados do Power BI, estando prontos para alimentar todos os gráficos e tabelas do dashboard, permitindo a exploração interativa.</li>
+<li><strong>Loading</strong>: After the extraction and transformation steps, the data was loaded into the Power BI data model, ready to feed all the charts and tables of the dashboard, allowing for interactive exploration.</li>
 </ol>
 </section>
 </section>
 <section id="dashboard" class="level1">
 <h1>Dashboard</h1>
-<p>O dashboard apresenta-se com um layout organizado para fornecer uma visão clara dos principais indicadores em um único olhar. A interface utiliza uma combinação de cartões de KPI para os totais gerais, gráficos de barras para comparações (por produto, categoria), gráficos de rosca para proporções (tempo de atendimento por tipo/gênero) e um mapa de calor para a análise geográfica do tempo de atendimento. A interatividade é um diferencial, permitindo que os usuários filtrem os dados por região, período ou até mesmo por colaborador, facilitando a exploração de insights específicos e a identificação de áreas de melhoria.</p>
+<p>The dashboard features an organized layout to provide a clear view of the main indicators at a glance. The interface uses a combination of KPI cards for overall totals, bar charts for comparisons (by product, category), donut charts for proportions (service time by type/gender), and a heatmap for the geographical analysis of service time. Interactivity is a key differentiator, allowing users to filter data by region, period, or even by employee, facilitating the exploration of specific insights and the identification of areas for improvement.</p>
 <div style="text-align:center;">
 <p><img src="imagem1.png" alt=""></p>
 </div>
 <section id="insights" class="level2">
 <h2 class="anchored" data-anchor-id="insights">Insights</h2>
-<p>A análise dos dados apresentados no Dashboard revelou insights valiosos sobre a performance operacional e comercial da empresa:</p>
+<p>The analysis of the data presented in the Dashboard revealed valuable insights into the company’s operational and commercial performance:</p>
 <ul>
-<li><strong>Visão Financeira e Operacional Consolidada</strong>:
+<li><strong>Consolidated Financial and Operational View</strong>:
 <ul>
-<li>No panorama geral, o dashboard destaca importantes indicadores: um <strong>Total de Vendas de R$ 10,6 Milhões</strong>, uma <strong>Quantidade Vendida de R$ 21,3 Mil</strong> itens e um <strong>Total de Produção de R$ 100,4 Mil</strong> unidades. Essas métricas oferecem uma base sólida para entender a escala das operações da empresa.</li>
+<li>In the overall panorama, the dashboard highlights important indicators: <strong>Total Sales of R$ 10.6 Million</strong>, <strong>Quantity Sold of R$ 21.3 Thousand</strong> items, and <strong>Total Production of R$ 100.4 Thousand</strong> units. These metrics offer a solid base for understanding the scale of the company’s operations.</li>
 </ul></li>
 </ul>
 <div style="text-align:center;">
 <p><img src="imagem2.png" alt=""></p>
 </div>
 <ul>
-<li><strong>Tendência de Vendas por Mês</strong>:
+<li><strong>Sales Trend by Month</strong>:
 <ul>
-<li>O gráfico “Total de Venda por Mês” mostra a progressão das vendas ao longo do ano (de janeiro a dezembro). A linha de tendência permite identificar padrões sazonais ou o impacto de campanhas específicas. Para um negócio, essa visualização é fundamental para planejar estoques, alocação de pessoal e estratégias de marketing futuras.</li>
+<li>The “Total Sales by Month” chart shows the progression of sales throughout the year (from January to December). The trend line allows for the identification of seasonal patterns or the impact of specific campaigns. For a business, this visualization is fundamental for planning inventory, personnel allocation, and future marketing strategies.</li>
 </ul></li>
 </ul>
 <div style="text-align:center;">
 <p><img src="imagem3.png" alt=""></p>
 </div>
 <ul>
-<li><strong>Performance de Vendas e Lucro por Categoria de Produto</strong>:
+<li><strong>Sales Performance and Profit by Product Category</strong>:
 <ul>
-<li>A categoria Hambúrguer se destaca significativamente nas vendas com R$ 4,9 Milhões, Sobremesa contribui com R$ 3,0 Milhões em vendas, Bebida com R$ 1,4 Milhão e Acompanhamento com R$ 1,4 Milhão.</li>
+<li>The Hamburger category significantly stands out in sales with R$ 4.9 Million, Dessert contributes R$ 3.0 Million in sales, Drinks with R$ 1.4 Million, and Sides with R$ 1.4 Million.</li>
 </ul></li>
 </ul>
-<p>Este insight é vital para a otimização do mix de produtos e estratégias de rentabilidade.</p>
+<p>This insight is vital for optimizing the product mix and profitability strategies.</p>
 <div style="text-align:center;">
 <p><img src="imagem4.png" alt=""></p>
 </div>
 <ul>
-<li><strong>Análise Detalhada do Tempo de Atendimento</strong>:
+<li><strong>Detailed Service Time Analysis</strong>:
 <ul>
-<li>O dashboard oferece uma visão multifacetada do tempo de atendimento médio, crucial para a satisfação do cliente.</li>
-<li>Por Tipo de atendimento: O tempo médio de atendimento é de 7,82 minutos para o Balcão (representando 32,65% do tempo total de atendimento) e 8,13 minutos para o Drive-Thru (33,91%).</li>
-<li>O Delivery registra uma média de 8,01 minutos (33,44% do tempo total de atendimento).</li>
+<li>The dashboard offers a multifaceted view of the average service time, crucial for customer satisfaction.</li>
+<li>By Service Type: The average service time is 7.82 minutes for Counter (representing 32.65% of total service time) and 8.13 minutes for Drive-Thru (33.91%).</li>
+<li>Delivery records an average of 8.01 minutes (33.44% of total service time).</li>
 </ul></li>
 </ul>
-<p>A identificação dessas médias permite que a empresa invista em treinamento específico ou melhorias de processo para os canais e públicos que apresentam tempos de atendimento mais longos.</p>
+<p>Identifying these averages allows the company to invest in specific training or process improvements for channels and audiences that experience longer service times.</p>
 <div style="text-align:center;">
 <p><img src="imagem5.png" alt=""></p>
 </div>
 <ul>
-<li><strong>Desempenho Individual no Atendimento</strong>:
+<li><strong>Individual Service Performance</strong>:
 <ul>
-<li>Além das médias gerais, o painel permite acompanhar o tempo de atendimento de colaboradores específicos: Aaron Kelley (10 min), Aaron Lyons (4 min) e Aaron Mccall (7 min). Essa granularidade é extremamente útil para identificar funcionários de alta performance que podem servir de exemplo, e para oferecer suporte ou treinamento adicional àqueles que precisam otimizar seu tempo de serviço.</li>
+<li>In addition to general averages, the dashboard allows tracking the service time of specific employees: Aaron Kelley (10 min), Aaron Lyons (4 min), and Aaron Mccall (7 min). This granularity is extremely useful for identifying high-performing employees who can serve as examples, and for offering support or additional training to those who need to optimize their service time.</li>
 </ul></li>
-<li><strong>Vendas por Faixa Etária e Gênero</strong>:
+<li><strong>Sales by Age Group and Gender</strong>:
 <ul>
-<li>Os gráficos de barras para “Vendas por Faixa Etária e Gênero” são essenciais para entender o perfil do consumidor. Eles mostram a distribuição de vendas por grupos de idade (18-30 Anos, 31-50 Anos, 51-70+ Anos) e segregam essa informação por gênero (feminino e masculino, inferido pelas duas barras distintas para cada faixa etária).</li>
-<li>Observa-se que as vendas são significativas em todas as faixas etárias, mas com volumes distintos em cada uma. Destaca-se que a faixa etária de 31-50 e 51-70+ anos estão a frente da faixa etária mais jovem de 18-30 anos, além de poder observar um equilibrio claro entre os gêneros.</li>
+<li>The bar charts for “Sales by Age Group and Gender” are essential for understanding the consumer profile. They show the distribution of sales by age groups (18-30 Years, 31-50 Years, 51-70+ Years) and segregate this information by gender (female and male, inferred by the two distinct bars for each age group).</li>
+<li>It is observed that sales are significant across all age groups, but with distinct volumes in each. Notably, the 31-50 and 51-70+ age groups are ahead of the younger 18-30 age group, and a clear balance between genders can be observed.</li>
 </ul></li>
 </ul>
-<p>Esses insights demográficos são imposrtantes para a equipe de marketing, permitindo a criação de campanhas direcionadas, promoções específicas para certos grupos ou até mesmo o desenvolvimento de produtos que atendam melhor às preferências de diferentes segmentos de clientes.</p>
+<p>These demographic insights are important for the marketing team, allowing for the creation of highly personalized campaigns, specific promotions for certain groups, or even the development of products that better meet the preferences of different customer segments.</p>
 <div style="text-align:center;">
 <p><img src="imagem6.png" alt=""></p>
 </div>
 </section>
-<section id="considerações" class="level2">
-<h2 class="anchored" data-anchor-id="considerações">Considerações</h2>
-<p>O Dashboard ofereceu uma série de oportunidades para otimização e crescimento. A partir dos insights obtidos, algumas considerações importantes surgem:</p>
+<section id="considerations" class="level2">
+<h2 class="anchored" data-anchor-id="considerations">Considerations</h2>
+<p>The Dashboard offered a series of opportunities for optimization and growth. From the insights obtained, some important considerations arise:</p>
 <ul>
-<li><strong>Otimização do Atendimento ao Cliente</strong>: A análise detalhada dos tempos de atendimento por tipo (Drive-Thru, Delivery, Balcão) e por estado é crucial. A empresa pode implementar treinamentos específicos, reorganizar equipes ou investir em tecnologia para reduzir esses tempos, impactando diretamente a satisfação do cliente e a capacidade de servir mais consumidores.</li>
-<li><strong>Estratégias de Produto e Rentabilidade</strong>: A concentração de lucro na categoria de hambúrgueres exige atenção. É vital investigar por que outras categorias não mostram lucro aparente e explorar formas de otimizar suas margens, seja através de renegociação com fornecedores, otimização de processos de produção ou ajustes de preço. O dashboard sugere a necessidade de uma análise mais aprofundada de custos e precificação em outras categorias.</li>
-<li><strong>Marketing Orientado por Dados</strong>: A segmentação das vendas por faixa etária e gênero permite que a equipe de marketing crie campanhas altamente personalizadas. Por exemplo, se a faixa etária “18-30 Anos” demonstra ser um segmento forte, a empresa pode direcionar publicidade em plataformas sociais populares entre esse público.</li>
-<li><strong>Gestão de Desempenho de Colaboradores</strong>: O acompanhamento individual do tempo de atendimento de colaboradores como Aaron Kelley, Lyons e Mccall, é uma ferramenta poderosa para a gestão de performance. Isso permite identificar necessidades de treinamento, reconhecer e recompensar a eficiência, e promover um ambiente de trabalho focado na melhoria contínua do serviço.</li>
-<li><strong>Expansão e Otimização Regional</strong>: O mapa de tempo de atendimento por estado pode guiar futuras decisões de expansão ou a necessidade de intervenções em filiais de estados com desempenho inferior.</li>
+<li><strong>Customer Service Optimization</strong>: The detailed analysis of service times by type (Drive-Thru, Delivery, Counter) and by state is crucial. The company can implement specific training, reorganize teams, or invest in technology to reduce these times, directly impacting customer satisfaction and the ability to serve more consumers.</li>
+<li><strong>Product and Profitability Strategies</strong>: The concentration of profit in the hamburger category demands attention. It is vital to investigate why other categories do not show apparent profit and explore ways to optimize their margins, whether through renegotiation with suppliers, optimization of production processes, or price adjustments. The dashboard suggests the need for a more in-depth cost and pricing analysis in other categories.</li>
+<li><strong>Data-Driven Marketing</strong>: The segmentation of sales by age group and gender allows the marketing team to create highly personalized campaigns. For example, if the “18-30 Years” age group proves to be a strong segment, the company can direct advertising on social platforms popular among this audience.</li>
+<li><strong>Employee Performance Management</strong>: Individual tracking of employee service time, such as Aaron Kelley, Lyons, and Mccall, is a powerful tool for performance management. This allows identifying training needs, recognizing and rewarding efficiency, and fostering a work environment focused on continuous service improvement.</li>
+<li><strong>Regional Expansion and Optimization</strong>: The service time map by state can guide future expansion decisions or the need for interventions in branches in underperforming states.</li>
 </ul>
 </section>
-<section id="conclusão" class="level2">
-<h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
-<p>O Dashboard foi uma ferramenta analítica essencial que transforma dados operacionais e de vendas em inteligência acionável. Sua principal contribuição reside na capacidade de:</p>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The Dashboard was an essential analytical tool that transforms operational and sales data into actionable intelligence. Its main contribution lies in its ability to:</p>
 <ul>
-<li>Fornecer um panorama financeiro e operacional abrangente, facilitando o acompanhamento das metas de vendas e produção.</li>
-<li>Detalhar a performance do serviço de atendimento ao cliente por diversos ângulos (canal, gênero, indivíduo, localização), permitindo intervenções cirúrgicas para melhoria.</li>
-<li>Oferecer insights demográficos profundos sobre os clientes, subsidiando estratégias de marketing e desenvolvimento de produtos.</li>
-<li>Identificar oportunidades para otimizar o mix de produtos e a lucratividade das categorias.</li>
+<li>Provide a comprehensive financial and operational overview, facilitating the monitoring of sales and production goals.</li>
+<li>Detail customer service performance from various angles (channel, gender, individual, location), allowing for surgical interventions for improvement.</li>
+<li>Offer deep demographic insights into customers, supporting marketing strategies and product development.</li>
+<li>Identify opportunities to optimize the product mix and category profitability.</li>
 </ul>
-<p>Este projeto demonstra a habilidade em construir soluções de BI que capacitam empresas a entenderem profundamente suas operações, aprimorarem a experiência do cliente e tomarem decisões estratégicas baseadas em dados, impulsionando o crescimento e a eficiência em um mercado competitivo como o de quick-service.</p>
+<p>This project demonstrates the ability to build BI solutions that empower companies to deeply understand their operations, improve customer experience, and make strategic decisions based on data, driving growth and efficiency in a competitive market like quick-service.</p>
 </section>
-<section id="link-para-o-dashboard" class="level2">
-<h2 class="anchored" data-anchor-id="link-para-o-dashboard">Link para o Dashboard:</h2>
-<p><a href="https://app.powerbi.com/groups/me/reports/3fd60242-5e84-4e13-a6e4-8c12c5b021cc/ReportSectiond76d31f79c73f7fe0e3b?experience=power-bi" target="_blank" rel="noopener noreferrer"> Clique aqui para acessar o relatório no Power BI </a></p>
+<section id="link-to-the-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="link-to-the-dashboard">Link to the Dashboard:</h2>
+<p><a href="https://app.powerbi.com/groups/me/reports/3fd60242-5e84-4e13-a6e4-8c12c5b021cc/ReportSectiond76d31f79c73f7fe0e3b?experience=power-bi" rel="noopener noreferrer"> Click here to access the report in Power BI </a></p>
 </section>
 </section>
 

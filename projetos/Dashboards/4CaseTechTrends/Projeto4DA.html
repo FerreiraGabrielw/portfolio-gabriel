@@ -9,7 +9,7 @@
 <meta name="author" content="Gabriel Ferreira">
 <meta name="dcterms.date" content="2022-07-10">
 
-<title>Projeto: Dashboard Tech Trends - Análise de Marketing Digital</title>
+<title>Project: Tech Trends Dashboard - Digital Marketing Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -48,7 +48,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projeto: Dashboard Tech Trends - Análise de Marketing Digital</h1>
+<h1 class="title">Project: Tech Trends Dashboard - Digital Marketing Analysis</h1>
 </div>
 
 
@@ -77,100 +77,100 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introdução" class="level1">
-<h1>Introdução</h1>
-<p>Este projeto apresenta um Dashboard de Marketing Analytics, construído para fornecer uma visão abrangente do desempenho das campanhas digitais e do comportamento do usuário. O objetivo principal é capacitar as equipes de marketing a monitorar métricas chave como transações, receita, taxas de conversão e rejeição, e tempo médio na página, permitindo uma análise aprofundada por canal e campanha. O painel visa otimizar a alocação de recursos, identificar canais de maior performance e refinar estratégias para maximizar o retorno sobre o investimento em marketing digital.</p>
-<section id="estrutura-do-projeto" class="level2">
-<h2 class="anchored" data-anchor-id="estrutura-do-projeto">Estrutura do Projeto</h2>
-<p>Os principais requisitos e indicadores desenvolvidos para esta análise foram:</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>This project presents a Marketing Analytics Dashboard, built to provide a comprehensive view of digital campaign performance and user behavior. The main objective is to empower marketing teams to monitor key metrics such as transactions, revenue, conversion and bounce rates, and average time on page, allowing for in-depth analysis by channel and campaign. The dashboard aims to optimize resource allocation, identify higher-performing channels, and refine strategies to maximize return on investment in digital marketing.</p>
+<section id="project-structure" class="level2">
+<h2 class="anchored" data-anchor-id="project-structure">Project Structure</h2>
+<p>The main requirements and indicators developed for this analysis were:</p>
 <ul>
-<li><strong>Visão Geral de Performance</strong>: Exibição dos totais de Transações, Receita, Taxa de Conversão Geral, Taxa de Rejeição Geral e Tempo Médio na Página.</li>
-<li><strong>Tendência Diária da Taxa de Conversão</strong>: Gráfico de linha para visualizar a variação da taxa de conversão ao longo dos dias, identificando picos e vales.</li>
-<li><strong>Performance por Canal de Tráfego</strong>: Análise da Taxa de Rejeição por Meio (CPC, Referral, Organic Search, Social, Direct, Paid Search) para avaliar a qualidade do tráfego.</li>
-<li><strong>Distribuição de Tráfego por Origem</strong>: Quantificação do tráfego proveniente de diferentes plataformas e fontes (Google, Facebook, Twitter, Direct, Bing).</li>
-<li><strong>Análise de Desempenho de Campanhas</strong>: Tabela detalhada apresentando Taxa Média de Conversão, Taxa de Rejeição e Média de Páginas Visualizadas por Campanha e Meio, permitindo uma avaliação granular da efetividade.</li>
+<li><strong>Performance Overview</strong>: Display of total Transactions, Revenue, General Conversion Rate, General Bounce Rate, and Average Time on Page.</li>
+<li><strong>Daily Conversion Rate Trend</strong>: Line chart to visualize the daily variation of the conversion rate, identifying peaks and valleys.</li>
+<li><strong>Traffic Channel Performance</strong>: Analysis of Bounce Rate by Medium (CPC, Referral, Organic Search, Social, Direct, Paid Search) to evaluate traffic quality.</li>
+<li><strong>Traffic Distribution by Source</strong>: Quantification of traffic from different platforms and sources (Google, Facebook, Twitter, Direct, Bing).</li>
+<li><strong>Campaign Performance Analysis</strong>: Detailed table showing Average Conversion Rate, Bounce Rate, and Average Pages Viewed per Campaign and Medium, allowing for a granular assessment of effectiveness.</li>
 </ul>
 </section>
-<section id="tecnologias-utilizadas" class="level2">
-<h2 class="anchored" data-anchor-id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
-<p>Para a construção deste dashboard analítico, as ferramentas empregadas foram:</p>
+<section id="technologies-used" class="level2">
+<h2 class="anchored" data-anchor-id="technologies-used">Technologies Used</h2>
+<p>For the construction of this analytical dashboard, the tools employed were:</p>
 <ul>
-<li><strong>Power BI Desktop</strong>: Para conectar as fontes de dados, realizar a modelagem e transformação necessárias, e desenvolver os visuais interativos que compõem o dashboard.</li>
-<li><strong>Figma</strong>: A prototipação e o design do dashboard foram feitos com o Figma, garantindo uma experiência de usuário intuitiva e visualmente atraente.</li>
+<li><strong>Power BI Desktop</strong>: To connect data sources, perform the necessary modeling and transformation, and develop the interactive visuals that compose the dashboard.</li>
+<li><strong>Figma</strong>: Dashboard prototyping and design were done with Figma, ensuring an intuitive and visually appealing user experience.</li>
 </ul>
 </section>
-<section id="processo-de-etl-extração-transformação-e-carregamento" class="level2">
-<h2 class="anchored" data-anchor-id="processo-de-etl-extração-transformação-e-carregamento">Processo de ETL (Extração, Transformação e Carregamento)</h2>
-<p>O processo de ETL para o Dashboard Tech Trends foi:</p>
+<section id="etl-process-extract-transform-and-load" class="level2">
+<h2 class="anchored" data-anchor-id="etl-process-extract-transform-and-load">ETL Process (Extract, Transform, and Load)</h2>
+<p>The ETL process for the Tech Trends Dashboard was:</p>
 <ol type="1">
-<li><strong>Extração</strong>: Os dados foram extraídos de uma base de dados que contém informações de marketing digital, provavelmente de plataformas de análise de tráfego web. Os dados foram fornecidos em um arquivo <code>.csv</code>, contendo métricas de desempenho por dia, canal, campanha e origem.</li>
-<li><strong>Transformação</strong>: No Power Query, parte integrante do Power BI, diversas operações de limpeza e enriquecimento foram realizadas. Isso incluiu:
+<li><strong>Extraction</strong>: Data was extracted from a database containing digital marketing information, likely from web traffic analysis platforms. The data was provided in a <code>.csv</code> file, containing performance metrics by day, channel, campaign, and source.</li>
+<li><strong>Transformation</strong>: In Power Query, an integral part of Power BI, various cleaning and enrichment operations were performed. This included:
 <ul>
-<li>Tratamento de valores ausentes ou inconsistentes.</li>
-<li>Padronização de nomes de canais e campanhas.</li>
+<li>Handling missing or inconsistent values.</li>
+<li>Standardizing channel and campaign names.</li>
 </ul></li>
-<li><strong>Carregamento</strong>: Após as etapas de extração e transformação, os dados foram carregados no modelo de dados do Power BI, estando prontos para alimentar todos os gráficos e tabelas do dashboard, permitindo a exploração interativa.</li>
+<li><strong>Loading</strong>: After the extraction and transformation steps, the data was loaded into the Power BI data model, ready to feed all the charts and tables of the dashboard, allowing for interactive exploration.</li>
 </ol>
 </section>
 </section>
 <section id="dashboard" class="level1">
 <h1>Dashboard</h1>
-<p>O dashboard apresenta um design limpo e funcional, com indicadores chave em destaque para uma compreensão imediata da performance geral. Os visuais são organizados de forma lógica, incluindo gráficos de linha para tendências, gráficos de barras para comparações entre canais e origens, e tabelas detalhadas para a performance de campanhas. A interatividade é um ponto forte, permitindo que os usuários explorem os dados a fundo, filtrando por diferentes dimensões e obtendo insights específicos para suas necessidades de marketing.</p>
+<p>The dashboard features a clean and functional design, with key indicators highlighted for immediate understanding of overall performance. The visuals are logically organized, including line charts for trends, bar charts for comparisons between channels and sources, and detailed tables for campaign performance. Interactivity is a strong point, allowing users to explore the data in depth, filtering by different dimensions and obtaining specific insights for their marketing needs.</p>
 <div style="text-align:center;">
 <p><img src="imagem1.png" alt=""></p>
 </div>
 <section id="insights" class="level2">
 <h2 class="anchored" data-anchor-id="insights">Insights</h2>
-<p>A análise dos dados apresentados no dashboard revelou insights valiosos sobre a performance das estratégias de marketing digital:</p>
+<p>The analysis of the data presented in the dashboard revealed valuable insights into the performance of digital marketing strategies:</p>
 <ul>
-<li><strong>Visão Geral da Performance de Marketing</strong>:
+<li><strong>Marketing Performance Overview</strong>:
 <ul>
-<li>O dashboard destaca indicadores essenciais: <strong>7,5 mil transações</strong>, gerando <strong>$1,7 milhão em receita</strong>.</li>
-<li>A <strong>taxa de conversão geral é de 10,0%</strong>, enquanto a <strong>taxa de rejeição é de 49,5%</strong>.</li>
-<li>Um ponto que chama a atenção é o <strong>tempo médio na página de 2 horas e 36 minutos</strong>. Embora seja um indicador de engajamento, um tempo tão elevado pode sugerir um conteúdo muito denso ou a necessidade de otimizar a jornada do usuário para conversão mais rápida, dependendo do tipo de negócio.</li>
+<li>The dashboard highlights essential indicators: <strong>7.5 thousand transactions</strong>, generating <strong>$1.7 million in revenue</strong>.</li>
+<li>The <strong>overall conversion rate is 10.0%</strong>, while the <strong>bounce rate is 49.5%</strong>.</li>
+<li>One striking point is the <strong>average time on page of 2 hours and 36 minutes</strong>. While an indicator of engagement, such a high time may suggest very dense content or the need to optimize the user journey for faster conversion, depending on the type of business.</li>
 </ul></li>
 </ul>
 <div style="text-align:center;">
 <p><img src="imagem2.png" alt=""></p>
 </div>
 <ul>
-<li><strong>Tendência da Taxa de Conversão por Dia</strong>:
+<li><strong>Daily Conversion Rate Trend</strong>:
 <ul>
-<li>O gráfico de linha “Taxa de Conversão por Dia” mostra a flutuação diária da taxa de conversão. Com rótulos de data explícitos, a visualização permite identificar os dias de maior e menor performance, auxiliando no planejamento de ações em dias específicos.</li>
+<li>The “Conversion Rate by Day” line chart shows the daily fluctuation of the conversion rate. With explicit date labels, the visualization allows identifying the days of highest and lowest performance, aiding in planning actions for specific days.</li>
 </ul></li>
 </ul>
 <div style="text-align:center;">
 <p><img src="imagem3.png" alt=""></p>
 </div>
 <ul>
-<li><strong>Taxa de Rejeição por Meio de Tráfego</strong>:
+<li><strong>Traffic Medium Bounce Rate</strong>:
 <ul>
-<li>A <strong>Taxa de Rejeição por Meio</strong> é um indicador crítico da qualidade do tráfego. O “Direct” (Mensagem Direta) apresenta a menor taxa de rejeição, com <strong>46,4%</strong>, indicando que este canal atrai visitantes mais qualificados.</li>
-<li>Em contrapartida, o canal “CPC” (Custo por Clique) tem a maior taxa de rejeição, atingindo <strong>52,1%</strong>. Isso sugere que, embora possa gerar tráfego, parte desse tráfego pode não ser tão relevante ou engajada.</li>
+<li>The <strong>Bounce Rate by Medium</strong> is a critical indicator of traffic quality. “Direct” traffic (Direct Message) shows the lowest bounce rate, at <strong>46.4%</strong>, indicating that this channel attracts more qualified visitors.</li>
+<li>In contrast, the “CPC” (Cost per Click) channel has the highest bounce rate, reaching <strong>52.1%</strong>. This suggests that, although it can generate traffic, some of this traffic may not be as relevant or engaged.</li>
 </ul></li>
 </ul>
 <div style="text-align:center;">
 <p><img src="imagem4.png" alt=""></p>
 </div>
 <ul>
-<li><strong>Distribuição de Tráfego por Origem</strong>:
+<li><strong>Traffic Distribution by Source</strong>:
 <ul>
-<li>As principais origens de tráfego são Google Search (4,9 mil)** e Direct (3,3 mil).</li>
-<li>O Facebook (2,5 mil) também contribui significativamente, enquanto o tráfego “Bing” (0,8 mil) e “Twitter” (0,8 mil) são menores. Este insight é fundamental para entender de onde vêm os usuários e para otimizar o investimento em diferentes plataformas.</li>
+<li>The main traffic sources are <strong>Google Search (4.9 thousand)</strong> and <strong>Direct (3.3 thousand)</strong>.</li>
+<li>Facebook (2.5 thousand) also contributes significantly, while “Bing” (0.8 thousand) and “Twitter” (0.8 thousand) traffic are smaller. This insight is fundamental to understand where users come from and to optimize investment across different platforms.</li>
 </ul></li>
 </ul>
 <div style="text-align:center;">
 <p><img src="imagem5.png" alt=""></p>
 </div>
 <ul>
-<li><strong>Desempenho Detalhado de Campanhas</strong>:
+<li><strong>Detailed Campaign Performance</strong>:
 <ul>
-<li>A tabela “Média de Taxa de Conversão, Taxa de Rejeição, Média de Páginas Visualizadas” por Campanha e Meio oferece insights valiosos:
+<li>The “Average Conversion Rate, Bounce Rate, Average Pages Viewed” table by Campaign and Medium offers valuable insights:
 <ul>
-<li>A campanha “Summer Sale” via tráfego “Direct” apresenta a mais baixa Taxa de Rejeição (39%) e uma média de páginas visualizadas de 4,22.</li>
-<li>A campanha “New Year Deal” via “Direct” se destaca pela segunda menor Taxa de Rejeição (39,3%), o que, combinado com uma média de páginas visualizadas de 4,51 , indica um tráfego de altíssima qualidade e engajamento.</li>
-<li>As campanhas (Summer Sale) via CPC e Black Friday via Social também mostram fortes resultados em conversão e páginas visualizadas, sugerindo que o canal CPC, apesar da alta taxa de rejeição geral, pode ser muito eficaz quando direcionado a campanhas específicas.</li>
-<li>A campanha “Black Friday” via “Direct” possui a maior taxa de rejeição entre as listadas (56,5%), mas ainda assim é um resultado considerável.</li>
+<li>The “Summer Sale” campaign via “Direct” traffic shows the lowest Bounce Rate (39%) and an average of 4.22 pages viewed.</li>
+<li>The “New Year Deal” campaign via “Direct” stands out for the second lowest Bounce Rate (39.3%), which, combined with an average of 4.51 pages viewed, indicates very high-quality and engaged traffic.</li>
+<li>The campaigns (Summer Sale) via CPC and Black Friday via Social also show strong results in conversion and pages viewed, suggesting that the CPC channel, despite the high overall bounce rate, can be very effective when directed to specific campaigns.</li>
+<li>The “Black Friday” campaign via “Direct” has the highest bounce rate among those listed (56.5%), but is still a considerable result.</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -178,29 +178,29 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="imagem6.png" alt=""></p>
 </div>
 </section>
-<section id="considerações" class="level2">
-<h2 class="anchored" data-anchor-id="considerações">Considerações</h2>
-<p>O dashboard oferece insights acionáveis para otimizar as estratégias de marketing digital. A partir dos dados apresentados, algumas considerações importantes surgem:</p>
+<section id="considerations" class="level2">
+<h2 class="anchored" data-anchor-id="considerations">Considerations</h2>
+<p>The dashboard offers actionable insights to optimize digital marketing strategies. Based on the data presented, some important considerations emerge:</p>
 <ul>
-<li><strong>Otimização de Canais de Tráfego</strong>: A empresa deve investigar a causa da alta taxa de rejeição do canal CPC. Se a taxa for muito alta para o CPC geral, pode ser necessário ajustar a segmentação de público-alvo ou a relevância dos anúncios para atrair usuários mais engajados. Em contraste, o “Direct” deve ser priorizado, dada sua menor taxa de rejeição, indicando maior qualidade do tráfego.</li>
-<li><strong>Capitalização de Campanhas de Sucesso</strong>: As campanhas de “Summer Sale” (tanto Direct quanto CPC) são exemplos de sucesso. É crucial analisar os fatores que as tornaram tão eficazes (oferta, criativos, segmentação) e replicar esses aprendizados em futuras campanhas.</li>
-<li><strong>Análise do Tempo na Página</strong>: O tempo médio de 2h 36min é um dado atípico para a maioria dos sites de marketing. É fundamental entender se esse alto valor é intencional (ex: conteúdo de vídeo longo, cursos) ou se há alguma disfunção no tracking. Se for intencional, o foco deve ser em como monetizar esse engajamento. Se não, investigar e corrigir problemas de usabilidade ou carregamento.</li>
-<li><strong>Alocação de Investimento em Mídia</strong>: A dominância de Google, Direct e Twitter como fontes de tráfego valida o investimento nessas plataformas. A empresa pode considerar explorar ainda mais o potencial desses canais, enquanto avalia a viabilidade de expandir ou otimizar o desempenho em fontes menores como Bing.</li>
+<li><strong>Traffic Channel Optimization</strong>: The company should investigate the cause of the high bounce rate of the CPC channel. If the rate is too high for the general CPC, it may be necessary to adjust target audience segmentation or ad relevance to attract more engaged users. In contrast, “Direct” should be prioritized, given its lower bounce rate, indicating higher traffic quality.</li>
+<li><strong>Capitalizing on Successful Campaigns</strong>: The “Summer Sale” campaigns (both Direct and CPC) are examples of success. It is crucial to analyze the factors that made them so effective (offer, creatives, targeting) and replicate these learnings in future campaigns.</li>
+<li><strong>Time on Page Analysis</strong>: The average time of 2h 36min is an atypical data point for most marketing websites. It is essential to understand if this high value is intentional (e.g., long video content, courses) or if there is a tracking malfunction. If intentional, the focus should be on how to monetize this engagement. If not, investigate and correct usability or loading issues.</li>
+<li><strong>Media Investment Allocation</strong>: The dominance of Google, Direct, and Twitter as traffic sources validates investment in these platforms. The company can consider exploring the potential of these channels even further, while evaluating the feasibility of expanding or optimizing performance in smaller sources like Bing.</li>
 </ul>
 </section>
-<section id="conclusão" class="level2">
-<h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
-<p>O dashboard é uma ferramenta analítica poderosa que transforma dados brutos de marketing em inteligência acionável. Sua principal contribuição reside na capacidade de:</p>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The dashboard is a powerful analytical tool that transforms raw marketing data into actionable intelligence. Its main contribution lies in its ability to:</p>
 <ul>
-<li>Oferecer uma visão clara da performance geral das campanhas digitais e do comportamento do usuário.</li>
-<li>Identificar a qualidade do tráfego por diferentes canais e a eficácia de campanhas específicas.</li>
-<li>Fornecer insights sobre as principais origens de tráfego, auxiliando na alocação estratégica de recursos.</li>
+<li>Provide a clear view of the overall performance of digital campaigns and user behavior.</li>
+<li>Identify the quality of traffic from different channels and the effectiveness of specific campaigns.</li>
+<li>Offer insights into the main traffic sources, aiding in strategic resource allocation.</li>
 </ul>
-<p>Este projeto demonstra a habilidade em criar soluções de Business Intelligence que capacitam equipes de marketing a tomar decisões baseadas em dados, otimizar o desempenho de campanhas e, em última instância, impulsionar transações e receita em um ambiente digital competitivo.</p>
+<p>This project demonstrates the ability to create Business Intelligence solutions that empower marketing teams to make data-driven decisions, optimize campaign performance, and, ultimately, drive transactions and revenue in a competitive digital environment.</p>
 </section>
-<section id="link-para-o-dashboard" class="level2">
-<h2 class="anchored" data-anchor-id="link-para-o-dashboard">Link para o Dashboard:</h2>
-<p><a href="https://app.powerbi.com/groups/me/reports/f01d9373-7129-45a1-b703-90d551b8f262/ReportSection?experience=power-bi" target="_blank" rel="noopener noreferrer"> Clique aqui para acessar o relatório no Power BI </a></p>
+<section id="link-to-the-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="link-to-the-dashboard">Link to the Dashboard:</h2>
+<p><a href="https://app.powerbi.com/groups/me/reports/f01d9373-7129-45a1-b703-90d551b8f262/ReportSection?experience=power-bi" rel="noopener noreferrer"> Click here to access the report in Power BI </a></p>
 </section>
 </section>
 
