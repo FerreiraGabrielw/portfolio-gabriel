@@ -9,7 +9,7 @@
 <meta name="author" content="Gabriel Ferreira">
 <meta name="dcterms.date" content="2024-09-18">
 
-<title>Projeto de Análise de Clientes para Shopping Center</title>
+<title>Customer Analysis Project for Shopping Center</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -85,7 +85,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projeto de Análise de Clientes para Shopping Center</h1>
+<h1 class="title">Customer Analysis Project for Shopping Center</h1>
 </div>
 
 
@@ -114,32 +114,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="introdução" class="level1">
-<h1>Introdução</h1>
-<p>Este projeto foi realizado a partir de um conjunto de dados real, proveniente de um shopping center, com o objetivo principal de estudar as características e os padrões de compra de seus clientes. Através de uma análise de dados de ponta a ponta (E2E), desde o tratamento e limpeza iniciais até a criação de visualizações, buscando não apenas descrever o comportamento do consumidor, mas também fornecer insights acionáveis que podem orientar decisões estratégicas, vendas e gestão da experiência do cliente.</p>
-<p>A meta é transformar dados brutos em conhecimento estratégico, permitindo que o shopping center otimize suas operações, personalize suas ofertas e maximize o valor para cada cliente.</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>This project was carried out using a real dataset from a shopping center, with the main objective of studying the characteristics and purchasing patterns of its customers. Through an end-to-end (E2E) data analysis, from initial cleaning and preparation to the creation of visualizations, the goal was not only to describe consumer behavior but also to provide actionable insights that can guide strategic decisions, sales, and customer experience management.</p>
+<p>The goal is to transform raw data into strategic knowledge, enabling the shopping center to optimize its operations, personalize its offers, and maximize the value of each customer.</p>
 </section>
-<section id="estrutura-do-projeto" class="level1">
-<h1>Estrutura do Projeto</h1>
-<p>O desenvolvimento deste projeto seguiu uma metodologia estruturada para garantir a precisão e confiabilidade dos insights extraídos, abrangendo desde a coleta e preparação dos dados até a avaliação e interpretação dos resultados. Cada fase, desde a extração dos dados até a interpretação das visualizações, foi executada com atenção aos detalhes e foco na maximização do valor analítico.</p>
-<section id="coleta-e-pré-processamento-dos-dados" class="level2">
-<h2 data-anchor-id="coleta-e-pré-processamento-dos-dados">Coleta e Pré-processamento dos dados</h2>
-<p>A qualidade dos dados é o pilar de qualquer análise. Nesta fase, temos que garantir que o dataset estivesse impecável e pronto para o processamento.</p>
-<section id="carregamento-e-visão-inicial-dos-dados" class="level3">
-<h3 data-anchor-id="carregamento-e-visão-inicial-dos-dados">Carregamento e Visão Inicial dos Dados</h3>
+<section id="project-structure" class="level1">
+<h1>Project Structure</h1>
+<p>The development of this project followed a structured methodology to ensure the accuracy and reliability of the extracted insights, covering everything from data collection and preparation to evaluation and interpretation of the results. Each phase, from data extraction to the interpretation of visualizations, was executed with attention to detail and focus on maximizing analytical value.</p>
+<section id="data-collection-and-preprocessing" class="level2">
+<h2 data-anchor-id="data-collection-and-preprocessing">Data Collection and Preprocessing</h2>
+<p>Data quality is the foundation of any analysis. At this stage, we ensured the dataset was clean and ready for processing.</p>
+<section id="data-loading-and-initial-overview" class="level3">
+<h3 data-anchor-id="data-loading-and-initial-overview">Data Loading and Initial Overview</h3>
 <ul>
-<li>Fonte dos Dados: Dados colhidos de um shopping center em Singapura</li>
+<li>Data Source: Collected from a shopping center in Singapore</li>
 </ul>
-<p>O ponto de partida foi o carregamento do conjunto de dados dataset. A primeira informação 28 colunas, cobrindo uma vasta gama de informações sobre os clientes, desde dados demográficos e status civil até comportamentos de compra e interações com campanhas promocionais.</p>
-<section id="carrega-o-dataset-5-primeiras-linhas-do-df" class="level6">
-<h6 data-anchor-id="carrega-o-dataset-5-primeiras-linhas-do-df">Carrega o dataset + 5 primeiras linhas do df:</h6>
-<div id="c554e798" class="cell" data-execution_count="2">
+<p>The starting point was loading the dataset. It contained 28 columns, covering a wide range of information about customers, from demographic data and marital status to purchasing behaviors and interactions with promotional campaigns.</p>
+<section id="load-dataset-first-5-rows" class="level6">
+<h6 data-anchor-id="load-dataset-first-5-rows">Load dataset + first 5 rows:</h6>
+<div id="a676a2ff" class="cell" data-execution_count="2">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">'dataset_shoppingcenter.csv'</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<summary>Show Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>caminho_do_arquivo <span class="op">=</span> <span class="st">'../data/dataset_shoppingcenter.csv'</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(caminho_do_arquivo)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="34">
+<div class="cell-output cell-output-display" data-execution_count="194">
 <div>
 
 
@@ -300,13 +301,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section>
 </section>
-<section id="análise-exploratória-dos-dados-e-limpeza" class="level3">
-<h3 data-anchor-id="análise-exploratória-dos-dados-e-limpeza">Análise Exploratória dos Dados e Limpeza</h3>
-<section id="contagem-de-cada-coluna-df01" class="level6">
-<h6 data-anchor-id="contagem-de-cada-coluna-df01">Contagem de cada coluna df01:</h6>
-<div id="79b2e490" class="cell" data-execution_count="3">
+<section id="exploratory-data-analysis-and-cleaning" class="level3">
+<h3 data-anchor-id="exploratory-data-analysis-and-cleaning">Exploratory Data Analysis and Cleaning</h3>
+<section id="column-count-df01" class="level6">
+<h6 data-anchor-id="column-count-df01">Column count df01:</h6>
+<div id="4722d7e0" class="cell" data-execution_count="3">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -347,13 +348,13 @@ dtypes: int64(23), object(5)
 memory usage: 490.1+ KB</code></pre>
 </div>
 </div>
-<p>Identificamos que a coluna Income (renda) estava formatada como um objeto (object) devido à presença de caracteres especiais como o cifrão ($) e vírgulas (,), para que pudéssemos realizar operações numéricas e análises estatísticas, então convertemos essa coluna para um tipo float e, adicionalmente, um espaço em branco inicial no nome da coluna foi corrigido para facilitar a manipulação. A coluna Dt_Customer (data de cadastro do cliente) também estava como object e não era reconhecida como um formato de data. A conversão para o tipo datetime é necessária para análises temporais, como a idade do cliente no momento do cadastro ou padrões de adesão ao longo do tempo.</p>
+<p>We identified that the column Income was formatted as an object due to special characters such as dollar signs ($) and commas (,). To enable numeric operations and statistical analyses, we converted this column to float. Additionally, a leading whitespace in the column name was fixed for easier handling. The Dt_Customer column (customer enrollment date) was also stored as an object and not recognized as a datetime. Conversion was necessary for temporal analyses, such as customer age at enrollment or sign-up trends over time.</p>
 </section>
-<section id="ajuste-nas-colunas-income-e-dt_customer" class="level6">
-<h6 data-anchor-id="ajuste-nas-colunas-income-e-dt_customer">Ajuste nas colunas Income e Dt_Customer:</h6>
-<div id="dae80e6a" class="cell" data-execution_count="4">
+<section id="adjusting-income-and-dt_customer-columns" class="level6">
+<h6 data-anchor-id="adjusting-income-and-dt_customer-columns">Adjusting Income and Dt_Customer columns:</h6>
+<div id="31152892" class="cell" data-execution_count="4">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>df.rename({<span class="st">' Income '</span> : <span class="st">'Income'</span>}, axis <span class="op">=</span> <span class="dv">1</span>, inplace <span class="op">=</span> <span class="va">True</span>)</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Income'</span>] <span class="op">=</span> df[<span class="st">'Income'</span>].<span class="bu">str</span>.replace(<span class="st">'$'</span>, <span class="st">''</span>)</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Income'</span>] <span class="op">=</span> df[<span class="st">'Income'</span>].<span class="bu">str</span>.replace(<span class="st">','</span>, <span class="st">''</span>).astype(<span class="bu">float</span>)</span>
@@ -361,14 +362,14 @@ memory usage: 490.1+ KB</code></pre>
 </details>
 </div>
 </section>
-<section id="verificando-valores-ausentes" class="level6">
-<h6 data-anchor-id="verificando-valores-ausentes">Verificando Valores Ausentes:</h6>
-<div id="df78329c" class="cell" data-execution_count="5">
+<section id="checking-for-missing-values" class="level6">
+<h6 data-anchor-id="checking-for-missing-values">Checking for Missing Values:</h6>
+<div id="c4e46337" class="cell" data-execution_count="5">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df.isnull().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="37">
+<div class="cell-output cell-output-display" data-execution_count="197">
 <pre><code>ID                      0
 Year_Birth              0
 Education               0
@@ -400,16 +401,16 @@ Country                 0
 dtype: int64</code></pre>
 </div>
 </div>
-<p>Após a conversão para tipo numérico, a coluna Income ainda apresenta 24 valores ausentes. Para decidir a melhor estratégia de preenchimento (imputação) ou remoção, investigamos a distribuição estatística da variável</p>
+<p>After converting Income to numeric, 24 missing values remained. To determine the best imputation strategy, we investigated the statistical distribution of the variable.</p>
 </section>
-<section id="resumo-estatístico-da-variável-income" class="level6">
-<h6 data-anchor-id="resumo-estatístico-da-variável-income">Resumo Estatístico da variável Income:</h6>
-<div id="20e36fcb" class="cell" data-execution_count="6">
+<section id="statistical-summary-of-income" class="level6">
+<h6 data-anchor-id="statistical-summary-of-income">Statistical Summary of Income:</h6>
+<div id="503fb0ab" class="cell" data-execution_count="6">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Income'</span>].describe()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="38">
+<div class="cell-output cell-output-display" data-execution_count="198">
 <pre><code>count      2216.000000
 mean      52247.251354
 std       25173.076661
@@ -421,129 +422,129 @@ max      666666.000000
 Name: Income, dtype: float64</code></pre>
 </div>
 </div>
-<p>A análise revelou uma diferença significativa entre a média (52.247)e a mediana(51.381). Mais notavelmente, o valor máximo (666.666)extremamente distante do terceiroquartil (68.522), um forte indicativo da presença de outliers (valores atípicos). Esses valores extremos teriam um impacto desproporcional na média, tornando-a uma representação não confiável da tendência central dos dados.</p>
-<p><strong>Decisão</strong>: Optamos por substituir os valores ausentes pela mediana da renda, visto que a mediana é uma medida de tendência central mais robusta e menos sensível a valores extremos, garantindo que a imputação não distorcesse a distribuição real da renda dos clientes e, consequentemente, a análise de perfil.</p>
+<p>The analysis revealed a significant difference between mean (52,247) and median (51,381). Most notably, the maximum value (666,666) was extremely distant from the third quartile (68,522), a strong indication of outliers. Such extreme values disproportionately affect the mean, making it unreliable for central tendency.</p>
+<p>Decision: We chose to replace missing values with the median income, as the median is more robust and less sensitive to outliers, ensuring imputation did not distort the real distribution of income.</p>
 </section>
-<section id="substituindo-valores-ausentes-pela-mediana-na-variável-renda" class="level6">
-<h6 data-anchor-id="substituindo-valores-ausentes-pela-mediana-na-variável-renda">Substituindo Valores Ausentes pela Mediana na Variável Renda:</h6>
-<div id="277c8cea" class="cell" data-execution_count="7">
+<section id="replacing-missing-values-with-median-in-income" class="level6">
+<h6 data-anchor-id="replacing-missing-values-with-median-in-income">Replacing Missing Values with Median in Income:</h6>
+<div id="4c9da9db" class="cell" data-execution_count="7">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>median_income <span class="op">=</span> df[<span class="st">'Income'</span>].median()</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Income'</span>].fillna(median_income, inplace<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p>Embora tenhamos feito a imputação dos valores ausentes tenha com a mediana, a existência de valores extremos pode influenciar negativamente modelos e visualizações, por isso vamos analisar como esta distribuída a variável renda</p>
+<p>Although we imputed missing values using the median, the presence of extreme outliers could still negatively influence models and visualizations. We analyzed the distribution of income further.</p>
 </section>
-<section id="distribuição-da-variável-renda" class="level6">
-<h6 data-anchor-id="distribuição-da-variável-renda">Distribuição da variável renda:</h6>
-<div id="dc812e2d" class="cell" data-execution_count="8">
+<section id="income-variable-distribution" class="level6">
+<h6 data-anchor-id="income-variable-distribution">Income variable distribution:</h6>
+<div id="acc5914c" class="cell" data-execution_count="8">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">6</span>, <span class="dv">6</span>))</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Distribuição de Renda dos Clientes"</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Customer Income Distribution"</span>)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>sns.boxplot(data <span class="op">=</span> df[<span class="st">'Income'</span>], color <span class="op">=</span> <span class="st">'blue'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="1AnaliseDadosShoppingCenter_files/figure-html/cell-9-output-1.png" width="526" height="506" class="figure-img"></p>
+<p><img src="1AnaliseDadosShoppingCenter_files/figure-html/cell-9-output-1.png" width="544" height="487" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>A presença do outlier de $666.666 na renda era notória e, dada a magnitude do dataset e a singularidade desse ponto, a remoção direta desse outlier foi considerada apropriada para evitar ruídos e garantir que a análise refletisse a distribuição mais representativa da renda dos clientes.</p>
+<p>The $666,666 outlier stood out, and given the dataset size and its singularity, we removed it to reduce noise and improve representativeness.</p>
 </section>
-<section id="removendo-o-outlier-e-visualizando-novamente-a-variável" class="level6">
-<h6 data-anchor-id="removendo-o-outlier-e-visualizando-novamente-a-variável">Removendo o outlier e visualizando novamente a variável:</h6>
-<div id="3ab021c2" class="cell" data-execution_count="9">
+<section id="removing-the-outlier-and-plotting-again" class="level6">
+<h6 data-anchor-id="removing-the-outlier-and-plotting-again">Removing the outlier and plotting again:</h6>
+<div id="d155ad1b" class="cell" data-execution_count="9">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[df[<span class="st">'Income'</span>] <span class="op">!=</span> <span class="fl">666666.0</span>]</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">6</span>, <span class="dv">6</span>))</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Distribuição de Renda dos Clientes (sem o outlier)"</span>)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Customer Income Distribution (without outlier)"</span>)</span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>sns.boxplot(data <span class="op">=</span> df[<span class="st">'Income'</span>], color <span class="op">=</span> <span class="st">'blue'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="1AnaliseDadosShoppingCenter_files/figure-html/cell-10-output-1.png" width="526" height="506" class="figure-img"></p>
+<p><img src="1AnaliseDadosShoppingCenter_files/figure-html/cell-10-output-1.png" width="544" height="487" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>A visualização da distribuição da renda através de um boxplot, tanto antes quanto depois da remoção do outlier, comprovou a eficácia dessa intervenção, resultando em uma representação mais limpa, preservando o perfil dos clientes.</p>
+<p>Boxplots before and after confirmed the effectiveness of this intervention, resulting in a cleaner representation of customer income.</p>
 </section>
 </section>
-<section id="engenharia-de-atributos-feature-engineering" class="level3">
-<h3 data-anchor-id="engenharia-de-atributos-feature-engineering">Engenharia de Atributos (Feature Engineering)</h3>
-<p>A criação de novas variáveis, ou Feature Engineering, é um passo importante para enriquecer o dataset e extrair insights mais complexos e relevantes de variáveis que estão implicítas a partir das colunas existentes. Então foram construídas métricas que capturam informações sobre o perfil e o comportamento dos clientes.</p>
-<p><strong>a) Idade do Cliente no Cadastro (Customer_Age_When_Enrolled)</strong></p>
-<p>Para entender a faixa etária dos clientes no momento em que se cadastraram no shopping, uma nova coluna foi criada subtraindo o ano de nascimento (Year_Birth) do ano de cadastro (Dt_Customer). Esta métrica é importante para campanhas segmentadas por faixa etária, indicando o público-alvo principal.</p>
-<section id="criando-a-feature-customer_age_when_enrolled" class="level6">
-<h6 data-anchor-id="criando-a-feature-customer_age_when_enrolled">Criando a feature Customer_Age_When_Enrolled:</h6>
-<div id="11754721" class="cell" data-execution_count="10">
+<section id="feature-engineering" class="level3">
+<h3 data-anchor-id="feature-engineering">Feature Engineering</h3>
+<p>The creation of new variables, or Feature Engineering, is an important step to enrich the dataset and extract deeper insights. We engineered metrics to capture customer profiles and behaviors.</p>
+<p><strong>a) Customer Age at Enrollment (Customer_Age_When_Enrolled)</strong></p>
+<p>To understand age distribution at enrollment, we created a column by subtracting birth year (Year_Birth) from enrollment year (Dt_Customer). This metric supports age-targeted campaigns.</p>
+<section id="creating-customer_age_when_enrolled" class="level6">
+<h6 data-anchor-id="creating-customer_age_when_enrolled">Creating Customer_Age_When_Enrolled:</h6>
+<div id="ed4b1667" class="cell" data-execution_count="10">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Customer_Age_When_Enrolled'</span>] <span class="op">=</span> df[<span class="st">'Dt_Customer'</span>].dt.year <span class="op">-</span> df[<span class="st">'Year_Birth'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p><strong>b) Gasto Total (Total_Spent)</strong></p>
-<p>A divisão dos gastos em categorias de produtos (vinhos, frutas, carnes, peixes, doces e ouro) é informativa, mas uma métrica consolidada do “Gasto Total” oferece uma visão macro do valor de cada cliente para o shopping. Isso permite identificar clientes de alto valor e entender o poder de compra geral.</p>
+<p><strong>b) Total Spending (Total_Spent)</strong></p>
+<p>While spending was divided across product categories (wine, fruits, meat, fish, sweets, gold), a consolidated “Total_Spent” metric provides a holistic view of customer value.</p>
 </section>
-<section id="criando-a-feature-total_spent" class="level6">
-<h6 data-anchor-id="criando-a-feature-total_spent">Criando a feature Total_Spent:</h6>
-<div id="b80451f6" class="cell" data-execution_count="11">
+<section id="creating-total_spent" class="level6">
+<h6 data-anchor-id="creating-total_spent">Creating Total_Spent:</h6>
+<div id="77e6c385" class="cell" data-execution_count="11">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Total_Spent'</span>] <span class="op">=</span> df[[<span class="st">'MntWines'</span>,<span class="st">'MntFruits'</span>,<span class="st">'MntMeatProducts'</span>,<span class="st">'MntFishProducts'</span>,<span class="st">'MntSweetProducts'</span>,<span class="st">'MntGoldProds'</span>]].<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p><strong>c) Total de Compras (Total_Purchases)</strong></p>
-<p>Similar ao gasto total, a soma das diferentes modalidades de compra (promoções, web, catálogo e loja física) fornece uma métrica unificada da frequência e engajamento do cliente com o shopping.</p>
+<p><strong>c) Total Purchases (Total_Purchases)</strong></p>
+<p>Similarly, summing purchases across different channels (promotions, web, catalog, in-store) provided a unified measure of engagement.</p>
 </section>
-<section id="criando-a-feature-total_purchases" class="level6">
-<h6 data-anchor-id="criando-a-feature-total_purchases">Criando a feature Total_Purchases:</h6>
-<div id="0d14b90c" class="cell" data-execution_count="12">
+<section id="total-purchases-total_purchases" class="level6">
+<h6 data-anchor-id="total-purchases-total_purchases">Total Purchases (Total_Purchases):</h6>
+<div id="f1437288" class="cell" data-execution_count="12">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Total_Purchases'</span>] <span class="op">=</span> df[[<span class="st">'NumDealsPurchases'</span>,<span class="st">'NumWebPurchases'</span>,<span class="st">'NumStorePurchases'</span>,<span class="st">'NumCatalogPurchases'</span>]].<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p><strong>d) Presença de Crianças e Adolescentes em Casa (Kids_Teen_at_home)</strong></p>
-<p>A união das informações sobre Kidhome (crianças em casa) e Teenhome (adolescentes em casa) em uma única variável simplifica a análise e permite identificar clientes com responsabilidades familiares, um fator que pode influenciar significativamente os padrões de compra (ex: busca por produtos para família, entretenimento infantil, etc.).</p>
+<p><strong>d) Kids and Teens at Home (Kids_Teen_at_home)</strong></p>
+<p>We combined Kidhome and Teenhome into one variable to simplify analysis and identify households with dependents, which may impact shopping patterns.</p>
 </section>
-<section id="criando-a-feature-kids_teen_at_home" class="level6">
-<h6 data-anchor-id="criando-a-feature-kids_teen_at_home">Criando a feature Kids_Teen_at_home:</h6>
-<div id="7e2e4a4f" class="cell" data-execution_count="13">
+<section id="creating-kids_teen_at_home" class="level6">
+<h6 data-anchor-id="creating-kids_teen_at_home">Creating Kids_Teen_at_home:</h6>
+<div id="4ab65d4c" class="cell" data-execution_count="13">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'Kids_Teen_at_home'</span>] <span class="op">=</span> df[[<span class="st">'Kidhome'</span>,<span class="st">'Teenhome'</span>]].<span class="bu">sum</span>(axis<span class="op">=</span><span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
-<section id="limpeza-de-variáveis-originais" class="level4">
-<h4 data-anchor-id="limpeza-de-variáveis-originais">Limpeza de Variáveis Originais</h4>
-<p>Após a criação das features agregadas, as colunas originais Kidhome e Teenhome foram removidas para evitar redundância e simplificar o dataset, mantendo apenas as variáveis mais informativas para a análise subsequente.</p>
-<section id="removendo-colunas-originais" class="level6">
-<h6 data-anchor-id="removendo-colunas-originais">Removendo colunas originais:</h6>
-<div id="0ad17b22" class="cell" data-execution_count="14">
+<section id="cleaning-original-variables" class="level4">
+<h4 data-anchor-id="cleaning-original-variables">Cleaning Original Variables</h4>
+<p>After aggregation, we dropped Kidhome and Teenhome to avoid redundancy.</p>
+<section id="dropping-original-columns" class="level6">
+<h6 data-anchor-id="dropping-original-columns">Dropping original columns:</h6>
+<div id="fa29e1bd" class="cell" data-execution_count="14">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df.drop([<span class="st">'Kidhome'</span>, <span class="st">'Teenhome'</span>], axis <span class="op">=</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
 </section>
 </section>
 </section>
-<section id="re-verificação-e-tratamentos-de-outliers-com-iqr" class="level3">
-<h3 data-anchor-id="re-verificação-e-tratamentos-de-outliers-com-iqr">Re-verificação e Tratamentos de Outliers com IQR</h3>
-<p>Para garantir a qualidade dos novos atributos e das colunas já existentes, foi realizada uma nova verificação de outliers utilizando o método do Intervalo Interquartil (IQR) para as features mais relevantes para a análise (Customer_Age_When_Enrolled, Total_Spent, Total_Purchases, Kids_Teen_at_home). A régua de 2 vezes o IQR foi aplicado para uma detecção mais sensível.</p>
-<section id="definindo-colunas-de-interesse-criando-a-função-e-aplicando-nas-colunas-definidas-para-identificação-de-outliers" class="level6">
-<h6 data-anchor-id="definindo-colunas-de-interesse-criando-a-função-e-aplicando-nas-colunas-definidas-para-identificação-de-outliers">Definindo colunas de interesse, criando a função e aplicando nas colunas definidas para identificação de outliers:</h6>
-<div id="5d017cb4" class="cell" data-execution_count="15">
+<section id="outlier-re-check-with-iqr" class="level3">
+<h3 data-anchor-id="outlier-re-check-with-iqr">Outlier Re-check with IQR</h3>
+<p>To ensure the quality of the new attributes and existing columns, a new outlier verification was performed using the Interquartile Range (IQR) method for the most relevant features for the analysis (Customer_Age_When_Enrolled, Total_Spent, Total_Purchases, Kids_Teen_at_home). The 2 times IQR rule was applied for a more sensitive detection.</p>
+<section id="defining-columns-of-interest-creating-the-function-and-applying-it-to-the-defined-columns-for-outlier-identification" class="level6">
+<h6 data-anchor-id="defining-columns-of-interest-creating-the-function-and-applying-it-to-the-defined-columns-for-outlier-identification">Defining columns of interest, creating the function and applying it to the defined columns for outlier identification:</h6>
+<div id="5e58001c" class="cell" data-execution_count="15">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Colunas de interesse</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>colunas <span class="op">=</span> [<span class="st">'Customer_Age_When_Enrolled'</span>, <span class="st">'Total_Spent'</span>, <span class="st">'Total_Purchases'</span>, <span class="st">'Kids_Teen_at_home'</span>]</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># FUncao para detectar outliers</span></span>
@@ -573,14 +574,14 @@ Total_Purchases: 0 outliers (0.00%)
 Kids_Teen_at_home: 0 outliers (0.00%)</code></pre>
 </div>
 </div>
-<p>Foi constatado que apenas 3 outliers persistiam na variável Customer_Age_When_Enrolled, representando um percentual muito baixo (0.13%) do dataset.</p>
-<p>Para melhor visualização vamos analisar o boxplot dessas variáveis:</p>
+<p>It was found that only 3 outliers persisted in the Customer_Age_When_Enrolled variable, representing a very low percentage (0.13%) of the dataset.</p>
+<p>For better visualization, let’s analyze the boxplot of these variables:</p>
 </section>
-<section id="boxplot-das-variáveis-de-interesse" class="level6">
-<h6 data-anchor-id="boxplot-das-variáveis-de-interesse">Boxplot das variáveis de interesse:</h6>
-<div id="355e157a" class="cell" data-execution_count="16">
+<section id="boxplot-of-variables-of-interest" class="level6">
+<h6 data-anchor-id="boxplot-of-variables-of-interest">Boxplot of variables of interest:</h6>
+<div id="d57f736f" class="cell" data-execution_count="16">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>,<span class="dv">6</span>))</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, coluna <span class="kw">in</span> <span class="bu">enumerate</span>(colunas):</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    plt.subplot(<span class="dv">1</span>, <span class="bu">len</span>(colunas), i<span class="op">+</span><span class="dv">1</span>)</span>
@@ -598,11 +599,11 @@ Kids_Teen_at_home: 0 outliers (0.00%)</code></pre>
 </div>
 </div>
 </section>
-<section id="identificação-dos-outliers-encontrados" class="level6">
-<h6 data-anchor-id="identificação-dos-outliers-encontrados">Identificação dos outliers encontrados:</h6>
-<div id="08736749" class="cell" data-execution_count="17">
+<section id="identification-of-found-outliers" class="level6">
+<h6 data-anchor-id="identification-of-found-outliers">Identification of found outliers:</h6>
+<div id="40c69e3a" class="cell" data-execution_count="17">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> coluna <span class="kw">in</span> colunas:</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    res <span class="op">=</span> detectar_outliers_iqr(df[coluna])</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    outliers <span class="op">=</span> res[<span class="st">'outliers'</span>]</span>
@@ -619,38 +620,38 @@ Coluna: 'Customer_Age_When_Enrolled'
 Name: Customer_Age_When_Enrolled, dtype: int64</code></pre>
 </div>
 </div>
-<p>Esses valores extremamente atípicos (idades como 113, 114 e 121 anos, provavelmente erros de registro) foram removidos para evitar qualquer ruído ou distorção em futuras análises de idade, que são cruciais para a segmentação de clientes.</p>
+<p>These extremely atypical values (ages like 113, 114, and 121 years, likely registration errors) were removed to avoid any noise or distortion in future age analyses, which are crucial for customer segmentation.</p>
 </section>
-<section id="removendo-os-valores-extremos-da-variável" class="level6">
-<h6 data-anchor-id="removendo-os-valores-extremos-da-variável">Removendo os valores extremos da variável:</h6>
-<div id="b1bc9a21" class="cell" data-execution_count="18">
+<section id="removing-extreme-values-from-the-variable" class="level6">
+<h6 data-anchor-id="removing-extreme-values-from-the-variable">Removing extreme values from the variable:</h6>
+<div id="16d60977" class="cell" data-execution_count="18">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[df[<span class="st">'Customer_Age_When_Enrolled'</span>] <span class="op">!=</span> <span class="dv">113</span>]</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[df[<span class="st">'Customer_Age_When_Enrolled'</span>] <span class="op">!=</span> <span class="dv">114</span>]</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[df[<span class="st">'Customer_Age_When_Enrolled'</span>] <span class="op">!=</span> <span class="dv">121</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 </div>
-<p><strong>Verificação de Duplicatas e Estrutura Final do Dataset</strong></p>
-<p>Antes de prosseguir, vamos realizar uma verificação final de registros duplicados</p>
+<p><strong>Duplicate Check and Final Dataset Structure</strong></p>
+<p>Duplicate Check and Final Dataset Structure</p>
 </section>
-<section id="verificando-a-presença-de-valores-duplicados" class="level6">
-<h6 data-anchor-id="verificando-a-presença-de-valores-duplicados">Verificando a presença de valores duplicados:</h6>
-<div id="a8561994" class="cell" data-execution_count="19">
+<section id="checking-for-duplicate-values" class="level6">
+<h6 data-anchor-id="checking-for-duplicate-values">Checking for duplicate values:</h6>
+<div id="c3753fdd" class="cell" data-execution_count="19">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>df.duplicated().<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div class="cell-output cell-output-display" data-execution_count="51">
+<div class="cell-output cell-output-display" data-execution_count="211">
 <pre><code>0</code></pre>
 </div>
 </div>
 </section>
-<section id="verificação-do-dataset-após-a-limpeza-e-criação-de-novas-features" class="level6">
-<h6 data-anchor-id="verificação-do-dataset-após-a-limpeza-e-criação-de-novas-features">Verificação do dataset após a limpeza e criação de novas features:</h6>
-<div id="2aa570d0" class="cell" data-execution_count="20">
+<section id="dataset-verification-after-cleaning-and-creating-new-features" class="level6">
+<h6 data-anchor-id="dataset-verification-after-cleaning-and-creating-new-features">Dataset verification after cleaning and creating new features:</h6>
+<div id="744a0a3f" class="cell" data-execution_count="20">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>df.info()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-stdout">
@@ -693,56 +694,56 @@ dtypes: datetime64[ns](1), float64(1), int64(25), object(3)
 memory usage: 541.5+ KB</code></pre>
 </div>
 </div>
-<p>O dataset resultante, com 2.236 linhas e 30 colunas, está agora limpo, mais completo com as novas features e pronto para a fase de análise exploratória.</p>
+<p>The resulting dataset, with 2,236 rows and 30 columns, is now clean, more complete with the new features, and ready for the exploratory analysis phase.</p>
 </section>
 </section>
 </section>
-<section id="análise-exploratória-dos-dados-e-visualizações-de-insights" class="level2">
-<h2 data-anchor-id="análise-exploratória-dos-dados-e-visualizações-de-insights">Análise Exploratória dos Dados e Visualizações de Insights</h2>
-<section id="análise-da-idade-dos-clientes" class="level3">
-<h3 data-anchor-id="análise-da-idade-dos-clientes">Análise da Idade dos Clientes:</h3>
-<div id="7ca8592a" class="cell" data-execution_count="21">
+<section id="exploratory-data-analysis-and-insight-visualizations" class="level2">
+<h2 data-anchor-id="exploratory-data-analysis-and-insight-visualizations">Exploratory Data Analysis and Insight Visualizations</h2>
+<section id="customer-age-analysis" class="level3">
+<h3 data-anchor-id="customer-age-analysis">Customer Age Analysis:</h3>
+<div id="af6333cb" class="cell" data-execution_count="21">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">6</span>, <span class="dv">6</span>))</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Distribuição da Idade dos Clientes"</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Customer Age Distribution"</span>)</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>sns.violinplot(data <span class="op">=</span> df[<span class="st">'Customer_Age_When_Enrolled'</span>], color <span class="op">=</span> <span class="st">'purple'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="1AnaliseDadosShoppingCenter_files/figure-html/cell-22-output-1.png" width="492" height="506" class="figure-img"></p>
+<p><img src="1AnaliseDadosShoppingCenter_files/figure-html/cell-22-output-1.png" width="510" height="487" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>A distribuição da idade dos clientes, visualizada através de um violin plot, revelou uma característica demográfica marcante: a maioria dos clientes concentra-se na faixa etária dos 35 aos 45 anos. Este dado é de suma importância, ele aponta para o principal nicho de mercado do shopping, indicando que as estratégias de marketing, a seleção de produtos e serviços, e até mesmo os eventos promocionais, devem ser direcionados para atender às necessidades e preferências desse grupo demográfico específico. Clientes nesta faixa etária geralmente possuem maior poder de compra e estabilidade financeira, sendo um público-alvo altamente valioso.</p>
+<p>The distribution of customer ages, visualized through a violin plot, revealed a striking demographic characteristic: the majority of customers are concentrated in the 35 to 45 age group. This data is of utmost importance, as it points to the shopping center’s main market niche, indicating that marketing strategies, product and service selection, and even promotional events should be directed to meet the needs and preferences of this specific demographic group. Customers in this age range generally have greater purchasing power and financial stability, making them a highly valuable target audience.</p>
 </section>
-<section id="distribuição-por-nível-de-escolaridade" class="level3">
-<h3 data-anchor-id="distribuição-por-nível-de-escolaridade">Distribuição por Nível de Escolaridade:</h3>
-<div id="a9468549" class="cell" data-execution_count="22">
+<section id="distribution-by-education-level" class="level3">
+<h3 data-anchor-id="distribution-by-education-level">Distribution by Education Level:</h3>
+<div id="a60b3e68" class="cell" data-execution_count="22">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>education_counts <span class="op">=</span> df[<span class="st">'Education'</span>].value_counts()</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">14</span>, <span class="dv">8</span>))</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Distribuição da Clientes por Nível de Escolaridade"</span>)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">"Customer Distribution by Education Level"</span>)</span>
 <span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>sns.countplot(x <span class="op">=</span> df[<span class="st">'Education'</span>], palette <span class="op">=</span> <span class="st">'rocket_r'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="1AnaliseDadosShoppingCenter_files/figure-html/cell-23-output-1.png" width="1122" height="672" class="figure-img"></p>
+<p><img src="1AnaliseDadosShoppingCenter_files/figure-html/cell-23-output-1.png" width="1122" height="671" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
-<p>A análise da escolaridade dos clientes, através de um count plot, destacou a predominância de clientes com Graduação, seguidos por aqueles com PhD e Mestrado. A minoria detém apenas o nível básico de escolaridade. Este padrão educacional sugere um perfil de cliente que valoriza qualidade, talvez com maior acesso à informação e poder de decisão sobre suas compras. Compreender essa característica pode influenciar a comunicação, o tipo de lojas e serviços oferecidos, e a abordagem de vendas, que pode ser mais sofisticada e focada em valor.</p>
+<p>The analysis of customer education levels, through a count plot, highlighted the predominance of customers with Bachelor’s degrees, followed by those with PhDs and Master’s degrees. A minority holds only a basic education level. This educational pattern suggests a customer profile that values quality, perhaps with greater access to information and decision-making power regarding their purchases. Understanding this characteristic can influence communication, the type of stores and services offered, and the sales approach, which can be more sophisticated and value-focused.</p>
 </section>
-<section id="perfil-por-estado-civil" class="level3">
-<h3 data-anchor-id="perfil-por-estado-civil">Perfil por Estado Civil:</h3>
-<div id="1066144e" class="cell" data-execution_count="23">
+<section id="profile-by-marital-status" class="level3">
+<h3 data-anchor-id="profile-by-marital-status">Profile by Marital Status:</h3>
+<div id="4f75bf9e" class="cell" data-execution_count="23">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando um df para armazernar a contagem de cada tipo de estado civil</span></span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>estado_civil <span class="op">=</span> df[<span class="st">'Marital_Status'</span>].value_counts().to_frame(<span class="st">'Count'</span>)</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Criando o grafico</span></span>
@@ -763,18 +764,18 @@ memory usage: 541.5+ KB</code></pre>
 </div>
 </div>
 </div>
-<p>A distribuição do estado civil, ilustrada por um pie chart, revelou que a maior parte dos clientes é casada ou vive junto (Together), seguidos pelos solteiros. A predominância de casais sugere que muitas decisões de compra podem ser influenciadas por dinâmicas familiares. Isso pode abrir oportunidades para promoções e eventos direcionados a casais ou famílias, bem como para a oferta de produtos e serviços que atendam a múltiplos membros do lar.</p>
+<p>The distribution of marital status, illustrated by a pie chart, revealed that most customers are married or living together, followed by single individuals. The predominance of couples suggests that many purchasing decisions may be influenced by family dynamics. This could open opportunities for promotions and events aimed at couples or families, as well as offering products and services that cater to multiple household members.</p>
 </section>
-<section id="distribuição-de-renda-e-padrões-de-gasto" class="level3">
-<h3 data-anchor-id="distribuição-de-renda-e-padrões-de-gasto">Distribuição de Renda e Padrões de Gasto:</h3>
-<div id="00f6527d" class="cell" data-execution_count="24">
+<section id="income-distribution-and-spending-patterns" class="level3">
+<h3 data-anchor-id="income-distribution-and-spending-patterns">Income Distribution and Spending Patterns:</h3>
+<div id="087a588b" class="cell" data-execution_count="24">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> df[df[<span class="st">'Income'</span>] <span class="op">&lt;</span> <span class="dv">200000</span>]</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">12</span>,<span class="dv">7</span>))</span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>sns.distplot(df[<span class="st">'Income'</span>], color <span class="op">=</span> <span class="st">'magenta'</span>)</span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Salario'</span>)</span>
-<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Densidade'</span>)</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Salary'</span>)</span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Density'</span>)</span>
 <span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
@@ -785,18 +786,18 @@ memory usage: 541.5+ KB</code></pre>
 </div>
 </div>
 </div>
-<p>A análise da distribuição de renda, através de um distplot, confirmou que a grande maioria dos clientes possui renda em torno de $50.000. Embora a distribuição seja aproximadamente normal, alguns clientes apresentam renda superiora $150.000. Esta concentração indica um público com um poder de compra mediano-alto, que pode ser sensível a propostas de valor, mas também busca produtos e serviços que justifiquem o investimento. Os clientes de renda mais elevada, embora em menor número, representam um segmento de alto potencial para produtos e serviços premium.</p>
+<p>The analysis of income distribution, through a distplot, confirmed that the vast majority of customers have an income around 50,000. Although the distribution is approximately normal,some customers have incomes above 150,000. This concentration indicates a public with medium-to-high purchasing power, who may be sensitive to value propositions but also seek products and services that justify the investment. Higher-income customers, though fewer in number, represent a high-potential segment for premium products and services.</p>
 </section>
-<section id="relação-entre-renda-e-escolaridade" class="level3">
-<h3 data-anchor-id="relação-entre-renda-e-escolaridade">Relação entre Renda e Escolaridade:</h3>
-<div id="236dbe2f" class="cell" data-execution_count="25">
+<section id="relationship-between-income-and-education" class="level3">
+<h3 data-anchor-id="relationship-between-income-and-education">Relationship between Income and Education:</h3>
+<div id="88b15df9" class="cell" data-execution_count="25">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>sns.set_palette(<span class="st">'rocket'</span>)</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">12</span>, <span class="dv">7</span>))</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>sns.violinplot(y <span class="op">=</span> df[<span class="st">'Income'</span>], x <span class="op">=</span> df[<span class="st">'Education'</span>])</span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Nível Educacional'</span>)</span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Salario'</span>)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Educational Level'</span>)</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Salary'</span>)</span>
 <span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
@@ -807,17 +808,17 @@ memory usage: 541.5+ KB</code></pre>
 </div>
 </div>
 </div>
-<p>A relação entre renda e escolaridade, explorada por um violin plot, validou uma tendência comum: quanto maior o nível de escolaridade, maior a renda. Esta correlação reforça o perfil do cliente como sendo melhor educado com boa capacidade financeira. Lojas e marcas que alinharem seus produtos e sua comunicação a um público intelectualizado e com aspirações de qualidade se beneficiarão mais nesse ambiente.</p>
+<p>The relationship between income and education, explored by a violin plot, validated a common trend: the higher the education level, the higher the income. This correlation reinforces the customer profile as being well-educated with good financial capacity. Stores and brands that align their products and communication with an intellectualized public with aspirations for quality will benefit more in this environment.</p>
 </section>
-<section id="relação-entre-renda-e-gastos-com-produtos-de-ouro" class="level3">
-<h3 data-anchor-id="relação-entre-renda-e-gastos-com-produtos-de-ouro">Relação entre Renda e Gastos com Produtos de Ouro:</h3>
-<div id="895fa81a" class="cell" data-execution_count="26">
+<section id="relationship-between-income-and-spending-on-gold-products" class="level3">
+<h3 data-anchor-id="relationship-between-income-and-spending-on-gold-products">Relationship between Income and Spending on Gold Products:</h3>
+<div id="2b837bd7" class="cell" data-execution_count="26">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">12</span>, <span class="dv">7</span>))</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>sns.regplot(x <span class="op">=</span> df[<span class="st">'Income'</span>], y <span class="op">=</span> df[<span class="st">'MntGoldProds'</span>], color <span class="op">=</span> <span class="st">'green'</span>)</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Salario'</span>)</span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Gasto com Produtos de Ouro'</span>)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Salary'</span>)</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Spending on Gold Products'</span>)</span>
 <span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
@@ -828,17 +829,17 @@ memory usage: 541.5+ KB</code></pre>
 </div>
 </div>
 </div>
-<p>A relação entre renda e gastos com produtos de ouro, visualizada por um regplot, demonstrou uma clara tendência positiva: clientes com maior renda tendem a gastar mais em produtos de ouro. Este é um indicador interessante do poder aquisitivo e do gosto dos clientes. Ouro e outros produtos de alto valor agregado podem ser promovidos de forma mais eficaz para o segmento de maior renda, talvez através de experiências de compra exclusivas ou programas de fidelidade diferenciados.</p>
+<p>The relationship between income and spending on gold products, visualized by a regplot, showed a clear positive trend: customers with higher incomes tend to spend more on gold products. This is an interesting indicator of customer purchasing power and taste. Gold and other high-value-added products can be promoted more effectively to the higher-income segment, perhaps through exclusive shopping experiences or differentiated loyalty programs.</p>
 </section>
-<section id="relação-entre-renda-e-gasto-total-em-compras" class="level3">
-<h3 data-anchor-id="relação-entre-renda-e-gasto-total-em-compras">Relação entre Renda e Gasto Total em Compras:</h3>
-<div id="65d6f63a" class="cell" data-execution_count="27">
+<section id="relationship-between-income-and-total-spending-on-purchases" class="level3">
+<h3 data-anchor-id="relationship-between-income-and-total-spending-on-purchases">Relationship between Income and Total Spending on Purchases:</h3>
+<div id="48d5b8db" class="cell" data-execution_count="27">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">12</span>, <span class="dv">7</span>))</span>
 <span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>sns.regplot(x <span class="op">=</span> df[<span class="st">'Income'</span>], y <span class="op">=</span> df[<span class="st">'Total_Spent'</span>], color <span class="op">=</span> <span class="st">'red'</span>)</span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Salario'</span>)</span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Gasto Total em Compras'</span>)</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Salary'</span>)</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Total Spending on Purchases'</span>)</span>
 <span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
@@ -849,17 +850,17 @@ memory usage: 541.5+ KB</code></pre>
 </div>
 </div>
 </div>
-<p>Ainda mais importante, a análise da relação entre renda e gasto total em compras, também através de um regplot, confirmou uma relação positiva robusta: clientes com maior renda naturalmente contribuem com um volume maior de gastos no shopping. Este é um dos insights mais fundamentais, reforça a importância de atrair e reter clientes de alta renda, pois eles são a espinha dorsal do faturamento. Estratégias que visam aumentar a renda disponível ou a percepção de valor para esses clientes podem ter um impacto direto e significativo nos resultados financeiros.</p>
+<p>Even more importantly, the analysis of the relationship between income and total spending on purchases, also through a regplot, confirmed a robust positive relationship: customers with higher incomes naturally contribute a larger volume of spending at the shopping center. This is one of the most fundamental insights, reinforcing the importance of attracting and retaining high-income customers, as they are the backbone of revenue. Strategies aimed at increasing disposable income or the perceived value for these customers can have a direct and significant impact on financial results.</p>
 </section>
-<section id="idade-dos-clientes-na-data-de-cadastro" class="level3">
-<h3 data-anchor-id="idade-dos-clientes-na-data-de-cadastro">Idade dos Clientes na Data de Cadastro:</h3>
-<div id="9f6c6374" class="cell" data-execution_count="28">
+<section id="customer-age-at-enrollment-date" class="level3">
+<h3 data-anchor-id="customer-age-at-enrollment-date">Customer Age at Enrollment Date:</h3>
+<div id="a803b5e3" class="cell" data-execution_count="28">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">7</span>, <span class="dv">5</span>))</span>
 <span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>sns.distplot(df[<span class="st">'Customer_Age_When_Enrolled'</span>], color <span class="op">=</span> <span class="st">'brown'</span>)</span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Idade do Cliente na Data do Cadastro'</span>)</span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Densidade'</span>)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Customer Age at Enrollment Date'</span>)</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Density'</span>)</span>
 <span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
@@ -870,13 +871,13 @@ memory usage: 541.5+ KB</code></pre>
 </div>
 </div>
 </div>
-<p>A distribuição da idade dos clientes na data de cadastro, um distplot, reiterou a concentração de clientes na faixa dos 40 anos. Isso solidifica a ideia de que o shopping tem um forte apelo para um público mais maduro e estabelecido, consolidando um nicho de mercado importante e consistente. A comunicação e as ofertas devem ressoar com os interesses e o estilo de vida dessa demografia.</p>
+<p>The distribution of customer age at the registration date, a distplot, reiterated the concentration of customers in their 40s. This solidifies the idea that the shopping center has a strong appeal to a more mature and established audience, consolidating an important and consistent market niche. Communication and offers should resonate with the interests and lifestyle of this demographic.</p>
 </section>
-<section id="distribuição-de-clientes-por-país-de-origem" class="level3">
-<h3 data-anchor-id="distribuição-de-clientes-por-país-de-origem">Distribuição de Clientes por País de Origem:</h3>
-<div id="b1c734e9" class="cell" data-execution_count="29">
+<section id="customer-distribution-by-country-of-origin" class="level3">
+<h3 data-anchor-id="customer-distribution-by-country-of-origin">Customer Distribution by Country of Origin:</h3>
+<div id="a0f2fbc0" class="cell" data-execution_count="29">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">6</span>))</span>
 <span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>sns.countplot(</span>
 <span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    x<span class="op">=</span><span class="st">'Country'</span>,</span>
@@ -884,8 +885,8 @@ memory usage: 541.5+ KB</code></pre>
 <span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>    palette<span class="op">=</span><span class="st">'icefire_r'</span>,</span>
 <span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>    order<span class="op">=</span>df[<span class="st">'Country'</span>].value_counts().index</span>
 <span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'País'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
-<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Número de Clientes'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Country'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Number of Customers'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
 <span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
 <span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -897,13 +898,13 @@ memory usage: 541.5+ KB</code></pre>
 </div>
 </div>
 </div>
-<p>A análise da distribuição de clientes por país, utilizando um countplot, revelou uma clara concentração de clientes no país de origem do dataset, Singapura, seguido por Arábia Saudita e Canadá. A dominância de Singapura é esperada e reforça a base local do shopping. A presença significativa de clientes da Arábia Saudita e Canadá indica uma possível clientela internacional ou de alto poder aquisitivo que pode estar visitando a região. Isso abre caminho para estratégias de turismo de compras e parcerias com agências de viagem, ou mesmo a adaptação de ofertas para culturas específicas.</p>
+<p>The analysis of customer distribution by country, using a countplot, revealed a clear concentration of customers in the dataset’s country of origin, Singapore, followed by Saudi Arabia and Canada. Singapore’s dominance is expected and reinforces the shopping center’s local base. The significant presence of customers from Saudi Arabia and Canada indicates a potential international or high-income clientele who may be visiting the region. This opens the way for shopping tourism strategies and partnerships with travel agencies, or even adapting offers for specific cultures.</p>
 </section>
-<section id="relação-entre-país-de-origem-e-total-de-compras" class="level3">
-<h3 data-anchor-id="relação-entre-país-de-origem-e-total-de-compras">Relação entre País de Origem e Total de Compras:</h3>
-<div id="41a092dc" class="cell" data-execution_count="30">
+<section id="relationship-between-country-of-origin-and-total-purchases" class="level3">
+<h3 data-anchor-id="relationship-between-country-of-origin-and-total-purchases">Relationship between Country of Origin and Total Purchases:</h3>
+<div id="6344aa12" class="cell" data-execution_count="30">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">12</span>, <span class="dv">7</span>))</span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>sns.violinplot(x <span class="op">=</span> df[<span class="st">'Country'</span>], y <span class="op">=</span> df[<span class="st">'Total_Purchases'</span>], palette <span class="op">=</span> <span class="st">'coolwarm'</span>)</span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -916,13 +917,13 @@ memory usage: 541.5+ KB</code></pre>
 </div>
 </div>
 </div>
-<p>Um violin plot comparando o país de origem com o total de compras mostrou que, em geral, os países apresentam um comportamento de compra similar. No entanto, houve exceções notáveis: os Estados Unidos apresentaram alguns clientes com valores de compra significativamente mais altos, enquanto o México exibiu um comportamento distintamente diferente dos demais. Isso sugere que, embora o perfil médio de compra seja consistente, há nichos de mercado em países específicos, como os clientes “super compradores” dos EUA, que merecem atenção especial. Para o México, um estudo mais aprofundado do porquê de seu comportamento divergente poderia revelar oportunidades ou desafios específicos.</p>
+<p>A violin plot comparing the country of origin with total purchases showed that, in general, countries exhibit similar purchasing behavior. However, there were notable exceptions: the United States showed some customers with significantly higher purchase values, while Mexico displayed distinctly different behavior from the others. This suggests that, although the average purchasing profile is consistent, there are market niches in specific countries, such as the “super buyers” from the USA, who deserve special attention. For Mexico, a more in-depth study of why its behavior diverges could reveal specific opportunities or challenges.</p>
 </section>
-<section id="agrupamento-do-gasto-total-por-país" class="level3">
-<h3 data-anchor-id="agrupamento-do-gasto-total-por-país">Agrupamento do Gasto Total por País:</h3>
-<div id="0a1bb561" class="cell" data-execution_count="31">
+<section id="grouping-of-total-spending-by-country" class="level3">
+<h3 data-anchor-id="grouping-of-total-spending-by-country">Grouping of Total Spending by Country:</h3>
+<div id="540953f6" class="cell" data-execution_count="31">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>pm <span class="op">=</span> df[[<span class="st">'Total_Purchases'</span>, <span class="st">'Country'</span>]].groupby([<span class="st">'Country'</span>]).agg([<span class="bu">sum</span>])</span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>sns.set_palette(<span class="st">'Spectral'</span>)</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">7</span>, <span class="dv">7</span>))</span>
@@ -944,20 +945,20 @@ memory usage: 541.5+ KB</code></pre>
 </div>
 </div>
 </div>
-<p>A análise do gasto total agregado por país, através de um pie chart, confirmou o que já era intuído: a maioria do faturamento provém de Singapura, seguida pela Arábia Saudita, que juntas respondem por quase 55% do total em compras. Essa concentração de valor em dois países reforça a necessidade de focar os esforços de retenção e engajamento nesses mercados primários. Estratégias personalizadas e campanhas de fidelidade para clientes de Singapura e Arábia Saudita são cruciais para a saúde financeira do shopping.</p>
+<p>The analysis of total aggregated spending by country, through a pie chart, confirmed what was already intuitive: the majority of revenue comes from Singapore, followed by Saudi Arabia, which together account for almost 55% of total purchases. This concentration of value in two countries reinforces the need to focus retention and engagement efforts on these primary markets. Personalized strategies and loyalty campaigns for customers from Singapore and Saudi Arabia are crucial for the shopping center’s financial health.</p>
 </section>
-<section id="agrupamento-do-gasto-total-por-país-1" class="level3">
-<h3 data-anchor-id="agrupamento-do-gasto-total-por-país-1">Agrupamento do Gasto Total por País:</h3>
-<div id="5c81e7d7" class="cell" data-execution_count="32">
+<section id="customer-registrations-by-month" class="level3">
+<h3 data-anchor-id="customer-registrations-by-month">Customer Registrations by Month:</h3>
+<div id="028da949" class="cell" data-execution_count="32">
 <details class="code-fold">
-<summary>Mostrar Código</summary>
+<summary>Show Code</summary>
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>cadastros_mes <span class="op">=</span> df[<span class="st">'Dt_Customer'</span>].dt.month.value_counts().sort_index()</span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>meses <span class="op">=</span> [<span class="st">'Jan'</span>, <span class="st">'Fev'</span>, <span class="st">'Mar'</span>, <span class="st">'Abr'</span>, <span class="st">'Mai'</span>, <span class="st">'Jun'</span>, <span class="st">'Jul'</span>, <span class="st">'Ago'</span>, <span class="st">'Set'</span>, <span class="st">'Out'</span>, <span class="st">'Nov'</span>, <span class="st">'Dez'</span>]</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>meses <span class="op">=</span> [<span class="st">'Jan'</span>, <span class="st">'Feb'</span>, <span class="st">'Mar'</span>, <span class="st">'Apr'</span>, <span class="st">'May'</span>, <span class="st">'Jun'</span>, <span class="st">'Jul'</span>, <span class="st">'Aug'</span>, <span class="st">'Sep'</span>, <span class="st">'Oct'</span>, <span class="st">'Nov'</span>, <span class="st">'Dec'</span>]</span>
 <span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>cores <span class="op">=</span> sns.color_palette(<span class="st">"Spectral"</span>, <span class="bu">len</span>(meses))</span>
 <span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">6</span>))</span>
 <span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>plt.bar(meses, cadastros_mes, color<span class="op">=</span>cores)</span>
-<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Mês'</span>)</span>
-<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Cadastros'</span>)</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Month'</span>)</span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Registrations'</span>)</span>
 <span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
 <span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
@@ -969,22 +970,22 @@ memory usage: 541.5+ KB</code></pre>
 </div>
 </div>
 </div>
-<p>A distribuição dos cadastros de clientes ao longo dos meses do ano, apresentada em um bar chart, revelou que o processo de aquisição é relativamente bem distribuído. Houve uma leve baixa nos meses de Junho e Julho, o que pode ser sazonal ou indicar oportunidades para campanhas de aquisição nesses períodos. A estabilidade nos cadastros mensais é um bom sinal. As leves quedas em Junho e Julho podem ser alvo de ações de marketing específicas para impulsionar a aquisição durante esses meses, talvez com promoções exclusivas para novos cadastros ou eventos temáticos</p>
+<p>The distribution of customer registrations throughout the months of the year, presented in a bar chart, revealed that the acquisition process is relatively well distributed. There was a slight dip in June and July, which could be seasonal or indicate opportunities for acquisition campaigns during these periods. The stability in monthly registrations is a good sign. The slight declines in June and July could be targets for specific marketing actions to boost acquisition during these months, perhaps with exclusive promotions for new registrations or themed events.</p>
 </section>
 </section>
-<section id="conclusão" class="level2">
-<h2 data-anchor-id="conclusão">Conclusão</h2>
-<p>Esta análise do perfil dos clientes do shopping center revelou insights cruciais que podem guiar futuras estratégias de negócios. Ao compreender quem são os clientes, de onde vêm, qual seu poder aquisitivo e seus hábitos de compra, o shopping pode otimizar significativamente suas operações.</p>
-<section id="principais-insights-do-projeto" class="level3">
-<h3 data-anchor-id="principais-insights-do-projeto">Principais Insights do Projeto:</h3>
+<section id="conclusion" class="level2">
+<h2 data-anchor-id="conclusion">Conclusion</h2>
+<p>This analysis of the shopping center’s customer profile revealed crucial insights that can guide future business strategies. By understanding who the customers are, where they come from, their purchasing power, and their spending habits, the shopping center can significantly optimize its operations.</p>
+<section id="key-project-insights" class="level3">
+<h3 data-anchor-id="key-project-insights">Key Project Insights:</h3>
 <ul>
-<li>Público-Alvo Definido: O shopping atrai predominantemente um público adulto, com idade entre 35 e 45 anos, com alta escolaridade (Graduação, PhD, Mestre) e majoritariamente casado ou em união estável. Este é o seu core business e deve ser o foco principal.</li>
-<li>Poder de Compra Consistente: A maioria dos clientes possui renda concentrada em torno de $50.000, com uma clara correlação positiva entre renda, escolaridade e gastos totais (incluindo produtos de alto valor como ouro). Isso valida a estratégia de focar em um público que busca qualidade e tem capacidade de investimento.</li>
-<li>Base de Clientes Geográfica: Embora diversificada, a base de clientes é majoritariamente local (Singapura) com uma notável contribuição da Arábia Saudita e Canadá. Isso sugere oportunidades para otimizar estratégias tanto para o mercado doméstico quanto para o turismo de compras.</li>
-<li>Comportamentos Específicos por País: A identificação de clientes de alto gasto nos EUA e um padrão diferente no México aponta para a necessidade de abordagens segmentadas por país para maximizar o retorno.</li>
-<li>Estabilidade na Aquisição: Os cadastros de clientes são bem distribuídos ao longo do ano, com pequenas quedas em Junho e Julho, que podem ser oportunidades para campanhas de aquisição direcionadas.</li>
+<li><p>Defined Target Audience: The shopping center predominantly attracts an adult audience, aged between 35 and 45, with high education (Bachelor’s, PhD, Master’s) and mostly married or in a stable union. This is its core business and should be the main focus.</p></li>
+<li><p>Consistent Purchasing Power: The majority of customers have income concentrated around $50,000, with a clear positive correlation between income, education, and total spending (including high-value products like gold). This validates the strategy of focusing on an audience that seeks quality and has investment capacity.</p></li>
+<li><p>Geographic Customer Base: Although diversified, the customer base is predominantly local (Singapore) with a notable contribution from Saudi Arabia and Canada. This suggests opportunities to optimize strategies for both the domestic market and shopping tourism.</p></li>
+<li><p>Country-Specific Behaviors: The identification of high-spending customers in the USA and a different pattern in Mexico points to the need for country-segmented approaches to maximize returns.</p></li>
+<li><p>Acquisition Stability: Customer registrations are well distributed throughout the year, with small dips in June and July, which can be opportunities for targeted acquisition campaigns.</p></li>
 </ul>
-<p>Este projeto demonstra como uma análise de dados bem executada pode ir além dos números, fornecendo uma base sólida para a tomada de decisões estratégicas que impulsionam o crescimento e a satisfação do cliente em um ambiente de varejo altamente competitivo. É uma prova do poder da Ciência de Dados em transformar informações em inteligência de negócios acionável.</p>
+<p>Ultimately, this project highlights how Data Science bridges the gap between raw data and business strategy, empowering retail organizations to remain competitive and customer-centric.”</p>
 </section>
 </section>
 </section>
