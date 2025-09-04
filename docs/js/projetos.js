@@ -33,9 +33,9 @@ document.addEventListener('DOMContentLoaded', function () {
             { 
             id: 'dash-proj-5', 
             category: 'Dashboards', 
-            title: 'Projeto Piracanjuba', 
+            title: 'Piracanjuba Project', 
             tools: 'Power BI, DAX, M',   
-            description: 'Este é um projeto real, e consiste na criação de um dashboard desenvolvido para a Piracanjuba, com o objetivo principal de avaliar o engajamento e o desenvolvimento dos colaboradores que estão participando de um curso', 
+            description: 'This is a real project, consisting of the creation of a dashboard developed for Piracanjuba, with the main objective of evaluating the engagement and development of employees participating in a course.', 
             link: 'projetos/Dashboards/5ProjetoPiracanjuba/Projeto5DA.html',
             image: 'projetos/Dashboards/5ProjetoPiracanjuba/capa.png'
         },
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: 'Dashboards', 
             title: 'Amazon Sales', 
             tools: 'Power BI, DAX, M',  
-            description: 'Este projeto apresenta um Dashboard de análise de vendas e lucratividade, desenvolvido para simular o ambiente de e-commerce e varejo da Amazon', 
+            description: 'This project presents a sales and profitability analysis Dashboard, developed to simulate Amazon\'s e-commerce and retail environment.', 
             link: 'projetos/Dashboards/6DadosAmazonSales/Projeto6DA.html',
             image: 'projetos/Dashboards/6DadosAmazonSales/capa.png'
         },
@@ -87,9 +87,9 @@ document.addEventListener('DOMContentLoaded', function () {
         { 
             id: 'dash-proj-7', 
             category: 'Dashboards', 
-            title: 'Campeonato Brasileiro', 
+            title: 'Brazilian Championship', 
             tools: 'Power BI, DAX, M',  
-            description: 'Este projeto apresenta um Dashboard analítico com foco nas estatísticas do Campeonato Brasileiro de Futebol.', 
+            description: 'This project presents an analytical Dashboard focused on the statistics of the Brazilian Soccer Championship.', 
             link: 'projetos/Dashboards/7DadosCampeonatoBrasileiro/Projeto7DA.html',
             image: 'projetos/Dashboards/7DadosCampeonatoBrasileiro/capa.png'
         },
@@ -98,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: 'Dashboards', 
             title: 'Spotify', 
             tools: 'Power BI, DAX, M, Python, HTML',  
-            description: 'Este projeto apresenta um Dashboard analítico do Spotify, focado em explorar as tendências musicais, o engajamento da audiência e as características das músicas mais populares.', 
+            description: 'This project presents an analytical Spotify Dashboard, focused on exploring music trends, audience engagement, and the characteristics of the most popular songs.', 
             link: 'projetos/Dashboards/8DashboardSpotify/Projeto8DA.html',
             image: 'projetos/Dashboards/8DashboardSpotify/capa.png'
         },
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: 'Dashboards', 
             title: 'Netflix', 
             tools: 'Tableau', 
-            description: 'Este projeto apresenta um Dashboard analítico com foco na vasta biblioteca de conteúdo da Netflix.', 
+            description: 'This project presents an analytical Dashboard focused on Netflix\'s vast content library.', 
             link: 'projetos/Dashboards/9TableauDashboard/Projeto9DA.html',
             image: 'projetos/Dashboards/9TableauDashboard/capa.png'
         },

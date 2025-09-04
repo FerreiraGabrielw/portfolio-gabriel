@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Gabriel Ferreira">
-<meta name="dcterms.date" content="2023-03-17">
+<meta name="dcterms.date" content="2024-02-27">
 
-<title>Projeto: Dashboard Amazon - Análise de Vendas e Lucratividade</title>
+<title>Project: Piracanjuba Dashboard - Student Engagement and Development Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,17 +25,17 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="Projeto6DA_files/libs/clipboard/clipboard.min.js"></script>
-<script src="Projeto6DA_files/libs/quarto-html/quarto.js" type="module"></script>
-<script src="Projeto6DA_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="Projeto6DA_files/libs/quarto-html/popper.min.js"></script>
-<script src="Projeto6DA_files/libs/quarto-html/tippy.umd.min.js"></script>
-<script src="Projeto6DA_files/libs/quarto-html/anchor.min.js"></script>
-<link href="Projeto6DA_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="Projeto6DA_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="Projeto6DA_files/libs/bootstrap/bootstrap.min.js"></script>
-<link href="Projeto6DA_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="Projeto6DA_files/libs/bootstrap/bootstrap-bb462d781dde1847d9e3ccf7736099dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="Projeto5DA_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Projeto5DA_files/libs/quarto-html/quarto.js" type="module"></script>
+<script src="Projeto5DA_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="Projeto5DA_files/libs/quarto-html/popper.min.js"></script>
+<script src="Projeto5DA_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Projeto5DA_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Projeto5DA_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Projeto5DA_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Projeto5DA_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Projeto5DA_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Projeto5DA_files/libs/bootstrap/bootstrap-bb462d781dde1847d9e3ccf7736099dd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -48,7 +48,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projeto: Dashboard Amazon - Análise de Vendas e Lucratividade</h1>
+<h1 class="title">Project: Piracanjuba Dashboard - Student Engagement and Development Analysis</h1>
 </div>
 
 
@@ -65,7 +65,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 17, 2023</p>
+      <p class="date">February 27, 2024</p>
     </div>
   </div>
   
@@ -77,140 +77,140 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introdução" class="level1">
-<h1>Introdução</h1>
-<p>Este projeto apresenta um Dashboard de análise de vendas e lucratividade, desenvolvido para simular o ambiente de e-commerce e varejo da Amazon. O principal objetivo é fornecer uma visão detalhada do desempenho financeiro da empresa ao longo dos anos, identificar os produtos e categorias mais rentáveis, analisar o comportamento de compra dos clientes e avaliar a eficiência operacional, como o tempo de entrega. O painel visa capacitar a gestão a tomar decisões estratégicas relacionadas a estoque, precificação, marketing e otimização da cadeia de suprimentos.</p>
-<section id="estrutura-do-projeto" class="level2">
-<h2 class="anchored" data-anchor-id="estrutura-do-projeto">Estrutura do Projeto</h2>
-<p>O dashboard é organizado em diferentes seções, cada uma focando em um aspecto crucial da análise de negócios:</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>This is a real project, consisting of the creation of a dashboard developed for <strong>Piracanjuba</strong>, with the primary objective of evaluating the engagement and development of employees participating in a technology degree course. The company acquired the course for its employees and requested an analytical tool to monitor progress, identify areas of success, and opportunities for improvement in the training process. The dashboard provides a clear view of the number of students, average study time, module completion progress, and certificate issuance, allowing Piracanjuba to make data-driven decisions to optimize its internal development programs.</p>
+<section id="note-all-employees-students-have-been-anonymized-in-the-dataset." class="level6">
+<h6 class="anchored" data-anchor-id="note-all-employees-students-have-been-anonymized-in-the-dataset.">Note: All employees (students) have been anonymized in the dataset.</h6>
+</section>
+<section id="project-structure" class="level2">
+<h2 class="anchored" data-anchor-id="project-structure">Project Structure</h2>
+<p>The analysis was divided into four main pages in the dashboard, each focusing on different aspects of student engagement and development:</p>
 <ul>
-<li><strong>Visão Geral Financeira</strong>: KPIs de vendas, lucro e margem, além de uma linha do tempo da performance anual.</li>
-<li><strong>Produtos e Clientes de Destaque</strong>: Identificação dos produtos mais vendidos e dos clientes mais lucrativos.</li>
-<li><strong>Análise por Categoria</strong>: Detalhamento de pedidos, lucro e vendas por diferentes categorias de produtos.</li>
-<li><strong>Eficiência Operacional e Comportamento de Pedidos</strong>: Avaliação do tempo médio de entrega e a distribuição de pedidos por mês e por cliente.</li>
+<li><strong>Overview</strong>: Presents total student indicators and the average days of study.</li>
+<li><strong>General Student Analysis</strong>: Details the completion of individual modules, the flow of new students per month, and the monthly module completion volume.</li>
+<li><strong>Student Performance Analysis - Certificates</strong>: Focuses on issued certificates, showing the general total, issuance per student, and by content.</li>
+<li><strong>Module Evaluation</strong>: Offers a view of the overall performance of modules (completed, pending, in progress) and a classification of student performance based on the number of completed modules.</li>
 </ul>
 </section>
-<section id="tecnologias-utilizadas" class="level2">
-<h2 class="anchored" data-anchor-id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
-<p>Para a construção deste dashboard, as ferramentas empregadas foram:</p>
+<section id="technologies-used" class="level2">
+<h2 class="anchored" data-anchor-id="technologies-used">Technologies Used</h2>
+<p>For the construction of this analytical dashboard, the tools employed were:</p>
 <ul>
-<li><strong>Power BI Desktop</strong>: Para conectar a fonte de dados, realizar a modelagem e transformação necessárias, desenvolver as medidas DAX para cálculos complexos e construir os visuais interativos que compõem o dashboard.</li>
-<li><strong>Figma</strong>: A prototipação e o design do dashboard foram feitos com o Figma, garantindo uma experiência de usuário intuitiva e visualmente atraente.</li>
+<li><strong>Power BI Desktop</strong>: To connect data sources, perform the necessary modeling and transformation, and develop the interactive visuals that compose the dashboard. DAX measures were used for calculations and the M language for data handling in Power Query.</li>
+<li><strong>Figma</strong>: The prototyping and design of the dashboard were done with Figma, ensuring an intuitive and visually appealing user experience, which was later exported and integrated into Power BI.</li>
 </ul>
 </section>
-<section id="processo-de-etl-extração-transformação-e-carregamento" class="level2">
-<h2 class="anchored" data-anchor-id="processo-de-etl-extração-transformação-e-carregamento">Processo de ETL (Extração, Transformação e Carregamento)</h2>
-<p>O processo de ETL para o Dashboard Amazon foi rigorosamente executado para garantir a qualidade e a integridade dos dados:</p>
+<section id="etl-process-extraction-transformation-and-loading" class="level2">
+<h2 class="anchored" data-anchor-id="etl-process-extraction-transformation-and-loading">ETL Process (Extraction, Transformation, and Loading)</h2>
+<p>The ETL process for this project was structured to ensure the accuracy and readiness of the data for analysis:</p>
 <ol type="1">
-<li><strong>Extração</strong>: Os dados foram extraídos de uma única planilha Excel (<code>.xls</code>), que consolidava todas as informações de vendas, produtos, clientes e operações necessárias para a análise.</li>
-<li><strong>Transformação</strong>: No Power Query, parte integrante do Power BI, foram realizadas diversas operações de limpeza e enriquecimento. Isso incluiu:
+<li><strong>Extraction</strong>: Raw data was extracted from Excel spreadsheets, containing detailed information about students, their progress in modules, and issued certificates. These spreadsheets served as the primary data source for the analysis.</li>
+<li><strong>Transformation</strong>: In Power Query, an integral part of Power BI, various cleaning and enrichment operations were performed. This included:
 <ul>
-<li>Tratamento de dados, como a padronização de nomes e a correção de valores.</li>
-<li>Criação de novas colunas e métricas calculadas que seriam essenciais para as análises, utilizando a linguagem M.</li>
-<li>A modelagem de dados foi cuidadosamente definida, estabelecendo relacionamentos entre as tabelas e garantindo que todas as informações pudessem ser corretamente agregadas e filtradas para uma análise multidimensional.</li>
+<li>Data treatment, ensuring consistency and quality.</li>
+<li>Creation of new columns and calculated metrics that would be essential for the analyses, using the M language.</li>
+<li>Data modeling was carefully defined, establishing relationships between tables and creating a schema that allowed for correct aggregation and filtering of information.</li>
 </ul></li>
-<li><strong>Carregamento</strong>: Após as etapas de extração e transformação, os dados foram carregados no modelo de dados do Power BI, estando prontos para alimentar todos os gráficos e tabelas do dashboard, permitindo a exploração interativa.</li>
+<li><strong>Loading</strong>: After the extraction and transformation steps, the data was loaded into the Power BI data model, ready to feed all the charts and tables of the dashboard, allowing for interactive exploration.</li>
 </ol>
 </section>
 </section>
 <section id="dashboard" class="level1">
 <h1>Dashboard</h1>
-<p>O dashboard apresenta um layout claro e organizado, com uma navegação intuitiva entre as diferentes análises. A interface combina cartões de KPI, gráficos de barras e linhas para tendências temporais e rankings, além de tabelas detalhadas. Cada visual é projetado para destacar informações chave e permitir a exploração interativa dos dados, facilitando a identificação de padrões e insights acionáveis para o negócio.</p>
+<p>The dashboard is organized into four distinct pages, each dedicated to a specific aspect of the analysis. The design, conceived in Figma and implemented in Power BI, ensures a clean interface, with clear and easily interpretable visuals. Interactivity allows users to navigate between pages and explore data at different levels of granularity, from an overview of engagement to the individual performance of modules and students.</p>
+<div style="text-align:center;">
+<p><img src="imagem1.png" alt=""></p>
+</div>
 <section id="insights" class="level2">
 <h2 class="anchored" data-anchor-id="insights">Insights</h2>
-<p>A análise dos dados apresentados no dashboard revelou insights valiosos sobre a performance de vendas e lucratividade:</p>
+<p>The analysis of the data presented in the dashboard revealed crucial insights into the engagement and development of Piracanjuba students:</p>
 <ul>
-<li><strong>Visão Geral Financeira Robusta</strong>:
+<li><strong>Engagement Overview</strong>:
 <ul>
-<li>O painel destaca um <strong>Total de Vendas de R$ 3,59 Milhões</strong> e um <strong>Total de Lucro de R$ 108 Mil</strong>.
+<li>The dashboard shows a total of 4,419 students enrolled in the course.</li>
+<li>The average study days is 27.28 days. This is an important indicator to measure the time students dedicate to learning, suggesting reasonable engagement with the platform or content.</li>
+</ul></li>
+</ul>
 <div style="text-align:center;">
-<img src="imagem1.png" alt="">
-</div></li>
-<li>A <strong>Margem de Lucro é de 3,02%</strong>, indicando a eficiência na conversão de vendas em lucro.
-<div style="text-align:center;">
-<img src="imagem2.png" alt="">
-</div></li>
-<li>A análise temporal de <strong>Vendas por Ano</strong> mostra um crescimento contínuo de 2011 a 2014, com o ano de 2014 registrando o maior volume de vendas, próximo a R$ 1,5 Milhão, sublinhando uma trajetória positiva de expansão.</li>
+<p><img src="imagem2.png" alt=""></p>
+</div>
+<ul>
+<li><strong>Module Completion and Student Flow</strong>:
+<ul>
+<li>The “Welcome!” and “Technical development” modules stand out with 219 and 192 completions, respectively, indicating they are entry points or modules of high relevance and engagement.</li>
+<li>Fundamental modules such as “Initial Module - Power BI” (135 completions), “Power BI II” (73 completions), and “SQL Essentials” (70 completions) show a good completion rate, which is positive for the development of technical skills.</li>
+<li>In contrast, more advanced or specific modules, such as “Q&amp;A Live Session” (16 completions) and “Pillar 4.3 Real Project” (17 completions), have significantly fewer completions. This may indicate greater difficulty, less interest, or that they are optional modules for a smaller group of students.</li>
 </ul></li>
 </ul>
 <div style="text-align:center;">
 <p><img src="imagem3.png" alt=""></p>
 </div>
 <ul>
-<li><strong>Produtos e Clientes de Destaque</strong>:
+<li><strong>Monthly Entry and Completion Flow</strong>:
 <ul>
-<li>Entre os <strong>Produtos Mais Vendidos</strong>, “Staples” lidera com <strong>R$ 1,2 Milhão</strong> em vendas, seguido por produtos como “Wilson Jones Clip &amp;…” e “Cardinal EasyOpen …”, com <strong>R$ 1,0 Milhão</strong>. Esses dados são cruciais para a gestão de estoque e campanhas de marketing direcionadas.
+<li>The entry of <strong>New Students</strong> had notable peaks in January (1,088) and September (779), with a drop in December (644) and two significant drops in October and November (265 and 64 respectively).
 <div style="text-align:center;">
 <img src="imagem4.png" alt="">
 </div></li>
-<li>Na análise de <strong>Lucro por Cliente</strong>, Raymond Buch se destaca, seguido por Jane Waco, evidenciando os clientes de maior valor para o negócio e a importância de programas de fidelidade.
-<div style="text-align:center;">
-<p><img src="imagem5.png" alt=""></p>
-</div></li>
-</ul></li>
-<li><strong>Eficiência e Desempenho por Categoria</strong>:
-<ul>
-<li>O Ticket Médio das vendas é de R$ 2.230,55, e o Valor Médio por Unidade é de R$ 226,49, indicando o valor transacional por pedido e por item vendido.
-<div style="text-align:center;">
-<img src="imagem6.png" alt="">
-</div></li>
-<li>Em Número de Pedidos por Categoria, “Binders” lidera com 403 pedidos, seguido por “Paper” (384) e “Furnishings” (281), o que sugere alta demanda por esses itens.
-<div style="text-align:center;">
-<img src="imagem7.png" alt="">
-</div></li>
-<li>A Vendas por Categoria mostram “Copiers” com R$ 0,50 Milhão** e “Phones” com R$ 0,49 Milhão, liderando em receita.
-<div style="text-align:center;">
-<img src="imagem8.png" alt="">
-</div></li>
-<li>Por outro lado, em Lucro por Categoria, “Tables” (R$ 19 Mil), “Copiers” (R$ 16 Mil) e “Binders” (R$ 16 Mil) são os maiores contribuintes, revelando que nem sempre as categorias com maior volume de vendas são as mais lucrativas.
-<div style="text-align:center;">
-<p><img src="imagem9.png" alt=""></p>
-</div></li>
-</ul></li>
-<li><strong>Performance de Pedidos e Clientes</strong>:
-<ul>
-<li>O Tempo Médio de Entrega é de 3,93 dias, um KPI importante para a satisfação do cliente. O Número Total de Pedidos no período é de 1.611.
+<li><strong>Module Completion per Month</strong> shows a different pattern. Although September (183) and October (215) have a high volume of completions, January (12) and December (18) record the lowest numbers. This may reflect a delay between student entry and module completion, or that completions are concentrated in specific months of the academic year.
 <div style="text-align:center;">
 <img src="imagem10.png" alt="">
 </div></li>
-<li>A análise de Pedidos por Mês ao longo dos anos revela que Setembro (227), Novembro e Dezembro (ambos com 234 pedidos, são os meses de pico, sugerindo sazonalidade nas compras.
+</ul></li>
+<li><strong>Certificate Issued Analysis</strong>:
+<ul>
+<li>A total of <strong>751 Certificates Issued</strong> demonstrates a tangible result of the training program.
 <div style="text-align:center;">
-<img src="imagem11.png" alt="">
+<img src="imagem5.png" alt="">
 </div></li>
-<li>Em Número de Pedidos por Cliente, Arianne Irving e Bill Donatelli estão entre os clientes com 7 pedidos cada, mostrando alta frequência de compra.
+<li>The distribution of certificates per student reveals that <strong>student #4</strong> stands out with 6 certificates.
 <div style="text-align:center;">
-<img src="imagem12.png" alt="">
+<img src="imagem6.png" alt="">
 </div></li>
-<li><strong>Total de Vendas por Cliente</strong> reitera o valor de Raymond Buch (R$ 58 Mil) e Nora Preis (R$ 55 Mil) como os clientes que geram mais receita.
+<li>Regarding <strong>Certificate Issuance by Content</strong>, “Power BI 1.0” (197 certificates) and “Excel” (168 certificates) are the contents with the highest number of certifications, highlighting the demand and relevance of these tools. SQL (153 certificates) also performs well. Contents like “Pentaho” and “Welcome” have a very low number of certificates (1 each), which may indicate that they are niche or introductory modules not focused on certification.
 <div style="text-align:center;">
-<p><img src="imagem13.png" alt=""></p>
+<p><img src="imagem7.png" alt=""></p>
 </div></li>
 </ul></li>
-</ul>
-</section>
-<section id="considerações" class="level2">
-<h2 class="anchored" data-anchor-id="considerações">Considerações</h2>
-<p>O dashboard oferece uma base sólida para otimizar as operações e as estratégias de vendas da Amazon (simulada). A partir dos insights obtidos, algumas considerações importantes surgem:</p>
+<li><strong>Overall and Per-Student Module Performance</strong>:
 <ul>
-<li><strong>Otimização do Mix de Produtos</strong>: A diferença entre categorias mais vendidas e mais lucrativas (“Copiers” e “Phones” vs.&nbsp;“Tables”) indica a necessidade de uma análise mais aprofundada de custos e precificação. A empresa pode focar em aumentar as vendas de itens de alta lucratividade ou buscar maneiras de melhorar a margem de produtos de alto volume.</li>
-<li><strong>Gestão de Estoque e Demanda Sazonal</strong>: O pico de pedidos entre Setembro e Dezembro é um indicativo claro de sazonalidade. A gestão de estoque e o planejamento de campanhas de marketing devem ser intensificados nesses meses para capitalizar a demanda.</li>
-<li><strong>Melhora Contínua do Tempo de Entrega</strong>: Um tempo médio de entrega de 3,93 dias é razoável, mas em um ambiente competitivo como o e-commerce, a otimização contínua desse KPI pode ser um diferencial crucial para a satisfação e retenção de clientes.</li>
-<li><strong>Programas de Fidelidade e VIP</strong>: A identificação dos clientes de maior valor, tanto em lucro quanto em vendas, permite a criação de programas de fidelidade ou ofertas personalizadas para incentivar a recompra e fortalecer o relacionamento.</li>
-<li><strong>Análise de Desempenho por Ano</strong>: A tendência de crescimento anual é positiva, mas é importante investigar os fatores que impulsionaram o aumento das vendas em 2014 para replicar essas estratégias em períodos futuros.</li>
+<li>Of the 26 total modules, most students are “In progress” (79.35%). Only 7.61% of students have “Completed” all modules, and 13.04% have “Pending” modules. This highlights the importance of strategies to encourage completion and follow-up for students in progress.
+<div style="text-align:center;">
+<img src="imagem9.png" alt="">
+</div></li>
+<li>The “Student Dedication” classification categorizes performance: “Good” (&gt; 20 modules completed), “Medium” (8 to 19 modules completed), and “Poor” (&lt; 8 modules completed).</li>
+<li>The “Student Performance” panel shows that most are “In progress”.
+<div style="text-align:center;">
+<img src="imagem8.png" alt="">
+</div></li>
+</ul></li>
+<li>It is also possible to visualize individual performance; this ability to identify individualized performance allows for targeted interventions, such as personalized support for “Poor” performing students or recognition for “Good” ones.</li>
 </ul>
 </section>
-<section id="conclusão" class="level2">
-<h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
-<p>O Dashboard foi uma ferramenta analítica abrangente que transforma dados de vendas e operações em inteligência de negócio acionável. Sua principal contribuição reside na capacidade de:</p>
+<section id="considerations" class="level2">
+<h2 class="anchored" data-anchor-id="considerations">Considerations</h2>
+<p>The dashboard offers a solid foundation for improving corporate education strategies at Piracanjuba. Based on the insights obtained, some important considerations emerge:</p>
 <ul>
-<li>Fornecer uma visão clara da performance financeira geral e da trajetória de crescimento da empresa.</li>
-<li>Identificar os produtos, categorias e clientes que impulsionam a receita e o lucro.</li>
-<li>Analisar a eficiência operacional e os padrões sazonais de pedidos.</li>
+<li><strong>Incentivizing Completion</strong>: With a large portion of students “In progress,” it is crucial to develop strategies to convert this progress into completion. This can include incentive campaigns, automated reminders, tutoring sessions, or gamification to keep students engaged until the end.</li>
+<li><strong>Monitoring Specific Modules</strong>: The low completion rate of more advanced or specific modules suggests the need to evaluate the difficulty of the content, the demand for these topics, or the need for more support for students starting them.</li>
+<li><strong>Optimizing Monthly Flow</strong>: The disparity between new student enrollment and module completion per month indicates the need to understand employee study cycles. Module offerings can be planned according to periods of higher engagement, or acceleration programs can be created for completion.</li>
+<li><strong>Exploring Certifications</strong>: The high number of certificates in Power BI and Excel validates the relevance of these topics. The company can explore creating new modules or deeper dives into these topics to meet demand. For topics with few certifications, a review of content or presentation format may be necessary.</li>
+<li><strong>Individualized Performance Management</strong>: The ability to classify student performance (“Good”, “Medium”, “Poor”) is a differentiator. Piracanjuba can use this information to offer mentorship to “Poor” performing students, celebrate “Good” ones and perhaps encourage them to become “mentors” for colleagues, and provide constructive feedback to “Medium” students.</li>
 </ul>
 </section>
-<section id="link-para-o-dashboard" class="level2">
-<h2 class="anchored" data-anchor-id="link-para-o-dashboard">Link para o Dashboard:</h2>
-<p><a href="https://app.powerbi.com/groups/me/reports/f3677347-a80f-4fd0-aad8-4a1b5c33b243/ReportSection45c8cf44a92cf66d802f?experience=power-bi" target="_blank" rel="noopener noreferrer"> Clique aqui para acessar o relatório no Power BI </a></p>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The Dashboard was a strategic analytical tool that transformed employee engagement and development data into actionable intelligence. Its main contribution lies in its ability to:</p>
+<ul>
+<li>Provide a clear and comprehensive view of the workforce’s educational progress.</li>
+<li>Identify engagement patterns, bottlenecks in module completion, and high-performance areas.</li>
+<li>Enable proactive management of the training program, from planning course offerings to individualized student support.</li>
+</ul>
+</section>
+<section id="link-to-the-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="link-to-the-dashboard">Link to the Dashboard:</h2>
+<p><a href="https://app.powerbi.com/groups/me/reports/e6f8d154-f679-4e1a-8fb4-a81b7300e178/ReportSectionbbdc1d2c38618044282c?experience=power-bi" rel="noopener noreferrer"> Click here to access the report in Power BI </a></p>
 </section>
 </section>
 

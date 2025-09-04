@@ -9,7 +9,7 @@
 <meta name="author" content="Gabriel Ferreira">
 <meta name="dcterms.date" content="2024-04-05">
 
-<title>Projeto: Dashboard Netflix - Análise de Conteúdo e Tendências de Streaming</title>
+<title>Project: Netflix Dashboard - Content Analysis and Streaming Trends</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -48,7 +48,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projeto: Dashboard Netflix - Análise de Conteúdo e Tendências de Streaming</h1>
+<h1 class="title">Project: Netflix Dashboard - Content Analysis and Streaming Trends</h1>
 </div>
 
 
@@ -77,121 +77,121 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introdução" class="level1">
-<h1>Introdução</h1>
-<p>Este projeto apresenta um Dashboard analítico com foco na vasta biblioteca de conteúdo da Netflix. O principal objetivo foi explorar e visualizar as tendências de filmes e séries, a distribuição de gêneros, classificações etárias e o volume de lançamentos ao longo dos anos. A construção deste painel foi na ferramenta Tableau. O dashboard visa capacitar analistas de conteúdo e estrategistas de mercado a compreender melhor o portfólio da Netflix e as preferências do público.</p>
-<section id="obs-o-datset-contém-dados-de-uma-fonte-americana-e-por-isso-algumas-features-podem-não-ser-conhecidas." class="level6">
-<h6 class="anchored" data-anchor-id="obs-o-datset-contém-dados-de-uma-fonte-americana-e-por-isso-algumas-features-podem-não-ser-conhecidas.">Obs: O datset contém dados de uma fonte americana e por isso algumas features podem não ser conhecidas.</h6>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>This project presents an analytical Dashboard focused on Netflix’s vast content library. The main objective was to explore and visualize movie and series trends, genre distribution, age ratings, and the volume of releases over the years. This panel was built using the Tableau tool. The dashboard aims to empower content analysts and market strategists to better understand Netflix’s portfolio and audience preferences.</p>
+<section id="note-the-dataset-contains-data-from-an-american-source-so-some-features-may-not-be-familiar." class="level6">
+<h6 class="anchored" data-anchor-id="note-the-dataset-contains-data-from-an-american-source-so-some-features-may-not-be-familiar.">Note: The dataset contains data from an American source, so some features may not be familiar.</h6>
 </section>
-<section id="estrutura-do-projeto" class="level2">
-<h2 class="anchored" data-anchor-id="estrutura-do-projeto">Estrutura do Projeto</h2>
-<p>O dashboard é organizado para oferecer uma visão multifacetada do conteúdo da Netflix:</p>
+<section id="project-structure" class="level2">
+<h2 class="anchored" data-anchor-id="project-structure">Project Structure</h2>
+<p>The dashboard is organized to offer a multifaceted view of Netflix’s content:</p>
 <ul>
-<li><strong>Visão Geral do Conteúdo</strong>: Distribuição entre filmes e séries, e suas respectivas quantidades.</li>
-<li><strong>Classificação Etária</strong>: Análise da variedade de classificações (TV-MA, TV-14, TV-PG, etc.) e a proporção de cada uma.</li>
-<li><strong>Top 10 Gêneros</strong>: Ranking dos gêneros mais prevalentes na plataforma.</li>
-<li><strong>Tendência de Lançamentos por Ano</strong>: Evolução do volume de filmes e séries adicionados anualmente.</li>
-<li><strong>Distribuição de Conteúdo por País</strong>: Um mapa para visualizar a origem ou o foco geográfico do conteúdo.</li>
-<li><strong>Detalhe de Título</strong>: Informações específicas sobre um título, como nome, tipo, classificação, ano de lançamento, duração e descrição.</li>
+<li><strong>Content Overview</strong>: Distribution between movies and series, and their respective quantities.</li>
+<li><strong>Age Rating</strong>: Analysis of the variety of ratings (TV-MA, TV-14, TV-PG, etc.) and the proportion of each.</li>
+<li><strong>Top 10 Genres</strong>: Ranking of the most prevalent genres on the platform.</li>
+<li><strong>Release Trend by Year</strong>: Evolution of the volume of movies and series added annually.</li>
+<li><strong>Content Distribution by Country</strong>: A map to visualize the origin or geographical focus of the content.</li>
+<li><strong>Title Detail</strong>: Specific information about a title, such as name, type, rating, release year, duration, and description.</li>
 </ul>
 </section>
-<section id="tecnologias-utilizadas" class="level2">
-<h2 class="anchored" data-anchor-id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
-<p>Para a construção deste dashboard analítico, a ferramenta empregada foi:</p>
+<section id="technologies-used" class="level2">
+<h2 class="anchored" data-anchor-id="technologies-used">Technologies Used</h2>
+<p>For the construction of this analytical dashboard, the tool employed was:</p>
 <ul>
-<li><strong>Tableau Desktop</strong>: Utilizado para conectar a fonte de dados, realizar as transformações necessárias, criar os cálculos e construir os visuais interativos que compõem o dashboard. A escolha do Tableau permitiu explorar suas capacidades nativas de design e análise e, com o design e o layout sendo desenvolvidos diretamente no ambiente do Tableau.</li>
+<li><strong>Tableau Desktop</strong>: Used to connect the data source, perform the necessary transformations, create calculations, and build the interactive visuals that make up the dashboard. The choice of Tableau allowed exploring its native design and analysis capabilities, with the design and layout being developed directly within the Tableau environment.</li>
 </ul>
 </section>
-<section id="processo-de-etl-extração-transformação-e-carregamento" class="level2">
-<h2 class="anchored" data-anchor-id="processo-de-etl-extração-transformação-e-carregamento">Processo de ETL (Extração, Transformação e Carregamento)</h2>
-<p>O processo de ETL para o Dashboard Netflix foi direto, aproveitando a estrutura de dados existente:</p>
+<section id="etl-process-extraction-transformation-and-loading" class="level2">
+<h2 class="anchored" data-anchor-id="etl-process-extraction-transformation-and-loading">ETL Process (Extraction, Transformation, and Loading)</h2>
+<p>The ETL process for the Netflix Dashboard was straightforward, leveraging the existing data structure:</p>
 <ol type="1">
-<li><strong>Extração</strong>: Os dados brutos foram extraídos de um único arquivo CSV, o <code>netflix_titles.csv</code>. Este arquivo continha informações abrangentes sobre cada título disponível na plataforma, incluindo seu tipo (filme ou série), gênero, classificação etária, ano de lançamento, duração, descrição, e países de origem.</li>
-<li><strong>Transformação</strong>: No Tableau, foram realizadas as transformações necessárias para preparar os dados para a visualização. Isso incluiu:
+<li><strong>Extraction</strong>: Raw data was extracted from a single CSV file, <code>netflix_titles.csv</code>. This file contained comprehensive information about each title available on the platform, including its type (movie or series), genre, age rating, release year, duration, description, and countries of origin.</li>
+<li><strong>Transformation</strong>: In Tableau, the necessary transformations were performed to prepare the data for visualization. This included:
 <ul>
-<li>Ajustes de tipo de dado e limpeza de possíveis inconsistências.</li>
-<li>Criação de campos calculados e hierarquias para análises mais aprofundadas (por exemplo, para agrupar anos ou categorias).</li>
-<li>Padronização de termos para garantir a consistência nos visuais.</li>
+<li>Adjustments to data types and cleaning of possible inconsistencies.</li>
+<li>Creation of calculated fields and hierarchies for more in-depth analyses (e.g., to group years or categories).</li>
+<li>Standardization of terms to ensure consistency in the visuals.</li>
 </ul></li>
-<li><strong>Carregamento</strong>: Após a conexão e as transformações, os dados foram carregados no ambiente do Tableau, tornando-os prontos para serem explorados através da criação de gráficos, tabelas e mapas interativos.</li>
+<li><strong>Loading</strong>: After connection and transformations, the data was loaded into the Tableau environment, making it ready to be explored through the creation of interactive charts, tables, and maps.</li>
 </ol>
 </section>
 </section>
 <section id="dashboard" class="level1">
 <h1>Dashboard</h1>
-<p>O dashboard apresenta um layout claro e intuitivo, com uma organização que facilita a navegação e a compreensão das tendências do conteúdo da Netflix. A interface combina gráficos de pizza/rosca para proporções, gráficos de barras para rankings e distribuições, gráficos de linha para tendências temporais e um mapa geográfico. A interatividade é um ponto forte, permitindo que os usuários explorem dados de diferentes ângulos e obtenham insights sobre os títulos, gêneros e padrões de lançamento.</p>
+<p>The dashboard features a clear and intuitive layout, organized to facilitate navigation and understanding of Netflix content trends. The interface combines pie/donut charts for proportions, bar charts for rankings and distributions, line charts for temporal trends, and a geographical map. Interactivity is a strong point, allowing users to explore data from different angles and gain insights into titles, genres, and release patterns.</p>
 <div style="text-align: center;">
 <p><img src="imagem1.png" alt="" style="max-width: 100%; height: auto;"></p>
 </div>
 <section id="insights" class="level2">
 <h2 class="anchored" data-anchor-id="insights">Insights</h2>
-<p>A análise dos dados apresentados no dashboard revelou insights valiosos sobre o conteúdo da Netflix:</p>
+<p>The analysis of the data presented in the dashboard revealed valuable insights into Netflix’s content:</p>
 <ul>
-<li><strong>Visão Geral da Distribuição de Conteúdo</strong>:
+<li><strong>Content Distribution Overview</strong>:
 <ul>
-<li>A plataforma é predominantemente composta por Filmes, que representam 68,42% do total, somando 4.265 títulos.</li>
-<li>As Séries de TV correspondem a 31,58%, com 1.969 títulos. Isso indica uma estratégia da Netflix de oferecer uma vasta gama de filmes, complementada por um forte catálogo de séries.</li>
+<li>The platform is predominantly composed of <strong>Movies</strong>, accounting for 68.42% of the total, with 4,265 titles.</li>
+<li><strong>TV Shows</strong> make up 31.58%, with 1,969 titles. This indicates a Netflix strategy to offer a wide range of movies, complemented by a strong catalog of series.</li>
 </ul></li>
 </ul>
 <div style="text-align: center;">
 <p><img src="imagem2.png" alt="" style="max-width: 100%; height: auto;"></p>
 </div>
 <ul>
-<li><strong>Distribuição por Classificação Etária</strong>:
+<li><strong>Distribution by Age Rating</strong>:
 <ul>
-<li>As classificações mais comuns são TV-MA (2.027 títulos), TV-14 (1.698 títulos) e TV-PG (701 títulos).</li>
-<li>Isso sugere que a Netflix possui uma quantidade considerável de conteúdo voltado para o público adulto ou adolescente (TV-MA e TV-14), mas também oferece uma boa variedade para toda a família (TV-PG). Outras classificações como R, PG-13, G, TV-Y e NC-17 completam a diversidade do catálogo.</li>
+<li>The most common ratings are <strong>TV-MA (2,027 titles), TV-14 (1,698 titles), and TV-PG (701 titles)</strong>.</li>
+<li>This suggests that Netflix has a considerable amount of content aimed at adult or adolescent audiences (TV-MA and TV-14), but also offers a good variety for the whole family (TV-PG). Other ratings such as R, PG-13, G, TV-Y, and NC-17 complete the catalog’s diversity.</li>
 </ul></li>
 </ul>
 <div style="text-align: center;">
 <p><img src="imagem3.png" alt="" style="max-width: 100%; height: auto;"></p>
 </div>
 <ul>
-<li><strong>Top 10 Gêneros</strong>:
+<li><strong>Top 10 Genres</strong>:
 <ul>
-<li>Documentários lideram com 299 títulos, seguidos por Stand-Up Comedy (273 títulos).</li>
-<li>Outros gêneros populares incluem “Dramas, International Movies” (248), “Dramas, Independent Movies, International Movies” (186), “Comedies, Dramas, International Movies” (174), “Kids’ TV” (159), “Documentaries, International Movies” (150), “Children &amp; Family Movies, Comedies” (129), “Comedies, International Movies” (120) e “Children &amp; Family Movies” (120).</li>
-<li>A predominância de documentários e comédia, e a presença constante de filmes e dramas internacionais, indicam uma estratégia de conteúdo diversificada, atendendo a nichos e ao público global.</li>
+<li><strong>Documentaries</strong> lead with 299 titles, followed by <strong>Stand-Up Comedy (273 titles)</strong>.</li>
+<li>Other popular genres include “Dramas, International Movies” (248), “Dramas, Independent Movies, International Movies” (186), “Comedies, Dramas, International Movies” (174), “Kids’ TV” (159), “Documentaries, International Movies” (150), “Children &amp; Family Movies, Comedies” (129), “Comedies, International Movies” (120), and “Children &amp; Family Movies” (120).</li>
+<li>The predominance of documentaries and comedy, and the constant presence of international films and dramas, indicate a diversified content strategy, catering to niches and the global audience.</li>
 </ul></li>
 </ul>
 <div style="text-align: center;">
 <p><img src="imagem4.png" alt="" style="max-width: 100%; height: auto;"></p>
 </div>
 <ul>
-<li><strong>Conteúdo por Ano de Lançamento</strong>:
+<li><strong>Content by Release Year</strong>:
 <ul>
-<li>O volume de lançamentos cresceu significativamente ao longo dos anos, com um pico notável entre 2017 e 2020. Por exemplo, 2019 e 2020 mostram os maiores volumes de Filmes e Séries adicionados.</li>
-<li>Esse aumento reflete o período de forte investimento da Netflix em produção e aquisição de conteúdo para expandir sua biblioteca e atrair novos assinantes.</li>
+<li>The volume of releases grew significantly over the years, with a notable peak between <strong>2017 and 2020</strong>. For example, 2019 and 2020 show the largest volumes of movies and series added.</li>
+<li>This increase reflects Netflix’s period of strong investment in content production and acquisition to expand its library and attract new subscribers.</li>
 </ul></li>
 </ul>
 <div style="text-align: center;">
 <p><img src="imagem5.png" alt="" style="max-width: 100%; height: auto;"></p>
 </div>
 <ul>
-<li><strong>Detalhe de Título (Exemplo: 1 Chance 2 Dance)</strong>:
+<li><strong>Title Detail (Example: 1 Chance 2 Dance)</strong>:
 <ul>
-<li>O dashboard permite aprofundar em títulos específicos, como o filme “1 Chance 2 Dance”, lançado em 2014 com 89 minutos de duração e adicionado à Netflix em 2017. Classificado como TV-PG, se enquadra nos gêneros “Dramas, Romantic Movies”, com a descrição que esta na plataforma. Essa funcionalidade destaca a granularidade da análise disponível.</li>
+<li>The dashboard allows delving into specific titles, such as the movie “1 Chance 2 Dance”, released in 2014 with 89 minutes of duration and added to Netflix in 2017. Rated TV-PG, it falls under the “Dramas, Romantic Movies” genres, with the description provided on the platform. This functionality highlights the granularity of the available analysis.</li>
 </ul></li>
 </ul>
 </section>
-<section id="considerações" class="level2">
-<h2 class="anchored" data-anchor-id="considerações">Considerações</h2>
-<p>O dashboard oferece uma visão estratégica para compreender o catálogo da Netflix e as tendências de consumo de conteúdo. A partir dos insights obtidos, algumas considerações importantes surgem:</p>
+<section id="considerations" class="level2">
+<h2 class="anchored" data-anchor-id="considerations">Considerations</h2>
+<p>The dashboard offers a strategic view to understand Netflix’s catalog and content consumption trends. Based on the insights obtained, some important considerations emerge:</p>
 <ul>
-<li><strong>Estratégia de Conteúdo</strong>: A predominância de filmes e a vasta gama de gêneros, especialmente documentários e comédia, sinalizam um investimento em diversidade para atrair diferentes segmentos de público. A análise da classificação etária pode guiar a criação ou aquisição de conteúdo para públicos específicos.</li>
-<li><strong>Crescimento Histórico</strong>: O expressivo aumento de lançamentos em anos recentes (2017-2020) reflete a fase de expansão agressiva da Netflix, o que pode ser comparado com estratégias de concorrentes ou com a maturidade do mercado.</li>
+<li><strong>Content Strategy</strong>: The predominance of movies and the wide range of genres, especially documentaries and comedy, signal an investment in diversity to attract different audience segments. The analysis of age ratings can guide content creation or acquisition for specific audiences.</li>
+<li><strong>Historical Growth</strong>: The significant increase in releases in recent years (2017-2020) reflects Netflix’s aggressive expansion phase, which can be compared with competitors’ strategies or market maturity.</li>
 </ul>
 </section>
-<section id="conclusão" class="level2">
-<h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
-<p>O Dashboard Netflix foi analítica eficaz que transformou dados brutos de conteúdo em inteligência acionável. Sua principal contribuição residiu na capacidade de:</p>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The Netflix Dashboard was an effective analytical tool that transformed raw content data into actionable intelligence. Its main contribution lies in its ability to:</p>
 <ul>
-<li>Fornecer uma visão clara da composição do catálogo da Netflix por tipo, gênero e classificação etária.</li>
-<li>Identificar padrões históricos de lançamento e a evolução da biblioteca de conteúdo.</li>
-<li>Demonstrar a proficiência em utilizar o Tableau para construir análises robustas e intuitivas.</li>
+<li>Provide a clear view of Netflix’s catalog composition by type, genre, and age rating.</li>
+<li>Identify historical release patterns and the evolution of the content library.</li>
+<li>Demonstrate proficiency in using Tableau to build robust and intuitive analyses.</li>
 </ul>
-<p>Este projeto solidifica a habilidade em realizar análises de dados complexas, interpretar grandes volumes de informação e apresentar insights de forma clara e impactante, validando a capacidade de trabalhar com diferentes ferramentas de Business Intelligence.</p>
-<p><a href="https://public.tableau.com/app/profile/gabriel.ferreira2491/viz/DashboardTableauNetflix/Netflix?publish=yes" target="_blank" rel="noopener noreferrer"> Clique aqui para acessar o relatório no Tableau Public </a></p>
+<p>This project solidifies the ability to perform complex data analyses, interpret large volumes of information, and present insights clearly and impactfully, validating the capacity to work with different Business Intelligence tools.</p>
+<p><a href="https://public.tableau.com/app/profile/gabriel.ferreira2491/viz/DashboardTableauNetflix/Netflix?publish=yes" rel="noopener noreferrer"> Click here to access the report on Tableau Public </a></p>
 </section>
 </section>
 

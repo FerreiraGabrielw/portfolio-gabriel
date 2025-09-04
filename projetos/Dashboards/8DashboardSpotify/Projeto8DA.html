@@ -9,7 +9,7 @@
 <meta name="author" content="Gabriel Ferreira">
 <meta name="dcterms.date" content="2024-02-10">
 
-<title>Projeto: Dashboard Spotify - Análise de Tendências Musicais e Engajamento de Audiência</title>
+<title>Project: Spotify Dashboard - Analysis of Music Trends and Audience Engagement</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -48,7 +48,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projeto: Dashboard Spotify - Análise de Tendências Musicais e Engajamento de Audiência</h1>
+<h1 class="title">Project: Spotify Dashboard - Analysis of Music Trends and Audience Engagement</h1>
 </div>
 
 
@@ -77,114 +77,114 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introdução" class="level1">
-<h1>Introdução</h1>
-<p>Este projeto apresenta um Dashboard analítico do Spotify, focado em explorar as tendências musicais, o engajamento da audiência e as características das músicas mais populares. O principal objetivo foi não apenas visualizar dados, mas também testar e implementar funcionalidades avançadas no Power BI, como a integração com APIs externas e o uso de visuais personalizados (<code>Deneb</code> e <code>HTML Content</code>). O painel visa capacitar entusiastas de música, profissionais da indústria ou analistas de dados a compreender o sucesso de canções, artistas e gêneros, além de analisar padrões de lançamento e atributos sonoros que impulsionam o consumo.</p>
-<section id="estrutura-do-projeto" class="level2">
-<h2 class="anchored" data-anchor-id="estrutura-do-projeto">Estrutura do Projeto</h2>
-<p>O dashboard é concebido para oferecer uma visão multifacetada do universo musical do Spotify, abrangendo:</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>This project presents an analytical Spotify Dashboard, focused on exploring music trends, audience engagement, and the characteristics of the most popular songs. The main objective was not only to visualize data but also to test and implement advanced functionalities in Power BI, such as integration with external APIs and the use of custom visuals (<code>Deneb</code> and <code>HTML Content</code>). The dashboard aims to empower music enthusiasts, industry professionals, or data analysts to understand the success of songs, artists, and genres, as well as analyze release patterns and sonic attributes that drive consumption.</p>
+<section id="project-structure" class="level2">
+<h2 class="anchored" data-anchor-id="project-structure">Project Structure</h2>
+<p>The dashboard is designed to offer a multifaceted view of the Spotify music universe, covering:</p>
 <ul>
-<li><strong>Métricas de Audiência</strong>: Média de ouvintes por ano e total de streams.</li>
-<li><strong>Ranking de Músicas e Artistas</strong>: Identificação das músicas com mais streams e o número total de artistas no dataset.</li>
-<li><strong>Características Sonoras</strong>: Análise de atributos como Acústica, Dancabilidade, Vivacidade, Letra, Valência e o percentual de Energia da música.</li>
-<li><strong>Padrões de Lançamento</strong>: Distribuição de lançamentos ao longo dos anos e por mês.</li>
-<li><strong>Detalhes de Músicas Específicas</strong>: Informações como data de lançamento de hits e total de streams.</li>
+<li><strong>Audience Metrics</strong>: Average listeners per year and total streams.</li>
+<li><strong>Song and Artist Ranking</strong>: Identification of songs with the most streams and the total number of artists in the dataset.</li>
+<li><strong>Sound Characteristics</strong>: Analysis of attributes such as Acoustics, Danceability, Liveness, Speechiness, Valence, and the Energy percentage of the music.</li>
+<li><strong>Release Patterns</strong>: Distribution of releases over the years and by month.</li>
+<li><strong>Specific Song Details</strong>: Information such as the release date of hits and total streams.</li>
 </ul>
 </section>
-<section id="tecnologias-utilizadas" class="level2">
-<h2 class="anchored" data-anchor-id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
-<p>Para a construção deste dashboard analítico e tecnicamente avançado, as ferramentas empregadas foram:</p>
+<section id="technologies-used" class="level2">
+<h2 class="anchored" data-anchor-id="technologies-used">Technologies Used</h2>
+<p>For the construction of this analytical and technically advanced dashboard, the tools employed were:</p>
 <ul>
-<li><strong>Power BI</strong>: Para a modelagem de dados, criação de medidas DAX e construção dos visuais interativos. Serviu como a plataforma central para orquestrar todas as análises.</li>
-<li><strong>Figma</strong>: A prototipação e o design do dashboard foram feitos com o Figma, garantindo uma experiência de usuário intuitiva e visualmente atraente.</li>
-<li><strong>Python</strong>: Utilizado para enriquecer o dataset, acessando a API do Spotify para obter URLs das capas dos álbuns.</li>
-<li><strong>Spotify API</strong>: Acessada via Python para coletar informações adicionais (URLs de capas de álbuns) que não estavam disponíveis no dataset original.</li>
-<li><strong>HTML Visuals (HTML Content)</strong>: Um visual personalizado do Power BI utilizado para renderizar as capas dos álbuns diretamente no dashboard, a partir das URLs obtidas via API.</li>
-<li><strong>DENEB (Visual Personalizado)</strong>: Um visual avançado do Power BI que permite criar gráficos personalizados utilizando as especificações do Vega e Vega-Lite. Foi empregado para a visualização do percentual de Energia da música, oferecendo um controle granular sobre o design gráfico.</li>
-<li><strong>Adobe Color Palette</strong>: Utilizado para definir o tema de cores do dashboard, alinhando-o visualmente com a identidade da marca Spotify.</li>
+<li><strong>Power BI</strong>: For data modeling, creation of DAX measures, and construction of interactive visuals. It served as the central platform to orchestrate all analyses.</li>
+<li><strong>Figma</strong>: The prototyping and design of the dashboard were done with Figma, ensuring an intuitive and visually appealing user experience.</li>
+<li><strong>Python</strong>: Used to enrich the dataset by accessing the Spotify API to obtain album cover URLs.</li>
+<li><strong>Spotify API</strong>: Accessed via Python to collect additional information (album cover URLs) that was not available in the original dataset.</li>
+<li><strong>HTML Visuals (HTML Content)</strong>: A custom Power BI visual used to render album covers directly in the dashboard, from the URLs obtained via API.</li>
+<li><strong>DENEB (Custom Visual)</strong>: An advanced Power BI visual that allows creating custom charts using Vega and Vega-Lite specifications. It was used for visualizing the music’s “Energy%” percentage, offering granular control over graphic design.</li>
+<li><strong>Adobe Color Palette</strong>: Used to define the dashboard’s color theme, visually aligning it with Spotify’s brand identity.</li>
 </ul>
 </section>
-<section id="processo-de-etl-extração-transformação-e-carregamento" class="level2">
-<h2 class="anchored" data-anchor-id="processo-de-etl-extração-transformação-e-carregamento">Processo de ETL (Extração, Transformação e Carregamento)</h2>
-<p>O processo de ETL para o Dashboard Spotify foi particularmente interessante devido à etapa de enriquecimento de dados:</p>
+<section id="etl-process-extraction-transformation-and-loading" class="level2">
+<h2 class="anchored" data-anchor-id="etl-process-extraction-transformation-and-loading">ETL Process (Extraction, Transformation, and Loading)</h2>
+<p>The ETL process for the Spotify Dashboard was particularly interesting due to the data enrichment step:</p>
 <ol type="1">
-<li><strong>Extração</strong>: O dataset principal foi baixado do Kaggle, proveniente de “Top Spotify Songs 2023” (<code>https://www.kaggle.com/datasets/nelgiriyewithana/top-spotify-songs-2023?resource=download</code>).</li>
-<li><strong>Enriquecimento (Python &amp; API)</strong>: Antes de importar para o Power BI, o dataset foi incrementado utilizando um script Python. Este script, desenvolvido acessou a API do Spotify para coletar as URLs das imagens de capa de cada álbum, adicionando-as como uma nova coluna ao dataset. Esta etapa foi fundamental para o aspecto visual do dashboard.</li>
-<li><strong>Transformação</strong>: No Power Query, parte integrante do Power BI, foi realizada a transformação necessária para consolidar as informações de data. O dataset possuía colunas separadas para data de lançamento, mês de lançamento e ano de lançamento. Foi criada uma nova coluna calculada que combinou essas três informações em um formato de data único, facilitando análises de inteligência de tempo e navegação.</li>
-<li><strong>Modelagem e Medidas DAX</strong>: Dentro do Power BI, a modelagem de dados foi realizada para estruturar o dataset e medidas DAX foram criadas para calcular métricas como a média de ouvintes por ano, streams por música, e outras análises que compõem o dashboard.</li>
-<li><strong>Carregamento</strong>: Após todas as etapas de extração, enriquecimento e transformação, os dados foram carregados no modelo de dados do Power BI, estando prontos para alimentar todos os visuais do dashboard.</li>
+<li><strong>Extraction</strong>: The main dataset was downloaded from Kaggle, from “Top Spotify Songs 2023” (<code>https://www.kaggle.com/datasets/nelgiriyewithana/top-spotify-songs-2023?resource=download</code>).</li>
+<li><strong>Enrichment (Python &amp; API)</strong>: Before importing into Power BI, the dataset was augmented using a Python script. This script accessed the Spotify API to collect the image URLs of each album cover, adding them as a new column to the dataset. This step was fundamental for the visual aspect of the dashboard.</li>
+<li><strong>Transformation</strong>: In Power Query, an integral part of Power BI, the necessary transformation was performed to consolidate date information. The dataset had separate columns for release date, release month, and release year. A new calculated column was created that combined these three pieces of information into a single date format, facilitating time intelligence analyses and navigation.</li>
+<li><strong>Modeling and DAX Measures</strong>: Within Power BI, data modeling was performed to structure the dataset, and DAX measures were created to calculate metrics such as the average listeners per year, streams per song, and other analyses that comprise the dashboard.</li>
+<li><strong>Loading</strong>: After all extraction, enrichment, and transformation steps, the data was loaded into the Power BI data model, ready to feed all the visuals of the dashboard.</li>
 </ol>
 </section>
 </section>
 <section id="dashboard" class="level1">
 <h1>Dashboard</h1>
-<p>O dashboard apresenta um design moderno e alinhado à identidade visual do Spotify, concebido no Figma e implementado com refinamento no Power BI. Os visuais são claros e objetivos, combinando cards de KPIs, gráficos de barras para rankings, um visual <code>Deneb</code> personalizado para a “Energia%” da música, e o destaque inovador das capas dos álbuns renderizadas via <code>HTML Content</code>. A interatividade permite que o usuário explore as músicas por artista, ano ou características específicas, proporcionando uma experiência imersiva na análise de dados musicais.</p>
+<p>The dashboard features a modern design aligned with Spotify’s visual identity, conceived in Figma and refined in Power BI. The visuals are clear and objective, combining KPI cards, bar charts for rankings, a custom <code>Deneb</code> visual for music “Energy%”, and the innovative highlight of album covers rendered via <code>HTML Content</code>. Interactivity is a central feature, allowing users to explore songs by artist, year, or specific characteristics, providing an immersive experience in music data analysis.</p>
 <div style="text-align:center;">
 <p><img src="imagem1.png" alt=""></p>
 </div>
 <section id="insights" class="level2">
 <h2 class="anchored" data-anchor-id="insights">Insights</h2>
-<p>A análise dos dados apresentados no Dashboard Spotify revelou insights importantes sobre as tendências e o consumo de música:</p>
+<p>The analysis of the data presented in the Spotify Dashboard revealed important insights into music trends and consumption:</p>
 <ul>
-<li><strong>Engajamento da Audiência</strong>:
+<li><strong>Audience Engagement</strong>:
 <ul>
-<li>A Média de Ouvintes por Ano é de 514,14 Milhões, um número impressionante que reflete a vasta base de usuários da plataforma e o consumo massivo de música.</li>
-<li>O dashboard destaca que o total de streams para as músicas pode chegar a 4 Bilhões, demonstrando o alcance e a popularidade das faixas mais tocadas.</li>
+<li>The <strong>Average Listeners per Year is 514.14 Million</strong>, an impressive number that reflects the platform’s vast user base and the massive consumption of music.</li>
+<li>The dashboard highlights that the total streams for songs can reach <strong>4 Billion</strong>, demonstrating the reach and popularity of the most played tracks.</li>
 </ul></li>
 </ul>
 <div style="text-align:center;">
 <p><img src="imagem2.png" alt=""></p>
 </div>
 <ul>
-<li><strong>Top Músicas por Streams</strong>:
+<li><strong>Top Songs by Streams</strong>:
 <ul>
-<li>O painel identifica as músicas de maior sucesso em termos de streams, como “Blinding Lights”, “Shape of You”, “Someone You Loved”, “Dance Monkey”, “Sunflower - Spider-…”, “One Dance”, “STAY (with Justin Bieber)”, “Believer”, e “Closer”. Estas são as faixas que dominam as paradas e capturam a atenção de bilhões de ouvintes.</li>
-<li>A visualização do “Música por Streams” indica a distribuição de streams entre as faixas, variando de 0 Bilhão a 4 Bilhões, evidenciando o poder dos grandes hits.</li>
+<li>The panel identifies the most successful songs in terms of streams, such as “Blinding Lights”, “Shape of You”, “Someone You Loved”, “Dance Monkey”, “Sunflower - Spider-…”, “One Dance”, “STAY (with Justin Bieber)”, “Believer”, and “Closer”. These are the tracks that dominate the charts and capture the attention of billions of listeners.</li>
+<li>The “Songs by Streams” visualization indicates the distribution of streams among tracks, ranging from 0 Billion to 4 Billion, demonstrating the power of major hits.</li>
 </ul></li>
 </ul>
 <div style="text-align:center;">
 <p><img src="imagem3.png" alt=""></p>
 </div>
 <ul>
-<li><strong>Diversidade de Artistas</strong>:
+<li><strong>Artist Diversity</strong>:
 <ul>
-<li>O dataset abrange um total de 38 Artistas, indicando a variedade de talentos representados nas músicas mais populares.</li>
+<li>The dataset covers a total of <strong>38 Artists</strong>, indicating the variety of talents represented in the most popular songs.</li>
 </ul></li>
-<li><strong>Características Sonoras das Músicas</strong>:
+<li><strong>Sound Characteristics of Songs</strong>:
 <ul>
-<li>O dashboard explora dimensões como Acústica, Dancabilidade, Vivacidade, Letra** e Valência, fornecendo uma compreensão sobre os atributos que tornam as músicas populares.</li>
-<li>Um destaque técnico é a visualização da “Energy%” (64%), que indica o nível de energia e intensidade percebida na música. Este visual, construído com <code>Deneb</code>, oferece uma forma criativa e eficaz de representar uma métrica específica.</li>
+<li>The dashboard explores dimensions such as <strong>Acoustics, Danceability, Liveness, Speechiness</strong>, and <strong>Valence</strong>, providing an understanding of the attributes that make songs popular.</li>
+<li>A technical highlight is the visualization of “Energy%” (64%), which indicates the perceived level of energy and intensity in the music. This visual, built with <code>Deneb</code>, offers a creative and effective way to represent a specific metric.</li>
 </ul></li>
 </ul>
 <div style="text-align:center;">
 <p><img src="imagem4.png" alt=""></p>
 </div>
 <ul>
-<li><strong>Padrões de Lançamento ao Longo do Tempo</strong>:
+<li><strong>Release Patterns Over Time</strong>:
 <ul>
-<li>A análise de “Lançamentos por Ano” mostra a distribuição de músicas lançadas desde 1940 até 2020, com um pico significativo de lançamentos em anos mais recentes, atingindo 500 lançamentos por ano no período mais ativo.</li>
-<li>A visualização de “Música por Mês” detalha a distribuição de lançamentos ou de músicas mais tocadas por mês (Janeiro, Junho, Maio, Outubro, Novembro, Dezembro, Abril, Março, Julho, Agosto), permitindo identificar sazonalidades na indústria musical.</li>
+<li>The “Releases by Year” analysis shows the distribution of songs released from 1940 to 2020, with a significant peak of releases in more recent years, reaching 500 releases per year in the most active period.</li>
+<li>The “Songs by Month” visualization details the distribution of releases or most played songs by month (January, June, May, October, November, December, April, March, July, August), allowing for identification of seasonality in the music industry.</li>
 </ul></li>
 </ul>
 <div style="text-align:center;">
 <p><img src="imagem5.png" alt=""></p>
 </div>
 </section>
-<section id="considerações" class="level2">
-<h2 class="anchored" data-anchor-id="considerações">Considerações</h2>
-<p>O dashboard Spotify não apenas fornece insights valiosos sobre o consumo de música, mas também serve como uma prova das capacidades avançadas do Power BI e da integração de diversas ferramentas. A partir dos insights e do processo de desenvolvimento, algumas considerações importantes surgem:</p>
+<section id="considerations" class="level2">
+<h2 class="anchored" data-anchor-id="considerations">Considerations</h2>
+<p>The Spotify dashboard not only provides valuable insights into music consumption but also serves as a testament to the advanced capabilities of Power BI and the integration of various tools. From the insights and the development process, some important considerations emerge:</p>
 <ul>
-<li><strong>Desafio Técnico Superado</strong>: A integração com a API do Spotify via Python para o script demonstra uma habilidade em conectar e enriquecer dados de fontes externas de forma automatizada e inteligente.</li>
-<li><strong>Visualização Avançada</strong>: A implementação de visuais HTML para capas de álbuns e o uso do Deneb para a “Energia%” da música elevam o nível de profissionalismo e imersão do dashboard, destacando a capacidade de ir além dos visuais padrão do Power BI.</li>
+<li><strong>Technical Challenge Overcome</strong>: The integration with the Spotify API via Python for the script demonstrates an ability to connect and enrich data from external sources in an automated and intelligent way.</li>
+<li><strong>Advanced Visualization</strong>: The implementation of HTML visuals for album covers and the use of Deneb for music “Energy%” elevate the level of professionalism and immersion of the dashboard, highlighting the ability to go beyond Power BI’s standard visuals.</li>
 </ul>
 </section>
-<section id="conclusão" class="level2">
-<h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
-<p>Este projeto representa uma fusão de análise de dados, programação e design, capacitando o entendimento do cenário musical digital e solidificando as habilidades em criar soluções de BI.</p>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>This project represents a fusion of data analysis, programming, and design, enabling the understanding of the digital music landscape and solidifying skills in creating BI solutions.</p>
 </section>
-<section id="link-para-o-dashboard" class="level2">
-<h2 class="anchored" data-anchor-id="link-para-o-dashboard">Link para o Dashboard:</h2>
-<p><a href="https://app.powerbi.com/groups/me/reports/76ca68bc-548e-4c6f-aad1-79c11ece500e/ReportSectionf29673a5990829443c5d?experience=power-bi" target="_blank" rel="noopener noreferrer"> Clique aqui para acessar o relatório no Power BI </a></p>
+<section id="link-to-the-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="link-to-the-dashboard">Link to the Dashboard:</h2>
+<p><a href="https://app.powerbi.com/groups/me/reports/76ca68bc-548e-4c6f-aad1-79c11ece500e/ReportSectionf29673a5990829443c5d?experience=power-bi" rel="noopener noreferrer"> Click here to access the report in Power BI </a></p>
 </section>
 </section>
 

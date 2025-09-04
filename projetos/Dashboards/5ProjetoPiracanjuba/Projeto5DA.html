@@ -9,7 +9,7 @@
 <meta name="author" content="Gabriel Ferreira">
 <meta name="dcterms.date" content="2024-02-27">
 
-<title>Projeto: Dashboard Piracanjuba - Análise de Engajamento e Desenvolvimento de Alunos</title>
+<title>Project: Piracanjuba Dashboard - Student Engagement and Development Analysis</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -48,7 +48,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projeto: Dashboard Piracanjuba - Análise de Engajamento e Desenvolvimento de Alunos</h1>
+<h1 class="title">Project: Piracanjuba Dashboard - Student Engagement and Development Analysis</h1>
 </div>
 
 
@@ -77,140 +77,140 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introdução" class="level1">
-<h1>Introdução</h1>
-<p>Este é um projeto real, e consiste na criação de um dashboard desenvolvido para a <strong>Piracanjuba</strong>, com o objetivo principal de avaliar o engajamento e o desenvolvimento dos colaboradores que estão participando de um curso de tecnólogo. A empresa adquiriu o curso para seus funcionários e demandou uma ferramenta analítica para monitorar o progresso, identificar áreas de sucesso e oportunidades de melhoria no processo de capacitação. O painel proporciona uma visão clara sobre o número de alunos, o tempo médio de estudo, o avanço na conclusão de módulos e a emissão de certificados, permitindo à Piracanjuba tomar decisões baseadas em dados para otimizar seus programas de desenvolvimento interno.</p>
-<section id="obs-todos-os-funcionários-alunos-foram-anonimizados-no-dataset." class="level6">
-<h6 class="anchored" data-anchor-id="obs-todos-os-funcionários-alunos-foram-anonimizados-no-dataset.">Obs: Todos os funcionários (alunos) foram anonimizados no dataset.</h6>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>This is a real project, consisting of the creation of a dashboard developed for <strong>Piracanjuba</strong>, with the primary objective of evaluating the engagement and development of employees participating in a technology degree course. The company acquired the course for its employees and requested an analytical tool to monitor progress, identify areas of success, and opportunities for improvement in the training process. The dashboard provides a clear view of the number of students, average study time, module completion progress, and certificate issuance, allowing Piracanjuba to make data-driven decisions to optimize its internal development programs.</p>
+<section id="note-all-employees-students-have-been-anonymized-in-the-dataset." class="level6">
+<h6 class="anchored" data-anchor-id="note-all-employees-students-have-been-anonymized-in-the-dataset.">Note: All employees (students) have been anonymized in the dataset.</h6>
 </section>
-<section id="estrutura-do-projeto" class="level2">
-<h2 class="anchored" data-anchor-id="estrutura-do-projeto">Estrutura do Projeto</h2>
-<p>A análise foi dividida em quatro páginas principais no dashboard, cada uma focando em diferentes aspectos do engajamento e desenvolvimento dos alunos:</p>
+<section id="project-structure" class="level2">
+<h2 class="anchored" data-anchor-id="project-structure">Project Structure</h2>
+<p>The analysis was divided into four main pages in the dashboard, each focusing on different aspects of student engagement and development:</p>
 <ul>
-<li><strong>Visão Geral</strong>: Apresenta os indicadores totais de alunos e a média de dias de estudo.</li>
-<li><strong>Análise Geral dos Alunos</strong>: Detalha a conclusão de módulos individuais, o fluxo de novos alunos por mês e o volume de conclusão de módulos mensal.</li>
-<li><strong>Análise da Performance dos Alunos - Certificados</strong>: Foca nos certificados emitidos, mostrando o total geral, a emissão por aluno e por conteúdo.</li>
-<li><strong>Avaliação dos Módulos</strong>: Oferece uma visão do desempenho geral dos módulos (concluídos, pendentes, em progresso) e uma classificação do desempenho dos alunos com base no número de módulos concluídos.</li>
+<li><strong>Overview</strong>: Presents total student indicators and the average days of study.</li>
+<li><strong>General Student Analysis</strong>: Details the completion of individual modules, the flow of new students per month, and the monthly module completion volume.</li>
+<li><strong>Student Performance Analysis - Certificates</strong>: Focuses on issued certificates, showing the general total, issuance per student, and by content.</li>
+<li><strong>Module Evaluation</strong>: Offers a view of the overall performance of modules (completed, pending, in progress) and a classification of student performance based on the number of completed modules.</li>
 </ul>
 </section>
-<section id="tecnologias-utilizadas" class="level2">
-<h2 class="anchored" data-anchor-id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
-<p>Para a construção deste dashboard analítico, as ferramentas empregadas foram:</p>
+<section id="technologies-used" class="level2">
+<h2 class="anchored" data-anchor-id="technologies-used">Technologies Used</h2>
+<p>For the construction of this analytical dashboard, the tools employed were:</p>
 <ul>
-<li><strong>Power BI Desktop</strong>: Para conectar as fontes de dados, realizar a modelagem e transformação necessárias, e desenvolver os visuais interativos que compõem o dashboard. Foram utilizadas medidas DAX para cálculos e a linguagem M para o tratamento de dados no Power Query.</li>
-<li><strong>Figma</strong>: A prototipação e o design do dashboard foram feitos com o Figma, garantindo uma experiência de usuário intuitiva e visualmente atraente, que posteriormente foi exportada e integrada ao Power BI.</li>
+<li><strong>Power BI Desktop</strong>: To connect data sources, perform the necessary modeling and transformation, and develop the interactive visuals that compose the dashboard. DAX measures were used for calculations and the M language for data handling in Power Query.</li>
+<li><strong>Figma</strong>: The prototyping and design of the dashboard were done with Figma, ensuring an intuitive and visually appealing user experience, which was later exported and integrated into Power BI.</li>
 </ul>
 </section>
-<section id="processo-de-etl-extração-transformação-e-carregamento" class="level2">
-<h2 class="anchored" data-anchor-id="processo-de-etl-extração-transformação-e-carregamento">Processo de ETL (Extração, Transformação e Carregamento)</h2>
-<p>O processo de ETL para esse projeto foi estruturado para garantir a acuracidade e a prontidão dos dados para análise:</p>
+<section id="etl-process-extraction-transformation-and-loading" class="level2">
+<h2 class="anchored" data-anchor-id="etl-process-extraction-transformation-and-loading">ETL Process (Extraction, Transformation, and Loading)</h2>
+<p>The ETL process for this project was structured to ensure the accuracy and readiness of the data for analysis:</p>
 <ol type="1">
-<li><strong>Extração</strong>: Os dados brutos foram extraídos de planilhas Excel, contendo informações detalhadas sobre os alunos, seu progresso nos módulos e os certificados emitidos. Essas planilhas serviram como a fonte primária de dados para a análise.</li>
-<li><strong>Transformação</strong>: No Power Query, parte integrante do Power BI, foram realizadas diversas operações de limpeza e enriquecimento. Isso incluiu:
+<li><strong>Extraction</strong>: Raw data was extracted from Excel spreadsheets, containing detailed information about students, their progress in modules, and issued certificates. These spreadsheets served as the primary data source for the analysis.</li>
+<li><strong>Transformation</strong>: In Power Query, an integral part of Power BI, various cleaning and enrichment operations were performed. This included:
 <ul>
-<li>Tratamento de dados, garantindo consistência e qualidade.</li>
-<li>Criação de novas colunas e métricas calculadas que seriam essenciais para as análises, utilizando a linguagem M.</li>
-<li>A modelagem de dados foi cuidadosamente definida, estabelecendo relacionamentos entre as tabelas e criando um esquema que permitisse a correta agregação e filtragem das informações.</li>
+<li>Data treatment, ensuring consistency and quality.</li>
+<li>Creation of new columns and calculated metrics that would be essential for the analyses, using the M language.</li>
+<li>Data modeling was carefully defined, establishing relationships between tables and creating a schema that allowed for correct aggregation and filtering of information.</li>
 </ul></li>
-<li><strong>Carregamento</strong>: Após as etapas de extração e transformação, os dados foram carregados no modelo de dados do Power BI, estando prontos para alimentar todos os gráficos e tabelas do dashboard, permitindo a exploração interativa.</li>
+<li><strong>Loading</strong>: After the extraction and transformation steps, the data was loaded into the Power BI data model, ready to feed all the charts and tables of the dashboard, allowing for interactive exploration.</li>
 </ol>
 </section>
 </section>
 <section id="dashboard" class="level1">
 <h1>Dashboard</h1>
-<p>O dashboard é organizado em quatro páginas distintas, cada uma dedicada a um aspecto específico da análise. O design, concebido no Figma e implementado no Power BI, garante uma interface limpa, com visuais claros e de fácil interpretação. A interatividade permite que os usuários naveguem entre as páginas e explorem os dados em diferentes níveis de granularidade, desde a visão geral do engajamento até o desempenho individual dos módulos e alunos.</p>
+<p>The dashboard is organized into four distinct pages, each dedicated to a specific aspect of the analysis. The design, conceived in Figma and implemented in Power BI, ensures a clean interface, with clear and easily interpretable visuals. Interactivity allows users to navigate between pages and explore data at different levels of granularity, from an overview of engagement to the individual performance of modules and students.</p>
 <div style="text-align:center;">
 <p><img src="imagem1.png" alt=""></p>
 </div>
 <section id="insights" class="level2">
 <h2 class="anchored" data-anchor-id="insights">Insights</h2>
-<p>A análise dos dados apresentados no dashboard revelou insights cruciais sobre o engajamento e desenvolvimento dos alunos da Piracanjuba:</p>
+<p>The analysis of the data presented in the dashboard revealed crucial insights into the engagement and development of Piracanjuba students:</p>
 <ul>
-<li><strong>Visão Geral do Engajamento</strong>:
+<li><strong>Engagement Overview</strong>:
 <ul>
-<li>O painel revela um total de 4.419 alunos inscritos no curso.</li>
-<li>A média de dias de estudo é de 27,28 dias. Este é um indicador importante para medir o tempo que os alunos dedicam ao aprendizado, sugerindo um engajamento razoável com a plataforma ou conteúdo.</li>
+<li>The dashboard shows a total of 4,419 students enrolled in the course.</li>
+<li>The average study days is 27.28 days. This is an important indicator to measure the time students dedicate to learning, suggesting reasonable engagement with the platform or content.</li>
 </ul></li>
 </ul>
 <div style="text-align:center;">
 <p><img src="imagem2.png" alt=""></p>
 </div>
 <ul>
-<li><strong>Conclusão e Fluxo de Alunos por Módulo</strong>:
+<li><strong>Module Completion and Student Flow</strong>:
 <ul>
-<li>O módulo de “Boas-vindas!” e “Desenvolvimento técnico” se destacam com 219 e 192 conclusões, respectivamente, indicando que são os pontos de entrada ou módulos de grande relevância e engajamento.</li>
-<li>Módulos fundamentais como “Módulo Inicial - Power BI” (135 conclusões), “Power BI II” (73 conclusões) e “Essencial de SQL” (70 conclusões) mostram uma boa taxa de finalização, o que é positivo para o desenvolvimento das competências técnicas.</li>
-<li>Em contrapartida, módulos mais avançados ou específicos, como “Live de Dúvidas” (16 conclusões) e “Pilar 4.3 Projeto Real” (17 conclusões), possuem um número significativamente menor de conclusões. Indicando uma dificuldade maior, menor interesse, ou que são módulos opcionais para um grupo menor de alunos.</li>
+<li>The “Welcome!” and “Technical development” modules stand out with 219 and 192 completions, respectively, indicating they are entry points or modules of high relevance and engagement.</li>
+<li>Fundamental modules such as “Initial Module - Power BI” (135 completions), “Power BI II” (73 completions), and “SQL Essentials” (70 completions) show a good completion rate, which is positive for the development of technical skills.</li>
+<li>In contrast, more advanced or specific modules, such as “Q&amp;A Live Session” (16 completions) and “Pillar 4.3 Real Project” (17 completions), have significantly fewer completions. This may indicate greater difficulty, less interest, or that they are optional modules for a smaller group of students.</li>
 </ul></li>
 </ul>
 <div style="text-align:center;">
 <p><img src="imagem3.png" alt=""></p>
 </div>
 <ul>
-<li><strong>Fluxo de Entrada e Conclusão Mensal</strong>:
+<li><strong>Monthly Entry and Completion Flow</strong>:
 <ul>
-<li>A entrada de Novos Alunos** teve picos notáveis em Janeiro (1.088) e Setembro (779), com uma queda em Dezembro (644) e duas quedas signifcantes em Outubro e Novembro (265 e 64 respectivamente).
+<li>The entry of <strong>New Students</strong> had notable peaks in January (1,088) and September (779), with a drop in December (644) and two significant drops in October and November (265 and 64 respectively).
 <div style="text-align:center;">
 <img src="imagem4.png" alt="">
 </div></li>
-<li>A Conclusão de Módulos por Mês mostra um padrão diferente. Embora Setembro (183) e Outubro (215) tenham um alto volume de conclusões, Janeiro (12) e Dezembro (18) registram os menores números. Isso pode refletir um atraso entre a entrada de alunos e a conclusão dos módulos, ou que as conclusões se concentram em meses específicos do ano letivo.
+<li><strong>Module Completion per Month</strong> shows a different pattern. Although September (183) and October (215) have a high volume of completions, January (12) and December (18) record the lowest numbers. This may reflect a delay between student entry and module completion, or that completions are concentrated in specific months of the academic year.
 <div style="text-align:center;">
 <img src="imagem10.png" alt="">
 </div></li>
 </ul></li>
-<li><strong>Análise de Certificados Emitidos</strong>:
+<li><strong>Certificate Issued Analysis</strong>:
 <ul>
-<li>Um total de 751 Certificados Emitidos demonstra um resultado tangível do programa de capacitação.
+<li>A total of <strong>751 Certificates Issued</strong> demonstrates a tangible result of the training program.
 <div style="text-align:center;">
 <img src="imagem5.png" alt="">
 </div></li>
-<li>A distribuição de certificados por aluno revela que o aluno #4 se destaca com 6 certificados.
+<li>The distribution of certificates per student reveals that <strong>student #4</strong> stands out with 6 certificates.
 <div style="text-align:center;">
 <img src="imagem6.png" alt="">
 </div></li>
-<li>Em relação à Emissão de Certificados por Conteúdo**, “Power BI 1.0” (197 certificados) e “Excel” (168 certificados) são os conteúdos com maior número de certificações, sublinhando a demanda e a relevância dessas ferramentas. SQL (153 certificados) também possui um bom desempenho. Conteúdos como “Pentaho” e “Boas-Vindas” têm um número muito baixo de certificados (1 cada), o que pode indicar que são módulos de nicho ou introdutórios sem foco em certificação.
+<li>Regarding <strong>Certificate Issuance by Content</strong>, “Power BI 1.0” (197 certificates) and “Excel” (168 certificates) are the contents with the highest number of certifications, highlighting the demand and relevance of these tools. SQL (153 certificates) also performs well. Contents like “Pentaho” and “Welcome” have a very low number of certificates (1 each), which may indicate that they are niche or introductory modules not focused on certification.
 <div style="text-align:center;">
 <p><img src="imagem7.png" alt=""></p>
 </div></li>
 </ul></li>
-<li><strong>Desempenho Geral e por Aluno nos Módulos</strong>:
+<li><strong>Overall and Per-Student Module Performance</strong>:
 <ul>
-<li>Dos 26 módulos totais, a maioria dos alunos está “Em progresso” (79,35%). Apenas 7,61% dos alunos “Concluíram” todos os módulos, e 13,04% estão com módulos “Pendente”. Isso ressalta a importância de estratégias para incentivar a conclusão e o acompanhamento dos alunos em progresso.
+<li>Of the 26 total modules, most students are “In progress” (79.35%). Only 7.61% of students have “Completed” all modules, and 13.04% have “Pending” modules. This highlights the importance of strategies to encourage completion and follow-up for students in progress.
 <div style="text-align:center;">
 <img src="imagem9.png" alt="">
 </div></li>
-<li>A classificação de “Dedicação dos Alunos” categoriza o desempenho: “Bom” (&gt; 20 módulos concluídos), “Médio” (8 a 19 módulos concluídos) e “Ruim” (&lt; 8 módulos concluídos).</li>
-<li>O painel “Desempenho dos Alunos” mostra que a maior parte está em “Em progresso”.
+<li>The “Student Dedication” classification categorizes performance: “Good” (&gt; 20 modules completed), “Medium” (8 to 19 modules completed), and “Poor” (&lt; 8 modules completed).</li>
+<li>The “Student Performance” panel shows that most are “In progress”.
 <div style="text-align:center;">
 <img src="imagem8.png" alt="">
 </div></li>
 </ul></li>
-<li>Também é possivel visualizar uma performance individual, essa capacidade de identificar o desempenho individualizado permite intervenções direcionadas, como suporte personalizado para alunos com desempenho “Ruim” ou reconhecimento para os “Bons”.</li>
+<li>It is also possible to visualize individual performance; this ability to identify individualized performance allows for targeted interventions, such as personalized support for “Poor” performing students or recognition for “Good” ones.</li>
 </ul>
 </section>
-<section id="considerações" class="level2">
-<h2 class="anchored" data-anchor-id="considerações">Considerações</h2>
-<p>O dashboard oferece uma base sólida para aprimorar as estratégias de educação corporativa na Piracanjuba. A partir dos insights obtidos, algumas considerações importantes surgem:</p>
+<section id="considerations" class="level2">
+<h2 class="anchored" data-anchor-id="considerations">Considerations</h2>
+<p>The dashboard offers a solid foundation for improving corporate education strategies at Piracanjuba. Based on the insights obtained, some important considerations emerge:</p>
 <ul>
-<li><strong>Incentivo à Conclusão</strong>: Com uma grande parcela de alunos “Em progresso”, é fundamental desenvolver estratégias para converter esse progresso em conclusão. Isso pode incluir campanhas de incentivo, lembretes automatizados, sessões de tutoria ou a gamificação para manter os alunos engajados até o final.</li>
-<li><strong>Acompanhamento de Módulos Específicos</strong>: A baixa conclusão de módulos mais avançados ou específicos sugere a necessidade de avaliar a dificuldade do conteúdo, a demanda por esses tópicos ou a necessidade de mais suporte para os alunos que os iniciam.</li>
-<li><strong>Otimização do Fluxo Mensal</strong>: A disparidade entre a entrada de novos alunos e a conclusão de módulos por mês aponta para a necessidade de entender os ciclos de estudo dos colaboradores. Pode-se planejar a oferta de módulos de acordo com os períodos de maior engajamento ou criar programas de aceleração para a conclusão.</li>
-<li><strong>Exploração de Certificações</strong>: O alto número de certificados em Power BI e Excel valida a relevância desses temas. A empresa pode explorar a criação de novos módulos ou aprofundamentos nesses temas para atender à demanda. Para os temas com pouca certificação, uma revisão do conteúdo ou da forma de apresentação pode ser necessária.</li>
-<li><strong>Gestão Individualizada do Desempenho</strong>: A capacidade de classificar o desempenho dos alunos (“Bom”, “Médio”, “Ruim”) é um diferencial. A Piracanjuba pode usar essa informação para oferecer mentorias aos alunos com desempenho “Ruim”, celebrar os “Bons” e talvez incentivá-los a se tornarem “mentores” para os colegas, e fornecer feedback construtivo aos alunos “Médios”.</li>
+<li><strong>Incentivizing Completion</strong>: With a large portion of students “In progress,” it is crucial to develop strategies to convert this progress into completion. This can include incentive campaigns, automated reminders, tutoring sessions, or gamification to keep students engaged until the end.</li>
+<li><strong>Monitoring Specific Modules</strong>: The low completion rate of more advanced or specific modules suggests the need to evaluate the difficulty of the content, the demand for these topics, or the need for more support for students starting them.</li>
+<li><strong>Optimizing Monthly Flow</strong>: The disparity between new student enrollment and module completion per month indicates the need to understand employee study cycles. Module offerings can be planned according to periods of higher engagement, or acceleration programs can be created for completion.</li>
+<li><strong>Exploring Certifications</strong>: The high number of certificates in Power BI and Excel validates the relevance of these topics. The company can explore creating new modules or deeper dives into these topics to meet demand. For topics with few certifications, a review of content or presentation format may be necessary.</li>
+<li><strong>Individualized Performance Management</strong>: The ability to classify student performance (“Good”, “Medium”, “Poor”) is a differentiator. Piracanjuba can use this information to offer mentorship to “Poor” performing students, celebrate “Good” ones and perhaps encourage them to become “mentors” for colleagues, and provide constructive feedback to “Medium” students.</li>
 </ul>
 </section>
-<section id="conclusão" class="level2">
-<h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
-<p>O Dashboard foi uma ferramenta analítica estratégica que transformou os dados de engajamento e desenvolvimento dos colaboradores em inteligência acionável. Sua principal contribuição residiu na capacidade de:</p>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>The Dashboard was a strategic analytical tool that transformed employee engagement and development data into actionable intelligence. Its main contribution lies in its ability to:</p>
 <ul>
-<li>Fornecer uma visão clara e abrangente do progresso educacional da força de trabalho.</li>
-<li>Identificar padrões de engajamento, gargalos na conclusão de módulos e áreas de alta performance.</li>
-<li>Permitir uma gestão proativa do programa de capacitação, desde o planejamento da oferta de cursos até o suporte individualizado aos alunos.</li>
+<li>Provide a clear and comprehensive view of the workforce’s educational progress.</li>
+<li>Identify engagement patterns, bottlenecks in module completion, and high-performance areas.</li>
+<li>Enable proactive management of the training program, from planning course offerings to individualized student support.</li>
 </ul>
 </section>
-<section id="link-para-o-dashboard" class="level2">
-<h2 class="anchored" data-anchor-id="link-para-o-dashboard">Link para o Dashboard:</h2>
-<p><a href="https://app.powerbi.com/groups/me/reports/e6f8d154-f679-4e1a-8fb4-a81b7300e178/ReportSectionbbdc1d2c38618044282c?experience=power-bi" target="_blank" rel="noopener noreferrer"> Clique aqui para acessar o relatório no Power BI </a></p>
+<section id="link-to-the-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="link-to-the-dashboard">Link to the Dashboard:</h2>
+<p><a href="https://app.powerbi.com/groups/me/reports/e6f8d154-f679-4e1a-8fb4-a81b7300e178/ReportSectionbbdc1d2c38618044282c?experience=power-bi" rel="noopener noreferrer"> Click here to access the report in Power BI </a></p>
 </section>
 </section>
 
