@@ -9,7 +9,7 @@
 <meta name="author" content="Gabriel Ferreira">
 <meta name="dcterms.date" content="2021-07-04">
 
-<title>Projeto Análise de Gestão de Recursos Humanos e Performance de Contratos</title>
+<title>Human Resources Management and Contract Performance Analysis Project</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -48,7 +48,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Projeto Análise de Gestão de Recursos Humanos e Performance de Contratos</h1>
+<h1 class="title">Human Resources Management and Contract Performance Analysis Project</h1>
 </div>
 
 
@@ -77,94 +77,94 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="introdução" class="level1">
-<h1>Introdução</h1>
-<p>Este projeto foi desenvolvido com o propósito de proporcionar uma visão 360 graus sobre a composição da força de trabalho de uma organização fictícia e a performance de seus contratos, com um foco especial na identificação e gestão de contratos de alto valor e sua criticidade. O dashboard visa empoderar gestores com informações cruciais para a tomada de decisões estratégicas em alocação de pessoal, gestão de riscos financeiros e otimização de operações.</p>
-<section id="estrutura-do-projeto" class="level2">
-<h2 class="anchored" data-anchor-id="estrutura-do-projeto">Estrutura do Projeto</h2>
-<p>Os principais requisitos e indicadores desenvolvidos para esta análise foram:</p>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>This project was developed with the purpose of providing a 360-degree view of a fictitious organization’s workforce composition and contract performance, with a special focus on identifying and managing high-value contracts and their criticality. The dashboard aims to empower managers with crucial information for strategic decision-making in personnel allocation, financial risk management, and operations optimization.</p>
+<section id="project-structure" class="level2">
+<h2 class="anchored" data-anchor-id="project-structure">Project Structure</h2>
+<p>The main requirements and indicators developed for this analysis were:</p>
 <ul>
-<li>Composição da Força de Trabalho: Detalhar o número total de funcionários e sua distribuição por área (Operações, Financeiro, Comercial, Administrativo e Logística) e por nível hierárquico (Analista, Coordenador, Gerente, Diretor, Estagiário).</li>
-<li>Quadro de Funcionários: Apresentar a proporção entre funcionários efetivos e terceirizados, um indicador-chave para entender a flexibilidade e estrutura de custos da equipe.</li>
-<li>Performance Financeira: Exibir o valor total dos contratos e o salário total dos funcionários, oferecendo uma visão geral da saúde financeira e dos custos de pessoal.</li>
-<li>Análise de Contratos por Área e Criticidade: Fornecer uma detalhada segmentação do valor total de contratos e o ticket médio por serviço, categorizando-os por área e por um status de criticidade (Normal, Muito Crítico, Pouco Crítico). Este é um ponto crucial para identificar onde os maiores valores estão concentrados e quais contratos exigem atenção prioritária.</li>
-<li>Identificação de Clientes Chave: Destacar clientes com o maior valor de contrato, permitindo uma gestão de relacionamento mais direcionada.</li>
+<li>Workforce Composition: Detail the total number of employees and their distribution by area (Operations, Finance, Commercial, Administrative, and Logistics) and by hierarchical level (Analyst, Coordinator, Manager, Director, Intern).</li>
+<li>Employee Roster: Present the proportion between permanent and outsourced employees, a key indicator for understanding the flexibility and cost structure of the team.</li>
+<li>Financial Performance: Display the total value of contracts and the total salary of employees, offering an overview of financial health and personnel costs.</li>
+<li>Contract Analysis by Area and Criticality: Provide a detailed segmentation of the total contract value and the average ticket per service, categorizing them by area and by a criticality status (Normal, Very Critical, Slightly Critical). This is a crucial point for identifying where the largest values are concentrated and which contracts require priority attention.</li>
+<li>Key Client Identification: Highlight clients with the highest contract value, allowing for more targeted relationship management.</li>
 </ul>
 </section>
-<section id="tecnologias-utilizadas" class="level2">
-<h2 class="anchored" data-anchor-id="tecnologias-utilizadas">Tecnologias Utilizadas</h2>
-<p>Para a construção deste dashboard, a tecnologia principal empregada foi o Power BI Desktop</p>
-<p>Dado o escopo do projeto e as informações fornecidas, a fase de prototipação pode ter sido integrada diretamente ao processo de desenvolvimento no Power BI, com iterações rápidas e ajustes de design feitos na própria ferramenta para otimizar a experiência do usuário.</p>
+<section id="technologies-used" class="level2">
+<h2 class="anchored" data-anchor-id="technologies-used">Technologies Used</h2>
+<p>For the construction of this dashboard, the main technology employed was Power BI Desktop.</p>
+<p>Given the project’s scope and the information provided, the prototyping phase may have been directly integrated into the development process in Power BI, with rapid iterations and design adjustments made within the tool itself to optimize the user experience.</p>
 </section>
-<section id="processo-de-etl-extração-transformação-e-carregamento" class="level2">
-<h2 class="anchored" data-anchor-id="processo-de-etl-extração-transformação-e-carregamento">Processo de ETL (Extração, Transformação e Carregamento)</h2>
-<p>O processo de ETL para este dashboard envolveu as seguintes etapas:</p>
+<section id="etl-process-extraction-transformation-and-loading" class="level2">
+<h2 class="anchored" data-anchor-id="etl-process-extraction-transformation-and-loading">ETL Process (Extraction, Transformation, and Loading)</h2>
+<p>The ETL process for this dashboard involved the following steps:</p>
 <ol type="1">
-<li>Extração: Os dados foram extraídos de suas fontes originais, que tipicamente incluiriam sistemas de RH para informações de funcionários, e sistemas de gestão de contratos ou ERP para dados financeiros e de contratos. As bases de dados foram fornecidas em excel, sendo importadas para o ambiente do Power BI.</li>
-<li>Transformação: No Power Query, parte integrante do Power BI, as transformações necessárias foram aplicadas. Isso incluiu a limpeza de dados (remoção de duplicatas, tratamento de valores nulos), padronização de formatos, e a criação de novas colunas ou métricas calculadas (como ticket médio) para enriquecer a análise. A modelagem de dados foi realizada para estabelecer relacionamentos entre as tabelas de funcionários, contratos e áreas, garantindo a integridade e a correta agregação das informações.</li>
-<li>Carregamento: Após as transformações e a modelagem, os dados foram carregados para o modelo de dados do Power BI, prontos para a criação dos visuais e para a interatividade do dashboard.</li>
+<li>Extraction: Data was extracted from its original sources, which would typically include HR systems for employee information, and contract management or ERP systems for financial and contract data. The databases were provided in Excel, being imported into the Power BI environment.</li>
+<li>Transformation: In Power Query, an integral part of Power BI, the necessary transformations were applied. This included data cleaning (duplicate removal, null value handling), format standardization, and the creation of new columns or calculated metrics (such as average ticket) to enrich the analysis. Data modeling was performed to establish relationships between employee, contract, and area tables, ensuring the integrity and correct aggregation of information.</li>
+<li>Loading: After transformations and modeling, the data was loaded into the Power BI data model, ready for the creation of visuals and dashboard interactivity.</li>
 </ol>
 </section>
 </section>
 <section id="dashboard" class="level1">
 <h1>Dashboard</h1>
-<p>O dashboard apresenta uma interface clara e organizada, com múltiplos visuais que se complementam para oferecer uma análise completa. Destacam-se gráficos de barras que ilustram a distribuição de funcionários e valores de contrato por área, um gráfico de rosca para a composição do quadro de funcionários, e tabelas detalhadas que mostram a criticidade dos contratos. Os visuais são projetados para serem interativos, permitindo que o usuário explore os dados por diferentes dimensões e filtre as informações conforme a necessidade. A utilização de cores e layouts é pensada para facilitar a leitura e o entendimento rápido dos principais indicadores.</p>
+<p>The dashboard presents a clear and organized interface, with multiple visuals that complement each other to offer a complete analysis. Highlights include bar charts illustrating the distribution of employees and contract values by area, a donut chart for employee roster composition, and detailed tables showing contract criticality. The visuals are designed to be interactive, allowing the user to explore data by different dimensions and filter information as needed. The use of colors and layouts is designed to facilitate quick reading and understanding of key indicators.</p>
 <section id="insights" class="level2">
 <h2 class="anchored" data-anchor-id="insights">Insights</h2>
-<p>A análise aprofundada dos dados do dashboard revelou insights valiosos sobre a gestão de RH e contratos da empresa:</p>
-<p>Distribuição Equilibrada de Funcionários: A empresa demonstra uma distribuição de funcionários bem pulverizada entre suas áreas operacionais. “Operações: 75”, “Financeiro: 67”, “Comercial: 61”, “Administrativo: 60”, “Logísitca: 58”. Com um total de 320 funcionários, a área de Operações lidera com 75 colaboradores, seguida de perto por Financeiro e Comercial. Essa distribuição indica uma base sólida para as atividades essenciais da empresa.</p>
+<p>In-depth analysis of the dashboard data revealed valuable insights into the company’s HR and contract management:</p>
+<p>Balanced Employee Distribution: The company demonstrates a well-distributed workforce among its operational areas. “Operations: 75”, “Finance: 67”, “Commercial: 61”, “Administrative: 60”, “Logistics: 58”. With a total of 320 employees, the Operations area leads with 75 employees, closely followed by Finance and Commercial. This distribution indicates a solid base for the company’s essential activities.</p>
 <div style="text-align:center;">
 <p><img src="imagem1.png" alt=""></p>
 </div>
-<p>Em relação aos níveis, há um balanceamento interessante: “Analista (75)”, “Estagiário (69)”, “Coordenador (67)”, “Gerente (65)” e “Diretor (62)”. A alta quantidade de Analistas e Estagiários sugere um foco em execução e desenvolvimento de novos talentos, enquanto a presença robusta de Coordenadores, Gerentes e Diretores assegura a supervisão e a direção estratégica.</p>
+<p>Regarding levels, there is an interesting balance: “Analyst (75)”, “Intern (69)”, “Coordinator (67)”, “Manager (65)”, and “Director (62)”. The high number of Analysts and Interns suggests a focus on execution and development of new talents, while the robust presence of Coordinators, Managers, and Directors ensures supervision and strategic direction.</p>
 <div style="text-align:center;">
 <p><img src="imagem2.png" alt=""></p>
 </div>
-<p>Predominância de Terceirizados: Um insight particularmente notável é a composição do quadro de funcionários. “Efetivo 46,75%”, “Terceiro 53,25%”. Mais da metade da força de trabalho (53,25%) é composta por funcionários terceirizados. Essa estratégia pode conferir grande flexibilidade operacional e otimização de custos, permitindo à empresa escalar suas operações de forma mais ágil conforme a demanda. No entanto, também ressalta a necessidade de uma gestão rigorosa dos contratos com prestadores de serviço e um acompanhamento contínuo da qualidade e conformidade.</p>
+<p>Predominance of Outsourced Employees: A particularly notable insight is the composition of the workforce. “Permanent 46.75%”, “Outsourced 53.25%”. More than half of the workforce (53.25%) consists of outsourced employees. This strategy can provide great operational flexibility and cost optimization, allowing the company to scale its operations more agilely according to demand. However, it also highlights the need for rigorous management of contracts with service providers and continuous monitoring of quality and compliance.</p>
 <div style="text-align:center;">
 <p><img src="imagem3.png" alt=""></p>
 </div>
-<p>Grandes Valores de Contrato nas Áreas Chave: O valor total de contrato da empresa é substancial, totalizando R$ 80.424.000.</p>
+<p>High Contract Values in Key Areas: The company’s total contract value is substantial, totaling R$ 80,424,000.</p>
 <div style="text-align:center;">
 <p><img src="imagem4.png" alt=""></p>
 </div>
-<p>As áreas de Operações e Financeiro são as que geram os maiores valores.</p>
+<p>The Operations and Finance areas are those that generate the highest values.</p>
 <div style="text-align:center;">
 <p><img src="imagem5.png" alt=""></p>
 </div>
-<p>Esse dado, combinado com a distribuição de funcionários, sugere que as áreas com maior volume de contratos são também as que possuem o maior número de colaboradores, o que é um alinhamento esperado.</p>
+<p>This data, combined with employee distribution, suggests that the areas with the highest contract volume also have the largest number of employees, which is an expected alignment.</p>
 <div style="text-align:center;">
 <p><img src="imagem6.png" alt=""></p>
 </div>
-<p>Contratos “Muito Críticos” com Alto Valor Médio: Um dos insights mais críticos e acionáveis revelados pelo dashboard é a relação entre a criticidade e o valor médio dos contratos.</p>
-<p>Nas colunas “Valor Total de Contrato e Média de Valor por Serviço”, observa-se que, para todas as áreas (Financeiro, Operações, Comercial e Logística), os contratos classificados como “Muito Crítico” consistentemente apresentam um valor médio por serviço significativamente mais alto do que os contratos “Normal” ou “Pouco Crítico”.</p>
-<p>Exemplos: Em Financeiro, o valor médio para “Muito Crítico” é R$9.693,60, comparado a R$ 6.701,58 para “Normal”. Em Comercial, “Muito Crítico” atinge R$ 10.734,99.</p>
-<p>Isso indica que os contratos de maior porte e maior impacto financeiro são, paradoxalmente, os que mais frequentemente enfrentam problemas ou desafios graves. Esta é uma informação vital para o planejamento de recursos e para a priorização de intervenções.</p>
+<p>“Very Critical” Contracts with High Average Value: One of the most critical and actionable insights revealed by the dashboard is the relationship between criticality and the average value of contracts.</p>
+<p>In the columns “Total Contract Value and Average Service Value”, it is observed that, for all areas (Finance, Operations, Commercial, and Logistics), contracts classified as “Very Critical” consistently show a significantly higher average service value than “Normal” or “Slightly Critical” contracts.</p>
+<p>Examples: In Finance, the average value for “Very Critical” is R$9,693.60, compared to R$6,701.58 for “Normal”. In Commercial, “Very Critical” reaches R$10,734.99.</p>
+<p>This indicates that the largest and most financially impactful contracts are, paradoxically, those that most frequently face serious problems or challenges. This is vital information for resource planning and for prioritizing interventions.</p>
 <div style="text-align:center;">
 <p><img src="imagem7.png" alt=""></p>
 </div>
-<p>Identificação do Cliente de Maior Impacto: É possivél rapidamente visualizar o “Augusto Martins” como o “Cliente com Maior Valor de Contrato”. Esta funcionalidade é essencial para o gerenciamento de relacionamento com clientes estratégicos e para a alocação de recursos de atendimento VIP. Ticket Médio Operacional: O ticket médio de R$ 6,16 mil oferece uma métrica de referência para a valoração dos serviços ou produtos da empresa.</p>
+<p>Identification of the Client with the Highest Impact: It is quickly possible to visualize “Augusto Martins” as the “Client with the Highest Contract Value”. This functionality is essential for managing relationships with strategic clients and for allocating VIP service resources. Operational Average Ticket: The average ticket of R$6.16 thousand offers a reference metric for valuing the company’s services or products.</p>
 </section>
 </section>
-<section id="considerações" class="level1">
-<h1>Considerações</h1>
-<p>A análise do dashboard sugere várias considerações estratégicas para a organização:</p>
-<p>Gestão de Riscos em Contratos de Alto Valor: A correlação entre criticidade e alto valor em contratos é um sinal de alerta. É fundamental que a empresa estabeleça protocolos robustos de gestão de riscos e alocação de equipes especializadas para monitorar e mitigar os problemas associados a esses contratos “Muito Críticos”. Isso pode envolver revisões de SLAs, planos de contingência e comunicação proativa com os clientes envolvidos. O timização da Força de Trabalho Terceirizada: A alta proporção de terceirizados oferece agilidade, mas também pode implicar em desafios de integração cultural, manutenção do conhecimento interno e controle de qualidade. É importante garantir que os processos de contratação e gestão desses parceiros sejam eficientes e que haja um acompanhamento contínuo de seu desempenho para assegurar a entrega esperada.</p>
-<p>Alocação de Recursos: Com base na distribuição de funcionários e na criticidade dos contratos, a empresa pode otimizar a alocação de seus talentos mais experientes para as áreas e contratos que demandam maior atenção, garantindo que os recursos certos estejam nos lugares certos para maximizar o valor e minimizar os riscos.</p>
-<p>Foco Estratégico em Clientes Chave: A identificação do cliente com maior valor de contrato (Augusto Martins) permite que a empresa desenvolva estratégias de retenção e expansão personalizadas para seus clientes mais valiosos, fortalecendo parcerias e garantindo a continuidade da receita.</p>
+<section id="considerations" class="level1">
+<h1>Considerations</h1>
+<p>The dashboard analysis suggests several strategic considerations for the organization:</p>
+<p>Risk Management in High-Value Contracts: The correlation between criticality and high contract value is a warning sign. It is fundamental for the company to establish robust risk management protocols and allocate specialized teams to monitor and mitigate problems associated with these “Very Critical” contracts. This may involve reviewing SLAs, contingency plans, and proactive communication with involved clients. O ptimization of Outsourced Workforce: The high proportion of outsourced employees offers agility but can also imply challenges in cultural integration, maintenance of internal knowledge, and quality control. It is important to ensure that the hiring and management processes for these partners are efficient and that their performance is continuously monitored to ensure the expected delivery.</p>
+<p>Resource Allocation: Based on employee distribution and contract criticality, the company can optimize the allocation of its most experienced talents to the areas and contracts that demand greater attention, ensuring that the right resources are in the right places to maximize value and minimize risks.</p>
+<p>Strategic Focus on Key Clients: Identifying the client with the highest contract value (Augusto Martins) allows the company to develop personalized retention and expansion strategies for its most valuable clients, strengthening partnerships and ensuring revenue continuity.</p>
 </section>
-<section id="conclusão" class="level1">
-<h1>Conclusão</h1>
-<p>O dashboard foi uma ferramenta analítica de alto impacto, capaz de transformar dados brutos em inteligência acionável para a gestão de recursos humanos e a performance financeira da empresa. Sua principal contribuição reside na capacidade de:</p>
+<section id="conclusion" class="level1">
+<h1>Conclusion</h1>
+<p>The dashboard was a high-impact analytical tool, capable of transforming raw data into actionable intelligence for human resources management and the company’s financial performance. Its main contribution lies in its ability to:</p>
 <ul>
-<li>Oferecer uma visão clara da estrutura organizacional e da distribuição de talentos.</li>
-<li>Destacar a composição flexível da força de trabalho através da proporção de efetivos e terceirizados.</li>
+<li>Provide a clear view of the organizational structure and talent distribution.</li>
+<li>Highlight the flexible workforce composition through the proportion of permanent and outsourced employees.</li>
 </ul>
-<p>E, crucialmente, identificar e contextualizar o risco associado aos contratos de maior valor, ao correlacionar sua criticidade com seu impacto financeiro.</p>
-<p>Este projeto demonstra a habilidade de traduzir complexidades de dados em insights claros e práticos, capacitando líderes a tomarem decisões mais informadas sobre gestão de pessoas, mitigação de riscos em contratos estratégicos e, em última instância, aprimorando a rentabilidade e a eficiência operacional da organização. A sua implementação seria um passo significativo para qualquer empresa que busque uma gestão de RH e contratos orientada por dados.</p>
-<section id="link-para-o-dashboard" class="level2">
-<h2 class="anchored" data-anchor-id="link-para-o-dashboard">Link para o Dashboard:</h2>
-<p><a href="https://app.powerbi.com/groups/me/reports/76e35eaf-c92c-4671-9f9d-cad29ce49328/ReportSection?experience=power-bi">Clique aqui para acessar o relatório no Power BI</a></p>
+<p>And, crucially, identify and contextualize the risk associated with higher-value contracts by correlating their criticality with their financial impact.</p>
+<p>This project demonstrates the ability to translate data complexities into clear and practical insights, empowering leaders to make more informed decisions about people management, mitigating risks in strategic contracts, and ultimately improving the organization’s profitability and operational efficiency. Its implementation would be a significant step for any company seeking data-driven HR and contract management.</p>
+<section id="link-to-the-dashboard" class="level2">
+<h2 class="anchored" data-anchor-id="link-to-the-dashboard">Link to the Dashboard:</h2>
+<p><a href="https://app.powerbi.com/groups/me/reports/76e35eaf-c92c-4671-9f9d-cad29ce49328/ReportSection?experience=power-bi">Click here to access the report in Power BI</a></p>
 </section>
 </section>
 

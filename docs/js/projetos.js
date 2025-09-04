@@ -60,9 +60,9 @@ document.addEventListener('DOMContentLoaded', function () {
         { 
             id: 'dash-proj-1', 
             category: 'Dashboards', 
-            title: 'RH e Performance de Contratos', 
+            title: 'HR and Contract Performance', 
             tools: 'Power BI, DAX, M',  
-            description: 'Este projeto foi desenvolvido com o propósito de proporcionar uma visão sobre a composição da força de trabalho de uma organização fictícia e a performance de seus contratos.', 
+            description: 'This project was developed with the purpose of providing an overview of the workforce composition of a fictional organization and the performance of its contracts.', 
             link: 'projetos/Dashboards/1DashboardFuncionarios/Projeto1DA.html',
             image: 'projetos/Dashboards/1DashboardFuncionarios/capa.png'
         },
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
             category: 'Dashboards', 
             title: 'Auto Solutions', 
             tools: 'Power BI, DAX, M',  
-            description: 'Este projeto consiste na criação de um Dashboard desenvolvido no Power BI, com o objetivo de oferecer uma visão abrangente e detalhada sobre a performance das operações', 
+            description: 'This project consists of creating a Dashboard developed in Power BI, aiming to offer a comprehensive and detailed overview of operational performance.', 
             link: 'projetos/Dashboards/2DashboardAutoSolutions/Projeto2DA.html',
             image: 'projetos/Dashboards/2DashboardAutoSolutions/capa.png'
         },
