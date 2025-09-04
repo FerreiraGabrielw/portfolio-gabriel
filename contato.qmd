@@ -1,5 +1,5 @@
 ---
-title: "Contato"
+title: "Contact"
 ---
 
 <br>
@@ -7,9 +7,9 @@ title: "Contato"
 <div class="text-center">
   <h1 style="border: none; margin-bottom: 0;">FALE COMIGO!</h1>
   <p class="lead" style="margin-top: 10px;">
-    Adoraria conectar e discutir sobre dados, tecnologia ou oportunidades de colaboração.
+    I'd love to connect and discuss data, technology, or collaboration opportunities.
   </p>
-  <p>Seja para uma pergunta, uma proposta de projeto ou apenas para trocar uma ideia, aqui estão os melhores canais para me encontrar.</p>
+  <p>Whether it's for a question, a project proposal, or just to exchange ideas, here are the best channels to find me.</p>
 </div>
 
 <hr style="margin-top: 40px; margin-bottom: 50px;">
@@ -21,7 +21,7 @@ title: "Contato"
     <a href="https://www.linkedin.com/in/gabrielferreira2001/" target="_blank" class="contact-card">
       <i class="bi bi-linkedin" style="font-size: 2.5rem; color: #0077b5;"></i>
       <h5 class="mt-2">LinkedIn</h5>
-      <p class="text-muted">Conecte-se comigo</p>
+      <p class="text-muted">Connect with me</p>
     </a>
   </div>
 
@@ -29,14 +29,14 @@ title: "Contato"
     <div id="email-card" class="contact-card" style="cursor: pointer;">
       <i class="bi bi-envelope-fill" style="font-size: 2.5rem; color: #c71610;"></i>
       <h5 class="mt-2">Email</h5>
-      <p class="text-muted" id="email-text">Clique para copiar</p>
+      <p class="text-muted" id="email-text">Click to copy</p>
     </div>
   </div>
   <div class="g-col-12 g-col-sm-6 g-col-md-3">
     <a href="https://wa.me/5519992764799" target="_blank" class="contact-card">
       <i class="bi bi-whatsapp" style="font-size: 2.5rem; color: #25d366;"></i>
       <h5 class="mt-2">WhatsApp</h5>
-      <p class="text-muted">(19) 99276-4799</p>
+      <p class="text-muted">+5519992764799</p>
     </a>
   </div>
 
@@ -44,7 +44,7 @@ title: "Contato"
     <a href="https://github.com/FerreiraGabrielw" target="_blank" class="contact-card">
       <i class="bi bi-github" style="font-size: 2.5rem; color: #333;"></i>
       <h5 class="mt-2">GitHub</h5>
-      <p class="text-muted">Veja meus códigos</p>
+      <p class="text-muted">See my codes<</p>
     </a>
   </div>
 
@@ -52,7 +52,7 @@ title: "Contato"
 
 <div class="text-center" style="margin-top: 50px;">
   <a href="cv/CvAnalistadeDadosSeniorGabriel Ferreira.pt.pdf" class="btn btn-primary btn-lg" target="_blank" download>
-    <i class="bi bi-download"></i> Baixe meu CV
+    <i class="bi bi-download"></i> Download my CV
   </a>
 </div>
 ```

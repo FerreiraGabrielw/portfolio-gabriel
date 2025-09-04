@@ -30,10 +30,10 @@ Hello, welcome!
 ```{=html}
 <div class="text-center" style="margin-top: 20px; display: flex; justify-content: center; gap: 15px;">
   <a href="projetos.qmd" class="btn btn-success btn-lg">
-    <i class="bi bi-kanban-fill"></i> Ver Meus Projetos
+    <i class="bi bi-kanban-fill"></i> View my Projects
   </a>
-  <a href="cv/CvCientistadeDadosGabrielFerreira.pdf" class="btn btn-primary btn-lg" target="_blank" download>
-    <i class="bi bi-download"></i> Baixe meu CV
+  <a href="cv/CvDataScientistGabrielFerreiraEN.pdf" class="btn btn-primary btn-lg" target="_blank" download>
+    <i class="bi bi-download"></i> Donwload my CV
   </a>
 </div>
 ```
@@ -384,7 +384,7 @@ Hello, welcome!
   <a href="projetos.qmd" class="btn btn-success btn-lg">
     <i class="bi bi-kanban-fill"></i> View My Projects
   </a>
-  <a href="cv/CvCientistadeDadosGabrielFerreira.pdf" class="btn btn-primary btn-lg" target="_blank" download>
+  <a href="cv/CvDataScientistGabrielFerreiraEN.pdf" class="btn btn-primary btn-lg" target="_blank" download>
     <i class="bi bi-download"></i> Download my CV
   </a>
 </div>

@@ -1,5 +1,5 @@
 ---
-title: "Meus Projetos"
+title: "My Projects"
 format:
   html:
     include-after-body:
@@ -7,7 +7,7 @@ format:
           <script src="js/projetos.js" defer></script>
 ---
 
-Apresento aqui alguns projetos nos quais trabalhei, organizados em seções de Projetos de Ciência de Dados, Análise de Dados e Dashboards. Sinta-se à vontade para analisá-los. Caso queira trocar uma ideia, estou à disposição.
+Here I present some projects I've worked on, organized into sections of Data Science Projects, Data Analysis, and Dashboards. Feel free to explore them. If you'd like to discuss anything, I'm available.
 
 ### Data Science Projects
 
