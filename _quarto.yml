@@ -13,11 +13,11 @@ website:
   navbar:
     search: false               # <-- ADICIONADO: Remove a lupa de pesquisa
     left:
-      - text: "Principal"
+      - text: "Home"
         href: index.qmd
-      - text: "Projetos"
+      - text: "Projects"
         href: projetos.qmd
-      - text: "Contato"
+      - text: "Contact"
         href: contato.qmd
   page-footer:
     left: "Design by Gabriel Ferreira"
