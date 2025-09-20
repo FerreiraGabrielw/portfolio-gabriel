@@ -4,11 +4,20 @@ document.addEventListener('DOMContentLoaded', function () {
         { 
             id: 'ds-proj-1', 
             category: 'Data Science', 
-            title: 'Classificação de Clientes em Marketing', 
+            title: 'Clustering Project - Marketing', 
             tools: 'Python, PCA, KNN', 
-            description: 'O objetivo desse projeto foi utilizar técnicas de aprendizado não supervisionado (clusterização) para identificar grupos distintos de casais com base em suas respostas, permitindo a criação de estratégias de marketing mais eficazes e personalizadas.', 
+            description: 'The objective of this project was to utilize unsupervised learning techniques (clustering) to identify distinct groups of couples based on their responses, enabling the creation of more effective and personalized marketing strategies.', 
             link: 'projetos/DataScience/1AnaliseMarketingCasalProspero/AnaliseMarketingCasalProspero.html',
             image: 'projetos/DataScience/1AnaliseMarketingCasalProspero/projetocluster.png'
+        },
+                { 
+            id: 'ds-proj-2', 
+            category: 'Data Science', 
+            title: 'Customer Churn Analysis, Prediction and Deploy', 
+            tools: 'Python, Machine Learning, Streamlit', 
+            description: 'The objective of this project is to analyze and build a Machine Learning model based on customer churn data. Churn prediction identifies customers who are likely to cancel their contracts soon. ', 
+            link: 'projetos/DataScience/2ChurnPrediction/ProjetoChurn.html',
+            image: 'projetos/DataScience/2ChurnPrediction/churn.png'
         },
         // Projetos de Data Analytics
         { 
