@@ -55,6 +55,7 @@ Hello, welcome!
         <p class="timeline-date">May 2024 - Present</p>
         <h6>Activities:</h6>
         <ul>
+          <li> Create dashboards and reports to support strategic decisions and monitor critical indicators.</li>
           <li>Lead the development and implementation of analytical solutions, from descriptive and predictive analysis to prescriptive modeling, converting raw data into actionable intelligence to drive strategic decisions and optimize processes.</li>
           <li>Build and optimize scalable ETL/ELT pipelines using Python (focusing on data manipulation, standardization, and extraction from various sources, including libraries for Excel interaction and graphical interfaces) and VBA, ensuring efficient information processing.</li>
           <li>Develop solutions for data ingestion, cleaning, standardization, and enrichment from multiple sources (Excel, CSV, PDF, SQL), implementing quality checks and inconsistency handling. Apply techniques to identify and consolidate duplicate records, ensuring high data integrity and uniqueness for accurate analysis and Machine Learning models.</li>
