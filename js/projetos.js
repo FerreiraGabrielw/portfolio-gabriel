@@ -19,6 +19,15 @@ document.addEventListener('DOMContentLoaded', function () {
             link: 'projetos/DataScience/2ChurnPrediction/ProjetoChurn.html',
             image: 'projetos/DataScience/2ChurnPrediction/churn.png'
         },
+        { 
+            id: 'ds-proj-3', 
+            category: 'Data Science', 
+            title: 'Hotel Matching: Data Integration and Enrichment via API', 
+            tools: 'Python, Pandas, Levenshtein, Haversine, FastAPI', 
+            description: 'The objective of this project is to develop a scalable matching algorithm for integrating two heterogeneous hotel datasets without shared keys, using textual similarities (Levenshtein) and geographic proximity (Haversine), followed by enrichment via a simulated RESTful API to add attributes like stars, scores, and amenities for hospitality applications.', 
+            link: 'projetos/DataScience/3MatchingHoteis/MatchingHoteis.html',
+            image: 'projetos/DataScience/3MatchingHoteis/matchinghoteis.png'
+        },
         // Projetos de Data Analytics
         { 
             id: 'da-proj-1', 
