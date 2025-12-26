@@ -10,7 +10,16 @@ document.addEventListener('DOMContentLoaded', function () {
             link: 'projetos/DataScience/1AnaliseMarketingCasalProspero/AnaliseMarketingCasalProspero.html',
             image: 'projetos/DataScience/1AnaliseMarketingCasalProspero/projetocluster.png'
         },
-                { 
+        {
+            id: 'ds-proj-4',
+            category: 'Data Science',
+            title: 'Hybrid Recommender System for E-commerce (End-to-End)',
+            tools: 'Python, SQL, Pandas, Scikit-learn, AWS S3, AWS Lambda, API Gateway',
+            description: 'This project presents the end-to-end development of a hybrid recommender system for e-commerce, combining Item-Item Collaborative Filtering, Content-Based Filtering, and Association Rules. The solution covers the full lifecycle of a data science product, including relational database design in SQL, exploratory analysis, model development and recommendation API on AWS.',
+            link: 'projetos/DataScience/4RecomendationSystem/RecomendationSystemEN.html',
+            image: 'projetos/DataScience/4RecomendationSystem/RecomendationCapa.png'
+        },
+        { 
             id: 'ds-proj-2', 
             category: 'Data Science', 
             title: 'Customer Churn Analysis, Prediction and Deploy', 
