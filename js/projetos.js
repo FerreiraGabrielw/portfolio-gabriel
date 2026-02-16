@@ -37,6 +37,16 @@ document.addEventListener('DOMContentLoaded', function () {
             link: 'projetos/DataScience/3MatchingHoteis/MatchingHoteis.html',
             image: 'projetos/DataScience/3MatchingHoteis/matchinghoteis.png'
         },
+        // Projetos de Data Engineering
+        { 
+            id: 'de-proj-1', 
+            category: 'Data Engineering', 
+            title: 'Fitness Analytics Platform +LLM (End-to-End)',
+            tools: 'AWS, Python', 
+            description: 'This project implements a complete end-to-end data engineering pipeline for strength training and nutrition data.', 
+            link: 'projetos/DataEngineering/1FitnessLLM/FitnessDataLLM.html',
+            image: 'projetos/DataEngineering/1FitnessLLM/capa.png'
+        },
         // Projetos de Data Analytics
         { 
             id: 'da-proj-1', 
@@ -151,6 +161,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Adiciona o seletor para o novo container
     const dsContainer = document.querySelector('#ds-swiper .swiper-wrapper');
+    const deContainer = document.querySelector('#de-swiper .swiper-wrapper');
     const daContainer = document.querySelector('#da-swiper .swiper-wrapper');
     const dashContainer = document.querySelector('#dash-swiper .swiper-wrapper');
     
@@ -176,11 +187,17 @@ document.addEventListener('DOMContentLoaded', function () {
     // Atualiza o loop para incluir a nova categoria
     projects.forEach(p => {
         const cardHtml = createProjectCard(p);
+        
         if (p.category === 'Data Science' && dsContainer) {
             dsContainer.insertAdjacentHTML('beforeend', cardHtml);
-        } else if (p.category === 'Data Analytics' && daContainer) {
+        } 
+        else if (p.category === 'Data Engineering' && deContainer) {
+            deContainer.insertAdjacentHTML('beforeend', cardHtml);
+        } 
+        else if (p.category === 'Data Analytics' && daContainer) {
             daContainer.insertAdjacentHTML('beforeend', cardHtml);
-        } else if (p.category === 'Dashboards' && dashContainer) {
+        } 
+        else if (p.category === 'Dashboards' && dashContainer) {
             dashContainer.insertAdjacentHTML('beforeend', cardHtml);
         }
     });
@@ -221,17 +238,6 @@ document.addEventListener('DOMContentLoaded', function () {
     };
     
     const dsSwiper = new Swiper('#ds-swiper', { ...baseSwiperOptions, navigation: { nextEl: '#ds-swiper .swiper-button-next', prevEl: '#ds-swiper .swiper-button-prev', }, pagination: { el: '#ds-swiper .swiper-pagination', clickable: true, }, });
+    const deSwiper = new Swiper('#de-swiper', { ...baseSwiperOptions, navigation: { nextEl: '#de-swiper .swiper-button-next', prevEl: '#de-swiper .swiper-button-prev', }, pagination: { el: '#de-swiper .swiper-pagination', clickable: true, }, });
     const daSwiper = new Swiper('#da-swiper', { ...baseSwiperOptions, navigation: { nextEl: '#da-swiper .swiper-button-next', prevEl: '#da-swiper .swiper-button-prev', }, pagination: { el: '#da-swiper .swiper-pagination', clickable: true, }, });
-    
-    const dashSwiper = new Swiper('#dash-swiper', {
-        ...baseSwiperOptions,
-        navigation: {
-          nextEl: '#dash-swiper .swiper-button-next',
-          prevEl: '#dash-swiper .swiper-button-prev',
-        },
-        pagination: {
-          el: '#dash-swiper .swiper-pagination',
-          clickable: true,
-        },
-    });
-});
+    const dashSwiper = new Swiper('#dash-swiper', {...baseSwiperOptions, navigation: { nextEl: '#dash-swiper .swiper-button-next', prevEl: '#dash-swiper .swiper-button-prev', }, pagination: { el: '#dash-swiper .swiper-pagination', clickable: true, }, }); });

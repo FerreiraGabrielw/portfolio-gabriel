@@ -23,6 +23,20 @@ Here I present some projects I've worked on, organized into sections of Data Sci
 <hr>
 <br>
 
+### Data Engineering Projects
+
+<div id="de-swiper" class="swiper projetos-swiper">
+  <div class="swiper-wrapper">
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>
+
+<br>
+<hr>
+<br>
+
 ### Data Analytics Projects
 
 <div id="da-swiper" class="swiper projetos-swiper">
