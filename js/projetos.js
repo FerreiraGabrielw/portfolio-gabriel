@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
             id: 'de-proj-1', 
             category: 'Data Engineering', 
             title: 'Fitness Analytics Platform +LLM (End-to-End)',
-            tools: 'AWS (RDS,S3, Lambda, Bedrock), Python, PostgreSQL', 
+            tools: 'AWS (RDS, S3, Lambda, Bedrock), Python, PostgreSQL', 
             description: 'Production-grade end-to-end data engineering project transforming raw workout and nutrition data into a normalized PostgreSQL model on AWS. Implements ETL pipelines, Gold-layer weekly aggregations, and a deterministic JSON contract for LLM consumption.Executed in Amazon RDS, S3, and Bedrock (Claude).', 
             link: 'projetos/DataEngineering/1FitnessLLM/FitnessDataLLM.html',
             image: 'projetos/DataEngineering/1FitnessLLM/capa.png'
