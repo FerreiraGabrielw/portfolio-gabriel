@@ -42,8 +42,8 @@ document.addEventListener('DOMContentLoaded', function () {
             id: 'de-proj-1', 
             category: 'Data Engineering', 
             title: 'Fitness Analytics Platform +LLM (End-to-End)',
-            tools: 'AWS, Python', 
-            description: 'This project implements a complete end-to-end data engineering pipeline for strength training and nutrition data.', 
+            tools: 'AWS (RDS,S3, Lambda, Bedrock), Python, PostgreSQL', 
+            description: 'Production-grade end-to-end data engineering project transforming raw workout and nutrition data into a normalized PostgreSQL model on AWS. Implements ETL pipelines, Gold-layer weekly aggregations, and a deterministic JSON contract for LLM consumption.Executed in Amazon RDS, S3, and Bedrock (Claude).', 
             link: 'projetos/DataEngineering/1FitnessLLM/FitnessDataLLM.html',
             image: 'projetos/DataEngineering/1FitnessLLM/capa.png'
         },
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const daContainer = document.querySelector('#da-swiper .swiper-wrapper');
     const dashContainer = document.querySelector('#dash-swiper .swiper-wrapper');
     
-    // O restante da seleção de elementos do modal continua igual
+    // O restante da seleção de elementos do modal
     const modal = document.getElementById('projectModal');
     const modalImg = document.getElementById('modal-img');
     const modalTitle = document.getElementById('modal-title');
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
         `;
     }
 
-    // Atualiza o loop para incluir a nova categoria
+    // Atualiza o loop
     projects.forEach(p => {
         const cardHtml = createProjectCard(p);
         
