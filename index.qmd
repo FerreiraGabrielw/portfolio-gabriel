@@ -341,7 +341,7 @@ Hello, welcome!
 <ul class="list-unstyled">
   <li>🇧🇷 Portuguese (Native)</li>
   <li>🇺🇸 English (Fluent)</li>
-  <li>🇪🇸 Spanish (Advanced)</li>
+  <li>🇪🇸 Spanish (Fluent)</li>
 </ul>
 
 ### Skills and Abilities
@@ -350,16 +350,23 @@ Hello, welcome!
 ::: {.g-col-12 .g-col-md-3}
 <h5><i class="bi bi-tools"></i> Tools</h5>
 <ul class="list-unstyled">
-  <li>• Excel/VBA</li>
-  <li>• SQL</li>
   <li>• Python</li>
-  <li>• Linguagem R</li>
+  <li>• R</li>
+  <li>• SQL</li>
+  <li>• AWS</li>
   <li>• Apache Spark</li>
   <li>• Apache Airflow</li>
-  <li>• DuckDB</li>
+  <li>• Apache Kafka</li>
   <li>• Databricks</li>
-  <li>• AWS</li>
+  <li>• Docker</li>
+  <li>• Dbt</li>
+  <li>• Airbyte</li>
+  <li>• Snowflake</li>
   <li>• Microsoft Fabric</li>
+  <li>• Scikit-learn</li>
+  <li>• XGBoost/LightGBM</li>
+  <li>• TensorFlow/PyTorch</li>
+  <li>• MLflow</li>
   <li>• Power BI (DAX/M)</li>
   <li>• Tableau</li>
   <li>• Looker Studio</li>
