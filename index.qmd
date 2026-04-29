@@ -203,7 +203,7 @@ Hello, welcome!
 ```{=html}
 <div class="formacao-item">
   <a href="cursos/zDiplomaPosGraduacao.pdf" target="_blank" class="diploma-container">
-    <img src="images/logofacint.jpeg" alt="Logo Faculdade FACINT">
+    <img src="images/logofacint.png" alt="Logo Faculdade FACINT">
     <div class="diploma-overlay">
       <span>View Diploma</span>
     </div>
