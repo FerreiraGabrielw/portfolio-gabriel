@@ -39,6 +39,15 @@ document.addEventListener('DOMContentLoaded', function () {
         },
         // Projetos de Data Engineering
         { 
+            id: 'de-proj-2', 
+            category: 'Data Engineering', 
+            title: 'Fraud Detection Platform + ML (End-to-End)',
+            tools: 'Apache Spark, Apache Airflow, AWS (S3, RDS, Lambda, SNS), Airbyte, PostgreSQL, Python, Streamlit, Docker, Scikit-learn', 
+            description: 'Cloud-native end-to-end Fraud Detection Platform simulating a production fraud analytics environment. Implements incremental ingestion with Airbyte, distributed Spark processing, Medallion Data Lake architecture (Bronze/Silver/Gold), ML fraud inference pipelines, replay-safe prediction persistence in Amazon RDS, automated fraud alerting with AWS Lambda and SNS, and operational monitoring through a Streamlit dashboard orchestrated by Apache Airflow.', 
+            link: 'projetos/DataEngineering/2FraudDetection/FraudDetection.html',
+            image: 'projetos/DataEngineering/2FraudDetection/capa.png'
+        },
+        { 
             id: 'de-proj-1', 
             category: 'Data Engineering', 
             title: 'Fitness Analytics Platform +LLM (End-to-End)',

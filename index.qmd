@@ -392,8 +392,7 @@ Hello, welcome!
   <li>• Machine learning algorithms</li>
   <li>• Code Versioning (Git/Github)</li>
   <li>• Structuring Data Warehouses, Data Lakes, relational and non-relational databases (basic)</li>
-  <li>• Model Deployment (basic)</li>
-  <li>• Vibe Coding</li>
+  <li>• Model Deployment</li>
 </ul>
 :::
 

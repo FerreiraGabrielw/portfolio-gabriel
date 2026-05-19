@@ -9,20 +9,6 @@ format:
 
 Here I present some projects I've worked on, organized into sections of Data Science Projects, Data Analysis, and Dashboards. Feel free to explore them. If you'd like to discuss anything, I'm available.
 
-### Data Science Projects
-
-<div id="ds-swiper" class="swiper projetos-swiper">
-  <div class="swiper-wrapper">
-  </div>
-  <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-pagination"></div>
-</div>
-
-<br>
-<hr>
-<br>
-
 ### Data Engineering Projects
 
 <div id="de-swiper" class="swiper projetos-swiper">
@@ -36,6 +22,16 @@ Here I present some projects I've worked on, organized into sections of Data Sci
 <br>
 <hr>
 <br>
+
+### Data Science Projects
+
+<div id="ds-swiper" class="swiper projetos-swiper">
+  <div class="swiper-wrapper">
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>
 
 ### Data Analytics Projects
 

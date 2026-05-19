@@ -7,5 +7,8 @@
   },
   "projetos.qmd": {
     "projetos.html": "fbb2328c"
+  },
+  "projetos/DataEngineering/2FraudDetection/02_fraud_detection_ml.ipynb": {
+    "02_fraud_detection_ml.html": "62b93dd5"
   }
 }
